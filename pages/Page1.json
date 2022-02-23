@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 706,
+          "rightColumn": 2816,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -3005,7 +3005,7 @@
                       "rightColumn": 64,
                       "isDefaultClickDisabled": true,
                       "widgetId": "syggxz1h1j",
-                      "isVisible": "{{QueryShipment.data.data.getOrder.shipments.length > 0?true:false}}",
+                      "isVisible": "{{JSObject1.myFun2()}}",
                       "recaptchaType": "V3",
                       "version": 1,
                       "parentId": "bm5a7j1sy4",

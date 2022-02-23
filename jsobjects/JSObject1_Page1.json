@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t{{showModal('AddItemsModal');closeModal('SelectPackageModal')}}\n\t},\n\tmyFun2: () => {\n\t\t//write code here\n\t}\n}",
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t{{showModal('AddItemsModal');closeModal('SelectPackageModal')}}\n\t},\n\tmyFun2: () => {\n\t\tif (QueryShipment.data.data.getOrder.shipments.length == 0){\n\t\t\treturn true\n\t\t}else{\n\t\t\treturn false\n\t\t}\n\t}\n}",
     "variables": [
       {
         "name": "myVar1",
