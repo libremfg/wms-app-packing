@@ -30,7 +30,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"status\": \"CREATED\",\n      \"box\": {\n        \"sizeDepthCm\": parseFloat(DepthInput.text),\n        \"sizeWidthCm\": parseFloat(WidthInput.text),\n        \"sizeHeightCm\": parseFloat(HeightInput.text),\n      },\n\t\t\t\t\"weightKg\": parseFloat(weightInput.text),\n      \"shipment\": {\n        \"id\": \"0x63514\"\n      }\n    }\n  ]\n},\n\tquery:`\n\t\tmutation addShipmentItem($input:[AddShipmentItemInput!]!){\n  addShipmentItem (input:$input){ \n    numUids\n  }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"status\": \"CREATED\",\n      \"box\": {\n        \"sizeDepthCm\": parseFloat(DepthInput.text),\n        \"sizeWidthCm\": parseFloat(WidthInput.text),\n        \"sizeHeightCm\": parseFloat(HeightInput.text),\n      },\n\t\t\t\t\"isActive\":true,\n      \"shipment\": {\n        \"id\": ListShipmentDetail.selectedRow.id\n      }\n    }\n  ]\n},\n\tquery:`\n\t\tmutation addShipmentItem($input:[AddShipmentItemInput!]!){\n  addShipmentItem (input:$input){ \n    numUids\n  }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -48,7 +48,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"status\": \"CREATED\",\n      \"box\": {\n        \"sizeDepthCm\": parseFloat(DepthInput.text),\n        \"sizeWidthCm\": parseFloat(WidthInput.text),\n        \"sizeHeightCm\": parseFloat(HeightInput.text),\n      },\n\t\t\t\t\"weightKg\": parseFloat(weightInput.text),\n      \"shipment\": {\n        \"id\": \"0x63514\"\n      }\n    }\n  ]\n},\n\tquery:`\n\t\tmutation addShipmentItem($input:[AddShipmentItemInput!]!){\n  addShipmentItem (input:$input){ \n    numUids\n  }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"status\": \"CREATED\",\n      \"box\": {\n        \"sizeDepthCm\": parseFloat(DepthInput.text),\n        \"sizeWidthCm\": parseFloat(WidthInput.text),\n        \"sizeHeightCm\": parseFloat(HeightInput.text),\n      },\n\t\t\t\t\"isActive\":true,\n      \"shipment\": {\n        \"id\": ListShipmentDetail.selectedRow.id\n      }\n    }\n  ]\n},\n\tquery:`\n\t\tmutation addShipmentItem($input:[AddShipmentItemInput!]!){\n  addShipmentItem (input:$input){ \n    numUids\n  }\n}\n\t`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

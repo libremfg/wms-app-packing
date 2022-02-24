@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "AddItemsTabs",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tshipmentItemReceiveType: () => {\n\t\tvar item = QueryMaterialInventoryHandling.data.data.getMaterialDefinition\n\t\t//return item\n\t\treturn (item.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK');\n\t},\n\t\n}",
+    "variables": []
+  },
+  "id": "Page1_AddItemsTabs",
+  "deleted": false,
+  "gitSyncId": "6188a576799de8559acc5336_6216eedd2882606a1df5d552"
+}

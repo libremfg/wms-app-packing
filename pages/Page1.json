@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 2816,
+          "rightColumn": 1296,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -218,22 +218,7 @@
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
-                  "key": "template.Text1.text"
-                },
-                {
                   "key": "listData"
-                },
-                {
-                  "key": "template.Text2.text"
-                },
-                {
-                  "key": "template.Text4.text"
-                },
-                {
-                  "key": "template.Text5.text"
-                },
-                {
-                  "key": "template.Text5.backgroundColor"
                 },
                 {
                   "key": "isVisible"
@@ -257,6 +242,7 @@
                   "noPad": true,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
+                  "dynamicBindingPathList": [],
                   "children": [
                     {
                       "boxShadow": "NONE",
@@ -274,6 +260,7 @@
                       "openParentPropertyPane": true,
                       "isDeletable": false,
                       "leftColumn": 0,
+                      "dynamicBindingPathList": [],
                       "children": [
                         {
                           "widgetName": "Canvas2",
@@ -294,6 +281,7 @@
                           "isLoading": false,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
+                          "dynamicBindingPathList": [],
                           "children": [
                             {
                               "widgetName": "Text1",
@@ -572,7 +560,7 @@
               "key": "ir7m4o4ba1",
               "backgroundColor": "transparent",
               "rightColumn": 20,
-              "onListItemClick": "{{QueryShipment.run()}}",
+              "onListItemClick": "{{QueryShipment.run(() => QuertShipmentMaterialCode.run(), () => {})}}",
               "itemBackgroundColor": "#FFFFFF",
               "widgetId": "xzfevh51a7",
               "isVisible": "{{EquipmentSelector.selectedOptionValue == null?false:true}}",
@@ -659,6 +647,7 @@
                   "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
+                  "dynamicBindingPathList": [],
                   "children": [
                     {
                       "widgetName": "Text3",
@@ -903,28 +892,22 @@
                           "key": "tableData"
                         },
                         {
-                          "key": "primaryColumns.material.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.quantity.computedValue"
-                        },
-                        {
-                          "key": "derivedColumns.customColumn2.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn2.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.packedQty.computedValue"
+                          "key": "primaryColumns.customColumn3.buttonLabel"
                         },
                         {
                           "key": "primaryColumns.stockOnHandQty.computedValue"
                         },
                         {
-                          "key": "derivedColumns.customColumn3.buttonLabel"
+                          "key": "primaryColumns.packedQty.computedValue"
                         },
                         {
-                          "key": "primaryColumns.customColumn3.buttonLabel"
+                          "key": "primaryColumns.customColumn2.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.quantity.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.material.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -1117,6 +1100,7 @@
                       "hideCard": false,
                       "parentColumnSpace": 13.30859375,
                       "leftColumn": 0,
+                      "dynamicBindingPathList": [],
                       "key": "ne5gc6ef0n",
                       "dividerColor": "#EBEBEB",
                       "orientation": "horizontal",
@@ -1214,67 +1198,37 @@
                           "key": "tableData"
                         },
                         {
-                          "key": "primaryColumns.id.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.reference.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.items.computedValue"
-                        },
-                        {
-                          "key": "derivedColumns.customColumn1.buttonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn1.buttonLabel"
-                        },
-                        {
-                          "key": "derivedColumns.customColumn2.buttonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn2.buttonLabel"
-                        },
-                        {
-                          "key": "derivedColumns.customColumn3.buttonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.buttonLabel"
-                        },
-                        {
-                          "key": "derivedColumns.customColumn4.buttonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn4.buttonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.items.buttonLabel"
-                        },
-                        {
-                          "key": "primaryColumns.transportCompanyShipmentId.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.items.isDisabled"
-                        },
-                        {
-                          "key": "derivedColumns.customColumn3.isDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.isDisabled"
-                        },
-                        {
-                          "key": "derivedColumns.customColumn4.isDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn4.isDisabled"
+                          "key": "primaryColumns.customColumn5.buttonLabel"
                         },
                         {
                           "key": "primaryColumns.status.computedValue"
                         },
                         {
-                          "key": "derivedColumns.customColumn5.buttonLabel"
+                          "key": "primaryColumns.transportCompanyShipmentId.computedValue"
                         },
                         {
-                          "key": "primaryColumns.customColumn5.buttonLabel"
+                          "key": "primaryColumns.customColumn4.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn3.isDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.items.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.items.isDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.reference.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.id.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -1879,25 +1833,7 @@
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
-                          "key": "template.Text6.text"
-                        },
-                        {
-                          "key": "template.Text7.text"
-                        },
-                        {
                           "key": "listData"
-                        },
-                        {
-                          "key": "template.Text12.text"
-                        },
-                        {
-                          "key": "template.IconButton2.iconName"
-                        },
-                        {
-                          "key": "template.IconButton2.buttonColor"
-                        },
-                        {
-                          "key": "template.Text25.text"
                         }
                       ],
                       "gridType": "vertical",
@@ -1918,6 +1854,7 @@
                           "noPad": true,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
+                          "dynamicBindingPathList": [],
                           "children": [
                             {
                               "boxShadow": "NONE",
@@ -1935,6 +1872,7 @@
                               "openParentPropertyPane": true,
                               "isDeletable": false,
                               "leftColumn": 0,
+                              "dynamicBindingPathList": [],
                               "children": [
                                 {
                                   "widgetName": "Canvas5",
@@ -1955,6 +1893,7 @@
                                   "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
+                                  "dynamicBindingPathList": [],
                                   "children": [
                                     {
                                       "widgetName": "Text6",
@@ -2576,24 +2515,6 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "listData"
-                        },
-                        {
-                          "key": "template.Text27.text"
-                        },
-                        {
-                          "key": "template.Text28.text"
-                        },
-                        {
-                          "key": "template.Text29.text"
-                        },
-                        {
-                          "key": "template.Text30.text"
-                        },
-                        {
-                          "key": "template.Text30.fontSize"
-                        },
-                        {
-                          "key": "template.Text30.textAlign"
                         }
                       ],
                       "gridType": "vertical",
@@ -2614,6 +2535,7 @@
                           "noPad": true,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
+                          "dynamicBindingPathList": [],
                           "children": [
                             {
                               "boxShadow": "NONE",
@@ -2632,6 +2554,7 @@
                               "isDeletable": false,
                               "animateLoading": true,
                               "leftColumn": 0,
+                              "dynamicBindingPathList": [],
                               "children": [
                                 {
                                   "widgetName": "Canvas23",
@@ -2652,6 +2575,7 @@
                                   "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
+                                  "dynamicBindingPathList": [],
                                   "children": [
                                     {
                                       "widgetName": "Text27",
@@ -2977,8 +2901,12 @@
                     },
                     {
                       "widgetName": "CreateShipment",
+                      "onClick": "{{CreateShipmentMutation.run()}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
+                        {
+                          "key": "isDisabled"
+                        },
                         {
                           "key": "isVisible"
                         }
@@ -2992,7 +2920,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 29.80859375,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 48,
                       "dynamicBindingPathList": [
                         {
@@ -3000,12 +2932,12 @@
                         }
                       ],
                       "text": "Create Shipment",
-                      "isDisabled": false,
+                      "isDisabled": "",
                       "key": "oiun1q2rlh",
                       "rightColumn": 64,
                       "isDefaultClickDisabled": true,
                       "widgetId": "syggxz1h1j",
-                      "isVisible": "{{JSObject1.myFun2()}}",
+                      "isVisible": "{{QueryShipment.data.data.getOrder.shipments.length==0?true:false}}",
                       "recaptchaType": "V3",
                       "version": 1,
                       "parentId": "bm5a7j1sy4",
@@ -3072,28 +3004,22 @@
               "shouldScrollContents": true,
               "parentColumnSpace": 13.30859375,
               "leftColumn": 7,
+              "dynamicBindingPathList": [],
               "children": [
                 {
                   "widgetName": "Canvas6",
-                  "rightColumn": 319.40625,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "2v8w1898cp",
                   "topRow": 0,
                   "bottomRow": 310,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "igjy9bgord",
                   "shouldScrollContents": false,
                   "minHeight": 316,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
+                  "dynamicBindingPathList": [],
                   "children": [
                     {
                       "widgetName": "Icon1",
@@ -3114,6 +3040,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "leftColumn": 56,
+                      "dynamicBindingPathList": [],
                       "iconSize": 24,
                       "key": "zixug0jymb"
                     },
@@ -3153,6 +3080,7 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "leftColumn": 37,
+                      "dynamicBindingPathList": [],
                       "text": "Close",
                       "isDisabled": false,
                       "key": "oratw74zz7",
@@ -3454,7 +3382,15 @@
                     }
                   ],
                   "isDisabled": false,
-                  "key": "iyy6k8q99l"
+                  "key": "iyy6k8q99l",
+                  "rightColumn": 319.40625,
+                  "detachFromLayout": true,
+                  "widgetId": "2v8w1898cp",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "igjy9bgord",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
                 }
               ],
               "key": "an6f5x17yn",
@@ -3483,28 +3419,22 @@
               "shouldScrollContents": true,
               "parentColumnSpace": 13.30859375,
               "leftColumn": 5,
+              "dynamicBindingPathList": [],
               "children": [
                 {
                   "widgetName": "Canvas12",
-                  "rightColumn": 319.40625,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "n14jwxjd95",
                   "topRow": 0,
                   "bottomRow": 580,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "fhb3pb87t3",
                   "shouldScrollContents": false,
                   "minHeight": 586,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
+                  "dynamicBindingPathList": [],
                   "children": [
                     {
                       "tabId": "",
@@ -3521,6 +3451,7 @@
                       "hideCard": false,
                       "parentColumnSpace": 5.01800537109375,
                       "leftColumn": 0,
+                      "dynamicBindingPathList": [],
                       "children": [
                         {
                           "rightColumn": 321.15234375,
@@ -3528,7 +3459,7 @@
                           "detachFromLayout": true,
                           "widgetId": "z1nbhfge5v",
                           "containerStyle": "none",
-                          "bottomRow": 180,
+                          "bottomRow": 170,
                           "topRow": 0,
                           "parentRowSpace": 1,
                           "isVisible": true,
@@ -3547,70 +3478,8 @@
                           "renderMode": "CANVAS",
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
+                          "dynamicBindingPathList": [],
                           "children": [
-                            {
-                              "widgetName": "BoxWeightInput",
-                              "displayName": "Input",
-                              "iconSVG": "/static/media/icon.9f505595.svg",
-                              "topRow": 12,
-                              "bottomRow": 16,
-                              "parentRowSpace": 10,
-                              "autoFocus": false,
-                              "type": "INPUT_WIDGET",
-                              "hideCard": false,
-                              "parentColumnSpace": 5.01800537109375,
-                              "dynamicTriggerPathList": [],
-                              "resetOnSubmit": true,
-                              "leftColumn": 28.444444444444443,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "defaultText"
-                                }
-                              ],
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "isDisabled": false,
-                              "key": "7jx32u4uij",
-                              "isRequired": false,
-                              "rightColumn": 64,
-                              "widgetId": "jqp9itiofx",
-                              "isVisible": true,
-                              "label": "",
-                              "allowCurrencyChange": false,
-                              "version": 1,
-                              "parentId": "z1nbhfge5v",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "iconAlign": "left",
-                              "defaultText": "{{ShipmentItemList.selectedItem.weightKg}}"
-                            },
-                            {
-                              "widgetName": "Text19",
-                              "displayName": "Text",
-                              "iconSVG": "/static/media/icon.97c59b52.svg",
-                              "topRow": 12,
-                              "bottomRow": 16,
-                              "parentRowSpace": 10,
-                              "type": "TEXT_WIDGET",
-                              "hideCard": false,
-                              "parentColumnSpace": 5.01800537109375,
-                              "dynamicTriggerPathList": [],
-                              "leftColumn": 0,
-                              "dynamicBindingPathList": [],
-                              "text": "Weight(kg)",
-                              "key": "tfpt1p054n",
-                              "rightColumn": 28.444444444444443,
-                              "textAlign": "LEFT",
-                              "widgetId": "vt0nfslfk9",
-                              "isVisible": true,
-                              "fontStyle": "BOLD",
-                              "textColor": "#231F20",
-                              "version": 1,
-                              "parentId": "z1nbhfge5v",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "fontSize": "PARAGRAPH"
-                            },
                             {
                               "widgetName": "BoxHeightInput",
                               "displayName": "Input",
@@ -3624,7 +3493,7 @@
                               "parentColumnSpace": 5.01800537109375,
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
-                              "leftColumn": 28.444444444444443,
+                              "leftColumn": 28,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultText"
@@ -3687,7 +3556,7 @@
                               "parentColumnSpace": 5.01800537109375,
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
-                              "leftColumn": 28.444444444444443,
+                              "leftColumn": 28,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultText"
@@ -3835,6 +3704,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "leftColumn": 56,
+                      "dynamicBindingPathList": [],
                       "iconSize": 24,
                       "key": "dw7b8gs3uq"
                     },
@@ -3874,6 +3744,7 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "leftColumn": 38,
+                      "dynamicBindingPathList": [],
                       "text": "Close",
                       "isDisabled": false,
                       "key": "koy13o66fu",
@@ -3927,6 +3798,18 @@
                           "menuItems": {},
                           "onClick": "{{showModal('AddItemsModal');closeModal('SelectPackageModal')}}"
                         },
+                        "groupButtonqs977344rj": {
+                          "id": "groupButtonqs977344rj",
+                          "label": "Weigh Items",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "buttonColor": "#03B365",
+                          "placement": "CENTER",
+                          "widgetId": "q1nurxngge",
+                          "isDisabled": true,
+                          "isVisible": true,
+                          "index": 2
+                        },
                         "groupButton3": {
                           "label": "Add Docs",
                           "id": "groupButton3",
@@ -3935,7 +3818,7 @@
                           "widgetId": "",
                           "isVisible": true,
                           "isDisabled": true,
-                          "index": 2,
+                          "index": 3,
                           "menuItems": {
                             "menuItem1": {
                               "label": "First Option",
@@ -3975,13 +3858,14 @@
                         },
                         "groupButtonmmb4g5yzmo": {
                           "id": "groupButtonmmb4g5yzmo",
-                          "label": "Seal and Label",
+                          "label": "Print Postage Label",
                           "menuItems": {},
                           "buttonType": "SIMPLE",
                           "buttonColor": "#03B365",
                           "widgetId": "6nxkr62b1i",
                           "isDisabled": true,
-                          "isVisible": true
+                          "isVisible": true,
+                          "index": 4
                         }
                       },
                       "type": "BUTTON_GROUP_WIDGET",
@@ -3996,7 +3880,7 @@
                       "dynamicBindingPathList": [],
                       "key": "i5eraiqm8c",
                       "orientation": "horizontal",
-                      "rightColumn": 60,
+                      "rightColumn": 62,
                       "widgetId": "yql93lskfj",
                       "isVisible": true,
                       "version": 1,
@@ -4007,7 +3891,7 @@
                     },
                     {
                       "widgetName": "SelectPackageConfirmButton",
-                      "onClick": "{{EditSelectPackage.run(() => {{showModal('AddItemsModal');closeModal('SelectPackageModal');QuertShipmentMaterialCode.run();QueryOrder.run()}}, () => {})}}",
+                      "onClick": "{{UpdatePackageSize.run(() => {{showModal('AddItemsModal');closeModal('SelectPackageModal');QuertShipmentMaterialCode.run();QueryOrder.run()}}, () => {})}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
@@ -4045,7 +3929,15 @@
                     }
                   ],
                   "isDisabled": false,
-                  "key": "zbphgx4kah"
+                  "key": "zbphgx4kah",
+                  "rightColumn": 319.40625,
+                  "detachFromLayout": true,
+                  "widgetId": "n14jwxjd95",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "fhb3pb87t3",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
                 }
               ],
               "key": "eej2uynzz6",
@@ -4074,29 +3966,1138 @@
               "shouldScrollContents": true,
               "parentColumnSpace": 5.439453125,
               "leftColumn": 44,
+              "dynamicBindingPathList": [],
               "children": [
                 {
                   "widgetName": "Canvas18",
-                  "rightColumn": 130.546875,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "yabla4zhr1",
                   "topRow": 0,
-                  "bottomRow": 940,
+                  "bottomRow": 650,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "hvbs4xaoba",
                   "shouldScrollContents": false,
-                  "minHeight": 942,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
+                  "minHeight": 654,
                   "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
                   "leftColumn": 0,
+                  "dynamicBindingPathList": [],
                   "children": [
+                    {
+                      "widgetName": "receiveTabs",
+                      "isCanvas": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "displayName": "Tabs",
+                      "iconSVG": "/static/media/icon.74a6d653.svg",
+                      "topRow": 18,
+                      "bottomRow": 56,
+                      "parentRowSpace": 10,
+                      "type": "TABS_WIDGET",
+                      "hideCard": false,
+                      "shouldScrollContents": false,
+                      "parentColumnSpace": 19.8125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultTab"
+                        },
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "tabId": "tab1",
+                          "widgetName": "Canvas2Copy",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 520,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": true,
+                          "hideCard": true,
+                          "shouldScrollContents": false,
+                          "minHeight": 400,
+                          "parentColumnSpace": 1,
+                          "dynamicTriggerPathList": [],
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [],
+                          "children": [
+                            {
+                              "widgetName": "Form1",
+                              "backgroundColor": "white",
+                              "rightColumn": 64,
+                              "isCanvas": true,
+                              "displayName": "Form",
+                              "iconSVG": "/static/media/icon.ea3e08d1.svg",
+                              "widgetId": "sx3bhjv5ev",
+                              "topRow": 0,
+                              "bottomRow": 40,
+                              "parentRowSpace": 10,
+                              "isVisible": true,
+                              "type": "FORM_WIDGET",
+                              "hideCard": false,
+                              "parentId": "ob6g1mbuqa",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "parentColumnSpace": 4.990478515625,
+                              "leftColumn": 0,
+                              "children": [
+                                {
+                                  "widgetName": "Canvas14",
+                                  "rightColumn": 119.771484375,
+                                  "detachFromLayout": true,
+                                  "displayName": "Canvas",
+                                  "widgetId": "pzlf4a2kje",
+                                  "containerStyle": "none",
+                                  "topRow": 0,
+                                  "bottomRow": 390,
+                                  "parentRowSpace": 1,
+                                  "isVisible": true,
+                                  "type": "CANVAS_WIDGET",
+                                  "canExtend": false,
+                                  "version": 1,
+                                  "hideCard": true,
+                                  "parentId": "sx3bhjv5ev",
+                                  "minHeight": 400,
+                                  "renderMode": "CANVAS",
+                                  "isLoading": false,
+                                  "parentColumnSpace": 1,
+                                  "leftColumn": 0,
+                                  "children": [
+                                    {
+                                      "resetFormOnClick": true,
+                                      "widgetName": "btnAddSerial",
+                                      "onClick": "{{ReceiveSerialised.run(() => MutationCompletions.receiveSerialised(), () => {})}}",
+                                      "buttonColor": "#03B365",
+                                      "displayName": "FormButton",
+                                      "iconSVG": "/static/media/icon.c8f649ed.svg",
+                                      "topRow": 26,
+                                      "bottomRow": 30,
+                                      "type": "FORM_BUTTON_WIDGET",
+                                      "hideCard": true,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onClick"
+                                        }
+                                      ],
+                                      "leftColumn": 47,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Submit",
+                                      "key": "orfb913i2s",
+                                      "rightColumn": 63,
+                                      "isDefaultClickDisabled": true,
+                                      "widgetId": "f05arf26lk",
+                                      "isVisible": true,
+                                      "version": 1,
+                                      "recaptchaType": "V3",
+                                      "parentId": "pzlf4a2kje",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "disabledWhenInvalid": true,
+                                      "buttonVariant": "PRIMARY"
+                                    },
+                                    {
+                                      "resetFormOnClick": true,
+                                      "widgetName": "btnSerialReset",
+                                      "rightColumn": 46,
+                                      "isDefaultClickDisabled": true,
+                                      "buttonColor": "#03B365",
+                                      "displayName": "FormButton",
+                                      "iconSVG": "/static/media/icon.c8f649ed.svg",
+                                      "widgetId": "l6my1atcux",
+                                      "topRow": 26,
+                                      "bottomRow": 30,
+                                      "isVisible": true,
+                                      "type": "FORM_BUTTON_WIDGET",
+                                      "version": 1,
+                                      "recaptchaType": "V3",
+                                      "hideCard": true,
+                                      "parentId": "pzlf4a2kje",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "disabledWhenInvalid": false,
+                                      "leftColumn": 30,
+                                      "buttonVariant": "SECONDARY",
+                                      "text": "Reset",
+                                      "key": "orfb913i2s"
+                                    },
+                                    {
+                                      "widgetName": "txtSerialTitle",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                                      "topRow": 0,
+                                      "bottomRow": 4,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 5.56640625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
+                                      "text": "{{appsmith.store.receiveTabsDefault}}",
+                                      "key": "uhwu0fb310",
+                                      "rightColumn": 64,
+                                      "backgroundColor": "#F6F7F8",
+                                      "textAlign": "LEFT",
+                                      "widgetId": "u7jvhz6xtt",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "version": 1,
+                                      "parentId": "pzlf4a2kje",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "lblScanBarcode",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.e6c93592.svg",
+                                      "topRow": 4,
+                                      "bottomRow": 8,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Scan Barcode",
+                                      "key": "0unoxtd493",
+                                      "rightColumn": 32,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "jqnyw8st8a",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "version": 1,
+                                      "parentId": "pzlf4a2kje",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "inpBarcode",
+                                      "displayName": "Input",
+                                      "iconSVG": "/static/media/icon.9f505595.svg",
+                                      "topRow": 8,
+                                      "bottomRow": 12,
+                                      "parentRowSpace": 10,
+                                      "autoFocus": false,
+                                      "type": "INPUT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [],
+                                      "resetOnSubmit": true,
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "regex"
+                                        }
+                                      ],
+                                      "labelStyle": "",
+                                      "inputType": "TEXT",
+                                      "isDisabled": false,
+                                      "key": "hbhk893y2u",
+                                      "isRequired": true,
+                                      "rightColumn": 64,
+                                      "widgetId": "npb34l44my",
+                                      "isVisible": true,
+                                      "label": "",
+                                      "allowCurrencyChange": false,
+                                      "version": 1,
+                                      "parentId": "pzlf4a2kje",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "regex": "{{QueryMaterialInventoryHandling.data.data.getMaterialDefinition.serialMask}}",
+                                      "iconAlign": "left",
+                                      "defaultText": ""
+                                    }
+                                  ],
+                                  "key": "ynxpp8ycgp"
+                                }
+                              ],
+                              "key": "dk2s29klpd"
+                            }
+                          ],
+                          "isDisabled": false,
+                          "key": "a7umq6vyne",
+                          "tabName": "SERIALISED",
+                          "rightColumn": 475.5,
+                          "detachFromLayout": true,
+                          "widgetId": "ob6g1mbuqa",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "ly3l5q7iyj",
+                          "renderMode": "CANVAS",
+                          "isLoading": false
+                        },
+                        {
+                          "tabId": "tab2",
+                          "widgetName": "Canvas3Copy",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 430,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": true,
+                          "hideCard": true,
+                          "shouldScrollContents": false,
+                          "minHeight": 400,
+                          "parentColumnSpace": 1,
+                          "dynamicTriggerPathList": [],
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [],
+                          "children": [
+                            {
+                              "widgetName": "Form1Copy",
+                              "backgroundColor": "white",
+                              "rightColumn": 64,
+                              "isCanvas": true,
+                              "displayName": "Form",
+                              "iconSVG": "/static/media/icon.ea3e08d1.svg",
+                              "widgetId": "78s3w52s54",
+                              "topRow": 1,
+                              "bottomRow": 41,
+                              "parentRowSpace": 10,
+                              "isVisible": true,
+                              "type": "FORM_WIDGET",
+                              "hideCard": false,
+                              "parentId": "etnr3yd61o",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "parentColumnSpace": 4.990478515625,
+                              "leftColumn": 0,
+                              "children": [
+                                {
+                                  "widgetName": "Canvas14Copy",
+                                  "rightColumn": 119.771484375,
+                                  "detachFromLayout": true,
+                                  "displayName": "Canvas",
+                                  "widgetId": "fk99sabnbm",
+                                  "containerStyle": "none",
+                                  "topRow": 0,
+                                  "bottomRow": 390,
+                                  "parentRowSpace": 1,
+                                  "isVisible": true,
+                                  "type": "CANVAS_WIDGET",
+                                  "canExtend": false,
+                                  "version": 1,
+                                  "hideCard": true,
+                                  "parentId": "78s3w52s54",
+                                  "minHeight": 400,
+                                  "renderMode": "CANVAS",
+                                  "isLoading": false,
+                                  "parentColumnSpace": 1,
+                                  "leftColumn": 0,
+                                  "children": [
+                                    {
+                                      "resetFormOnClick": true,
+                                      "widgetName": "btnReceiveTrackedByCarrier",
+                                      "onClick": "{{ReceiveTrackedByCarrier.run(() => MutationCompletions.receiveTrackedByCarrier(), () => {})}}",
+                                      "buttonColor": "#03B365",
+                                      "displayName": "FormButton",
+                                      "iconSVG": "/static/media/icon.c8f649ed.svg",
+                                      "topRow": 21,
+                                      "bottomRow": 25,
+                                      "type": "FORM_BUTTON_WIDGET",
+                                      "hideCard": true,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onClick"
+                                        }
+                                      ],
+                                      "leftColumn": 48,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Submit",
+                                      "key": "orfb913i2s",
+                                      "rightColumn": 64,
+                                      "isDefaultClickDisabled": true,
+                                      "widgetId": "pspsnlwkt3",
+                                      "isVisible": true,
+                                      "version": 1,
+                                      "recaptchaType": "V3",
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "disabledWhenInvalid": true,
+                                      "buttonVariant": "PRIMARY"
+                                    },
+                                    {
+                                      "resetFormOnClick": true,
+                                      "widgetName": "btnCarrierReset",
+                                      "rightColumn": 48,
+                                      "isDefaultClickDisabled": true,
+                                      "buttonColor": "#03B365",
+                                      "displayName": "FormButton",
+                                      "iconSVG": "/static/media/icon.c8f649ed.svg",
+                                      "widgetId": "n24qgxp2ay",
+                                      "topRow": 21,
+                                      "bottomRow": 25,
+                                      "isVisible": true,
+                                      "type": "FORM_BUTTON_WIDGET",
+                                      "version": 1,
+                                      "recaptchaType": "V3",
+                                      "hideCard": true,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "disabledWhenInvalid": false,
+                                      "leftColumn": 32,
+                                      "buttonVariant": "SECONDARY",
+                                      "text": "Reset",
+                                      "key": "orfb913i2s"
+                                    },
+                                    {
+                                      "widgetName": "txtCarrierTitle",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                                      "topRow": 0,
+                                      "bottomRow": 4,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 5.56640625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
+                                      "text": "{{appsmith.store.receiveTabsDefault}}",
+                                      "key": "uhwu0fb310",
+                                      "rightColumn": 64,
+                                      "backgroundColor": "#F6F7F8",
+                                      "textAlign": "LEFT",
+                                      "widgetId": "dahwygf56w",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "version": 1,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "txtCarrierStatus",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.e6c93592.svg",
+                                      "topRow": 12,
+                                      "bottomRow": 16,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Status",
+                                      "key": "0unoxtd493",
+                                      "rightColumn": 19,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "jwwjdvbho2",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "version": 1,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "txtSerialBin",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.e6c93592.svg",
+                                      "topRow": 4,
+                                      "bottomRow": 8,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Bin",
+                                      "key": "0unoxtd493",
+                                      "rightColumn": 19,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "xcj4s0fy93",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "version": 1,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "carrierSelectBin",
+                                      "isFilterable": false,
+                                      "displayName": "Select",
+                                      "iconSVG": "/static/media/icon.bd99caba.svg",
+                                      "topRow": 4,
+                                      "bottomRow": 8,
+                                      "parentRowSpace": 10,
+                                      "type": "DROP_DOWN_WIDGET",
+                                      "serverSideFiltering": false,
+                                      "hideCard": false,
+                                      "defaultOptionValue": "GREEN",
+                                      "selectionType": "SINGLE_SELECT",
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onOptionChange"
+                                        }
+                                      ],
+                                      "leftColumn": 19,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "options"
+                                        }
+                                      ],
+                                      "options": "{{GetWarehouseBins.data.data.getEquipment.children}}",
+                                      "isDisabled": false,
+                                      "key": "ct817meesn",
+                                      "isRequired": true,
+                                      "rightColumn": 63,
+                                      "widgetId": "yb01lmut54",
+                                      "isVisible": true,
+                                      "label": "",
+                                      "version": 1,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "onOptionChange": "{{GetCarrierCarriers.run()}}"
+                                    },
+                                    {
+                                      "widgetName": "txtCarrierCarrier",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.e6c93592.svg",
+                                      "topRow": 8,
+                                      "bottomRow": 12,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Carrier",
+                                      "key": "0unoxtd493",
+                                      "rightColumn": 19,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "t8vlc560eg",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "version": 1,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "carrierSelectCarrier",
+                                      "isFilterable": false,
+                                      "displayName": "Select",
+                                      "iconSVG": "/static/media/icon.bd99caba.svg",
+                                      "topRow": 8,
+                                      "bottomRow": 12,
+                                      "parentRowSpace": 10,
+                                      "type": "DROP_DOWN_WIDGET",
+                                      "serverSideFiltering": false,
+                                      "hideCard": false,
+                                      "defaultOptionValue": "GREEN",
+                                      "selectionType": "SINGLE_SELECT",
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onOptionChange"
+                                        }
+                                      ],
+                                      "leftColumn": 19,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "options"
+                                        }
+                                      ],
+                                      "options": "{{GetCarrierCarriers.data.data.getEquipment.carriers}}",
+                                      "isDisabled": false,
+                                      "key": "ct817meesn",
+                                      "isRequired": true,
+                                      "rightColumn": 53,
+                                      "widgetId": "wtrskt3dck",
+                                      "isVisible": true,
+                                      "label": "",
+                                      "version": 1,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "onOptionChange": "{{GetCarriersStatus.run()}}"
+                                    },
+                                    {
+                                      "boxShadow": "NONE",
+                                      "widgetName": "btnCarrierAddCarrier",
+                                      "onClick": "{{showModal('modalCreateCarrier')}}",
+                                      "buttonColor": "#03B365",
+                                      "displayName": "Icon Button",
+                                      "iconSVG": "/static/media/icon.1a0c634a.svg",
+                                      "topRow": 8,
+                                      "bottomRow": 12,
+                                      "parentRowSpace": 10,
+                                      "type": "ICON_BUTTON_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 4.622314453124999,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onClick"
+                                        }
+                                      ],
+                                      "leftColumn": 53,
+                                      "dynamicBindingPathList": [],
+                                      "isDisabled": false,
+                                      "key": "as2kn4xhet",
+                                      "rightColumn": 63,
+                                      "iconName": "plus",
+                                      "widgetId": "6hnbiv3lxc",
+                                      "isVisible": true,
+                                      "version": 1,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "borderRadius": "CIRCLE",
+                                      "buttonVariant": "PRIMARY"
+                                    },
+                                    {
+                                      "widgetName": "inputCarrierQuantity",
+                                      "displayName": "Input",
+                                      "iconSVG": "/static/media/icon.9f505595.svg",
+                                      "topRow": 16,
+                                      "bottomRow": 20,
+                                      "parentRowSpace": 10,
+                                      "autoFocus": false,
+                                      "type": "INPUT_WIDGET_V2",
+                                      "hideCard": false,
+                                      "animateLoading": true,
+                                      "parentColumnSpace": 5.64453125,
+                                      "dynamicTriggerPathList": [],
+                                      "resetOnSubmit": true,
+                                      "leftColumn": 19,
+                                      "dynamicBindingPathList": [],
+                                      "labelStyle": "",
+                                      "inputType": "NUMBER",
+                                      "isDisabled": false,
+                                      "key": "xh192cbvbk",
+                                      "isRequired": false,
+                                      "rightColumn": 63,
+                                      "widgetId": "u6u0j7ukcf",
+                                      "isVisible": true,
+                                      "label": "",
+                                      "version": 2,
+                                      "parentId": "fk99sabnbm",
+                                      "minNum": "0",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "iconAlign": "left",
+                                      "defaultText": ""
+                                    },
+                                    {
+                                      "widgetName": "txtCarrierQuantity",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                                      "topRow": 16,
+                                      "bottomRow": 20,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "animateLoading": true,
+                                      "parentColumnSpace": 5.64453125,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [],
+                                      "shouldTruncate": false,
+                                      "truncateButtonColor": "#FFC13D",
+                                      "text": "Quantity",
+                                      "key": "9hhgqs1ikg",
+                                      "rightColumn": 19,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "5y1b1zggbh",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "shouldScroll": false,
+                                      "version": 1,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "Text13Copy",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                                      "topRow": 12,
+                                      "bottomRow": 16,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "animateLoading": true,
+                                      "parentColumnSpace": 3.76953125,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 19,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
+                                      "shouldTruncate": false,
+                                      "truncateButtonColor": "#FFC13D",
+                                      "text": "{{GetCarriersStatus.data.data.getCarrier.status.code}}",
+                                      "key": "kcvq6b1j0i",
+                                      "rightColumn": 63,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "pwhm5qhp83",
+                                      "isVisible": true,
+                                      "fontStyle": "",
+                                      "textColor": "#231F20",
+                                      "shouldScroll": false,
+                                      "version": 1,
+                                      "parentId": "fk99sabnbm",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    }
+                                  ],
+                                  "key": "ynxpp8ycgp"
+                                }
+                              ],
+                              "key": "dk2s29klpd"
+                            }
+                          ],
+                          "isDisabled": false,
+                          "key": "a7umq6vyne",
+                          "tabName": "CARRIER",
+                          "rightColumn": 475.5,
+                          "detachFromLayout": true,
+                          "widgetId": "etnr3yd61o",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "ly3l5q7iyj",
+                          "renderMode": "CANVAS",
+                          "isLoading": false
+                        },
+                        {
+                          "tabId": "tabk74roks5nk",
+                          "widgetName": "Canvas4Copy",
+                          "displayName": "Canvas",
+                          "topRow": 1,
+                          "bottomRow": 430,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": false,
+                          "hideCard": true,
+                          "minHeight": 400,
+                          "parentColumnSpace": 1,
+                          "dynamicTriggerPathList": [],
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [],
+                          "children": [
+                            {
+                              "widgetName": "Form1Copy1",
+                              "backgroundColor": "white",
+                              "rightColumn": 64,
+                              "isCanvas": true,
+                              "displayName": "Form",
+                              "iconSVG": "/static/media/icon.ea3e08d1.svg",
+                              "widgetId": "kcr356navm",
+                              "topRow": 1,
+                              "bottomRow": 41,
+                              "parentRowSpace": 10,
+                              "isVisible": true,
+                              "type": "FORM_WIDGET",
+                              "hideCard": false,
+                              "parentId": "g30jg01e8o",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "parentColumnSpace": 4.990478515625,
+                              "leftColumn": 0,
+                              "children": [
+                                {
+                                  "widgetName": "Canvas14Copy1",
+                                  "rightColumn": 119.771484375,
+                                  "detachFromLayout": true,
+                                  "displayName": "Canvas",
+                                  "widgetId": "xnzrqmrazn",
+                                  "containerStyle": "none",
+                                  "topRow": 0,
+                                  "bottomRow": 390,
+                                  "parentRowSpace": 1,
+                                  "isVisible": true,
+                                  "type": "CANVAS_WIDGET",
+                                  "canExtend": false,
+                                  "version": 1,
+                                  "hideCard": true,
+                                  "parentId": "kcr356navm",
+                                  "minHeight": 400,
+                                  "renderMode": "CANVAS",
+                                  "isLoading": false,
+                                  "parentColumnSpace": 1,
+                                  "leftColumn": 0,
+                                  "children": [
+                                    {
+                                      "resetFormOnClick": true,
+                                      "widgetName": "btnReceiveUntracked",
+                                      "onClick": "{{ReceiveUntracked.run(() => MutationCompletions.receiveUntracked(), () => {})}}",
+                                      "buttonColor": "#03B365",
+                                      "displayName": "FormButton",
+                                      "iconSVG": "/static/media/icon.c8f649ed.svg",
+                                      "topRow": 17,
+                                      "bottomRow": 21,
+                                      "type": "FORM_BUTTON_WIDGET",
+                                      "hideCard": true,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onClick"
+                                        }
+                                      ],
+                                      "leftColumn": 48,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Submit",
+                                      "key": "orfb913i2s",
+                                      "rightColumn": 64,
+                                      "isDefaultClickDisabled": true,
+                                      "widgetId": "dff3gosd60",
+                                      "isVisible": true,
+                                      "version": 1,
+                                      "recaptchaType": "V3",
+                                      "parentId": "xnzrqmrazn",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "disabledWhenInvalid": true,
+                                      "buttonVariant": "PRIMARY"
+                                    },
+                                    {
+                                      "resetFormOnClick": true,
+                                      "widgetName": "btnResetBulk",
+                                      "rightColumn": 47,
+                                      "isDefaultClickDisabled": true,
+                                      "buttonColor": "#03B365",
+                                      "displayName": "FormButton",
+                                      "iconSVG": "/static/media/icon.c8f649ed.svg",
+                                      "widgetId": "mha2ofjm5s",
+                                      "topRow": 17,
+                                      "bottomRow": 21,
+                                      "isVisible": true,
+                                      "type": "FORM_BUTTON_WIDGET",
+                                      "version": 1,
+                                      "recaptchaType": "V3",
+                                      "hideCard": true,
+                                      "parentId": "xnzrqmrazn",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "disabledWhenInvalid": false,
+                                      "leftColumn": 31,
+                                      "buttonVariant": "SECONDARY",
+                                      "text": "Reset",
+                                      "key": "orfb913i2s"
+                                    },
+                                    {
+                                      "widgetName": "txtBulk",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                                      "topRow": 0,
+                                      "bottomRow": 4,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 5.56640625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
+                                      "text": "{{appsmith.store.receiveTabsDefault}}",
+                                      "key": "uhwu0fb310",
+                                      "rightColumn": 64,
+                                      "backgroundColor": "#F6F7F8",
+                                      "textAlign": "LEFT",
+                                      "widgetId": "cgaj83900k",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "version": 1,
+                                      "parentId": "xnzrqmrazn",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "bulkSelectStatus",
+                                      "isFilterable": false,
+                                      "displayName": "Select",
+                                      "iconSVG": "/static/media/icon.bd99caba.svg",
+                                      "topRow": 4,
+                                      "bottomRow": 8,
+                                      "parentRowSpace": 10,
+                                      "type": "DROP_DOWN_WIDGET",
+                                      "serverSideFiltering": false,
+                                      "hideCard": false,
+                                      "defaultOptionValue": "RAW",
+                                      "selectionType": "SINGLE_SELECT",
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onOptionChange"
+                                        }
+                                      ],
+                                      "leftColumn": 20,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "options"
+                                        }
+                                      ],
+                                      "options": "{{ _.map(QueryMaterialInventoryHandling.data.data.getMaterialDefinition.inventoryHandlingPolicy.rules[0].stateModel.states,\"status\")}}",
+                                      "isDisabled": false,
+                                      "key": "ct817meesn",
+                                      "isRequired": true,
+                                      "rightColumn": 64,
+                                      "widgetId": "x53bpvh5ew",
+                                      "isVisible": true,
+                                      "label": "",
+                                      "version": 1,
+                                      "parentId": "xnzrqmrazn",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "onOptionChange": ""
+                                    },
+                                    {
+                                      "widgetName": "txtBulkStatus",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.e6c93592.svg",
+                                      "topRow": 4,
+                                      "bottomRow": 8,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Status",
+                                      "key": "0unoxtd493",
+                                      "rightColumn": 20,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "1lj90jphrx",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "version": 1,
+                                      "parentId": "xnzrqmrazn",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "txtBulkBin",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.e6c93592.svg",
+                                      "topRow": 8,
+                                      "bottomRow": 12,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Bin",
+                                      "key": "0unoxtd493",
+                                      "rightColumn": 20,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "1kvl8tryoj",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "version": 1,
+                                      "parentId": "xnzrqmrazn",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "bulkSelectBin",
+                                      "isFilterable": false,
+                                      "displayName": "Select",
+                                      "iconSVG": "/static/media/icon.bd99caba.svg",
+                                      "topRow": 8,
+                                      "bottomRow": 12,
+                                      "parentRowSpace": 10,
+                                      "type": "DROP_DOWN_WIDGET",
+                                      "serverSideFiltering": false,
+                                      "hideCard": false,
+                                      "defaultOptionValue": "GREEN",
+                                      "selectionType": "SINGLE_SELECT",
+                                      "parentColumnSpace": 4.640625,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onOptionChange"
+                                        }
+                                      ],
+                                      "leftColumn": 20,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "options"
+                                        }
+                                      ],
+                                      "options": "{{GetWarehouseBins.data.data.getEquipment.children}}",
+                                      "isDisabled": false,
+                                      "key": "ct817meesn",
+                                      "isRequired": true,
+                                      "rightColumn": 64,
+                                      "widgetId": "67vcxgvj5n",
+                                      "isVisible": true,
+                                      "label": "",
+                                      "version": 1,
+                                      "parentId": "xnzrqmrazn",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "onOptionChange": ""
+                                    },
+                                    {
+                                      "widgetName": "txtBulkQuantity",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                                      "topRow": 12,
+                                      "bottomRow": 16,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "animateLoading": true,
+                                      "parentColumnSpace": 5.64453125,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 0,
+                                      "dynamicBindingPathList": [],
+                                      "shouldTruncate": false,
+                                      "truncateButtonColor": "#FFC13D",
+                                      "text": "Quantity",
+                                      "key": "9hhgqs1ikg",
+                                      "rightColumn": 20,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "8tcc2wyh56",
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "shouldScroll": false,
+                                      "version": 1,
+                                      "parentId": "xnzrqmrazn",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "inputBulkQuantity",
+                                      "displayName": "Input",
+                                      "iconSVG": "/static/media/icon.9f505595.svg",
+                                      "topRow": 12,
+                                      "bottomRow": 16,
+                                      "parentRowSpace": 10,
+                                      "autoFocus": false,
+                                      "type": "INPUT_WIDGET_V2",
+                                      "hideCard": false,
+                                      "animateLoading": true,
+                                      "parentColumnSpace": 5.64453125,
+                                      "dynamicTriggerPathList": [],
+                                      "resetOnSubmit": true,
+                                      "leftColumn": 20,
+                                      "dynamicBindingPathList": [],
+                                      "labelStyle": "",
+                                      "inputType": "NUMBER",
+                                      "isDisabled": false,
+                                      "key": "xh192cbvbk",
+                                      "isRequired": false,
+                                      "rightColumn": 64,
+                                      "widgetId": "v090p0id7t",
+                                      "isVisible": true,
+                                      "label": "",
+                                      "version": 2,
+                                      "parentId": "xnzrqmrazn",
+                                      "minNum": "0",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "iconAlign": "left",
+                                      "defaultText": ""
+                                    }
+                                  ],
+                                  "key": "ynxpp8ycgp"
+                                }
+                              ],
+                              "key": "dk2s29klpd"
+                            }
+                          ],
+                          "key": "a7umq6vyne",
+                          "tabName": "BULK",
+                          "rightColumn": 475.5,
+                          "detachFromLayout": true,
+                          "widgetId": "g30jg01e8o",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "ly3l5q7iyj",
+                          "renderMode": "CANVAS",
+                          "isLoading": false
+                        }
+                      ],
+                      "key": "gugioq9428",
+                      "rightColumn": 61,
+                      "widgetId": "ly3l5q7iyj",
+                      "defaultTab": "{{AddItemsTabs.shipmentItemReceiveType()}}",
+                      "shouldShowTabs": true,
+                      "tabsObj": {
+                        "tab1": {
+                          "label": "SERIALISED",
+                          "id": "tab1",
+                          "widgetId": "ob6g1mbuqa",
+                          "isVisible": true,
+                          "index": 0
+                        },
+                        "tab2": {
+                          "label": "CARRIER",
+                          "id": "tab2",
+                          "widgetId": "etnr3yd61o",
+                          "isVisible": true,
+                          "index": 1
+                        },
+                        "tabk74roks5nk": {
+                          "id": "tabk74roks5nk",
+                          "label": "BULK",
+                          "widgetId": "g30jg01e8o",
+                          "isVisible": true,
+                          "index": 1
+                        }
+                      },
+                      "isVisible": "{{!_.isEmpty(AddItemsMaterialSelector.selectedOptionValue)}}",
+                      "version": 3,
+                      "parentId": "yabla4zhr1",
+                      "renderMode": "CANVAS",
+                      "isLoading": false
+                    },
                     {
                       "widgetName": "TitleButton2",
                       "isCanvas": false,
@@ -4135,6 +5136,18 @@
                           "menuItems": {},
                           "iconName": "small-tick"
                         },
+                        "groupButton8c5bmmveft": {
+                          "id": "groupButton8c5bmmveft",
+                          "label": "Weigh Items",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "buttonColor": "#03B365",
+                          "placement": "CENTER",
+                          "widgetId": "ajoan2rxq5",
+                          "isDisabled": true,
+                          "isVisible": true,
+                          "index": 2
+                        },
                         "groupButton3": {
                           "label": "Add Docs",
                           "id": "groupButton3",
@@ -4143,7 +5156,7 @@
                           "widgetId": "",
                           "isVisible": true,
                           "isDisabled": true,
-                          "index": 2,
+                          "index": 3,
                           "menuItems": {
                             "menuItem1": {
                               "label": "First Option",
@@ -4183,13 +5196,14 @@
                         },
                         "groupButtonmmb4g5yzmo": {
                           "id": "groupButtonmmb4g5yzmo",
-                          "label": "Seal and Label",
+                          "label": "Print Postage Label",
                           "menuItems": {},
                           "buttonType": "SIMPLE",
                           "buttonColor": "#03B365",
                           "widgetId": "6nxkr62b1i",
                           "isDisabled": true,
-                          "isVisible": true
+                          "isVisible": true,
+                          "index": 4
                         }
                       },
                       "type": "BUTTON_GROUP_WIDGET",
@@ -4232,6 +5246,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "leftColumn": 56,
+                      "dynamicBindingPathList": [],
                       "iconSize": 24,
                       "key": "jfw91zvi5h"
                     },
@@ -4261,34 +5276,8 @@
                       "key": "hhw544w8fd"
                     },
                     {
-                      "widgetName": "Button6",
-                      "onClick": "{{closeModal('AddItemsModal')}}",
-                      "buttonColor": "#03B365",
-                      "displayName": "Button",
-                      "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 83,
-                      "bottomRow": 87,
-                      "type": "BUTTON_WIDGET",
-                      "hideCard": false,
-                      "leftColumn": 37,
-                      "text": "Close",
-                      "isDisabled": false,
-                      "key": "p6o3ejwl4i",
-                      "rightColumn": 49,
-                      "isDefaultClickDisabled": true,
-                      "widgetId": "z4ksnldt7u",
-                      "buttonStyle": "PRIMARY",
-                      "isVisible": true,
-                      "version": 1,
-                      "recaptchaType": "V3",
-                      "parentId": "yabla4zhr1",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "buttonVariant": "SECONDARY"
-                    },
-                    {
                       "widgetName": "Button7",
-                      "onClick": "{{UpdateShipmentItemMaterial.run(() => {{closeModal('AddItemsModal')}}, () => {})}}",
+                      "onClick": "{{UpdateAUSPostShipmentItem.run(() => {{QueryShipment.run();showModal(\"Modal1\");closeModal(\"AddItemsModal\")}}, () => {})}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
@@ -4297,8 +5286,8 @@
                       ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 83,
-                      "bottomRow": 87,
+                      "topRow": 58,
+                      "bottomRow": 62,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "dynamicTriggerPathList": [
@@ -4306,12 +5295,12 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 49,
+                      "leftColumn": 44,
                       "dynamicBindingPathList": [],
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "p6o3ejwl4i",
-                      "rightColumn": 61,
+                      "rightColumn": 58,
                       "isDefaultClickDisabled": true,
                       "widgetId": "b524qnhns9",
                       "buttonStyle": "PRIMARY_BUTTON",
@@ -4338,7 +5327,11 @@
                       "defaultOptionValue": "GREEN",
                       "selectionType": "SINGLE_SELECT",
                       "parentColumnSpace": 11.0625,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -4356,124 +5349,24 @@
                       "version": 1,
                       "parentId": "yabla4zhr1",
                       "renderMode": "CANVAS",
-                      "isLoading": false
-                    },
-                    {
-                      "widgetName": "AddItemQuantityInput",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 17,
-                      "bottomRow": 21,
-                      "parentRowSpace": 10,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET",
-                      "hideCard": false,
-                      "parentColumnSpace": 11.0625,
-                      "dynamicTriggerPathList": [],
-                      "resetOnSubmit": true,
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [],
-                      "labelStyle": "",
-                      "inputType": "NUMBER",
-                      "placeholderText": "Quantity",
-                      "isDisabled": false,
-                      "key": "ep5px10rdb",
-                      "isRequired": false,
-                      "rightColumn": 21,
-                      "widgetId": "5yy9exizzs",
-                      "isVisible": true,
-                      "label": "",
-                      "allowCurrencyChange": false,
-                      "version": 1,
-                      "parentId": "yabla4zhr1",
-                      "renderMode": "CANVAS",
                       "isLoading": false,
-                      "iconAlign": "left",
-                      "defaultText": ""
-                    },
-                    {
-                      "widgetName": "SerialNumberInput",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 17,
-                      "bottomRow": 21,
-                      "parentRowSpace": 10,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET",
-                      "hideCard": false,
-                      "parentColumnSpace": 11.0625,
-                      "dynamicTriggerPathList": [],
-                      "resetOnSubmit": true,
-                      "leftColumn": 22,
-                      "dynamicBindingPathList": [],
-                      "labelStyle": "",
-                      "inputType": "TEXT",
-                      "placeholderText": "Serial Number",
-                      "isDisabled": false,
-                      "key": "198szrg0y7",
-                      "isRequired": false,
-                      "rightColumn": 42,
-                      "widgetId": "zelhmiyz0t",
-                      "isVisible": true,
-                      "label": "",
-                      "allowCurrencyChange": false,
-                      "version": 1,
-                      "parentId": "yabla4zhr1",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "iconAlign": "left",
-                      "defaultText": ""
-                    },
-                    {
-                      "widgetName": "UpdateDeliveryShipmentItemBtn",
-                      "onClick": "{{UpdateAUSPostShipmentItem.run(() => QueryShipment.run(), () => {})}}",
-                      "buttonColor": "#03B365",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "isDisabled"
-                        }
-                      ],
-                      "displayName": "Button",
-                      "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 24,
-                      "bottomRow": 28,
-                      "parentRowSpace": 10,
-                      "type": "BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 11.0625,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "isDisabled"
-                        }
-                      ],
-                      "text": "Update Delivery Shipment",
-                      "isDisabled": "{{!AUSPostValidation.disableCreateShipment()}}",
-                      "key": "6dly478ewk",
-                      "rightColumn": 23,
-                      "isDefaultClickDisabled": true,
-                      "widgetId": "y11ge40r60",
-                      "isVisible": true,
-                      "version": 1,
-                      "recaptchaType": "V3",
-                      "parentId": "yabla4zhr1",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "buttonVariant": "PRIMARY"
+                      "onOptionChange": "{{QueryMaterialInventoryHandling.run()}}"
                     }
                   ],
                   "isDisabled": false,
-                  "key": "j0yolanwgn"
+                  "key": "j0yolanwgn",
+                  "rightColumn": 130.546875,
+                  "detachFromLayout": true,
+                  "widgetId": "yabla4zhr1",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "hvbs4xaoba",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
                 }
               ],
               "key": "7mns992moq",
-              "height": 942,
+              "height": 654,
               "rightColumn": 68,
               "detachFromLayout": true,
               "widgetId": "hvbs4xaoba",
@@ -4498,28 +5391,22 @@
               "shouldScrollContents": true,
               "parentColumnSpace": 12.87109375,
               "leftColumn": 0,
+              "dynamicBindingPathList": [],
               "children": [
                 {
                   "widgetName": "Canvas19",
-                  "rightColumn": 308.90625,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "9a93n4chg9",
                   "topRow": 0,
-                  "bottomRow": 870,
+                  "bottomRow": 840,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "in7kpjusa9",
                   "shouldScrollContents": false,
                   "minHeight": 848,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
+                  "dynamicBindingPathList": [],
                   "children": [
                     {
                       "widgetName": "TitleButton2Copy",
@@ -4558,6 +5445,18 @@
                           "index": 1,
                           "menuItems": {}
                         },
+                        "groupButton0leivo86aj": {
+                          "id": "groupButton0leivo86aj",
+                          "label": "Weigh Items",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "buttonColor": "#03B365",
+                          "placement": "CENTER",
+                          "widgetId": "qd5regkcdr",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "index": 2
+                        },
                         "groupButton3": {
                           "label": "Add Docs",
                           "id": "groupButton3",
@@ -4566,7 +5465,7 @@
                           "widgetId": "",
                           "isVisible": true,
                           "isDisabled": true,
-                          "index": 2,
+                          "index": 3,
                           "menuItems": {
                             "menuItem1": {
                               "label": "First Option",
@@ -4607,13 +5506,14 @@
                         },
                         "groupButtonmmb4g5yzmo": {
                           "id": "groupButtonmmb4g5yzmo",
-                          "label": "Seal and Label",
+                          "label": "Print Postage Label",
                           "menuItems": {},
                           "buttonType": "SIMPLE",
                           "buttonColor": "#03B365",
                           "widgetId": "6nxkr62b1i",
                           "isDisabled": true,
-                          "isVisible": true
+                          "isVisible": true,
+                          "index": 4
                         }
                       },
                       "type": "BUTTON_GROUP_WIDGET",
@@ -4656,6 +5556,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "leftColumn": 56,
+                      "dynamicBindingPathList": [],
                       "iconSize": 24,
                       "key": "all9elmysf"
                     },
@@ -4690,15 +5591,16 @@
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 75,
-                      "bottomRow": 79,
+                      "topRow": 60,
+                      "bottomRow": 64,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
-                      "leftColumn": 38,
+                      "leftColumn": 37,
+                      "dynamicBindingPathList": [],
                       "text": "Close",
                       "isDisabled": false,
                       "key": "212tsy3oq4",
-                      "rightColumn": 50,
+                      "rightColumn": 49,
                       "isDefaultClickDisabled": true,
                       "widgetId": "4qu1nfpvjc",
                       "buttonStyle": "PRIMARY",
@@ -4721,8 +5623,8 @@
                       ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 75,
-                      "bottomRow": 79,
+                      "topRow": 60,
+                      "bottomRow": 64,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "dynamicTriggerPathList": [
@@ -4730,12 +5632,12 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 50,
+                      "leftColumn": 49,
                       "dynamicBindingPathList": [],
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "212tsy3oq4",
-                      "rightColumn": 62,
+                      "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "wbpm78515y",
                       "buttonStyle": "PRIMARY_BUTTON",
@@ -4811,7 +5713,15 @@
                     }
                   ],
                   "isDisabled": false,
-                  "key": "cxvc5yuy16"
+                  "key": "cxvc5yuy16",
+                  "rightColumn": 308.90625,
+                  "detachFromLayout": true,
+                  "widgetId": "9a93n4chg9",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "in7kpjusa9",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
                 }
               ],
               "key": "qvehw2t7wy",
@@ -4840,12 +5750,13 @@
               "shouldScrollContents": true,
               "parentColumnSpace": 13.30859375,
               "leftColumn": 9,
+              "dynamicBindingPathList": [],
               "children": [
                 {
                   "widgetName": "Canvas20",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 810,
+                  "bottomRow": 770,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -4894,15 +5805,38 @@
                           "index": 1,
                           "menuItems": {}
                         },
-                        "groupButton3": {
+                        "groupButtonzr3jmzg7lk": {
+                          "id": "groupButtonzr3jmzg7lk",
+                          "label": "Weigh Items",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "buttonColor": "#03B365",
+                          "placement": "CENTER",
+                          "widgetId": "59x44bjmc4",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "index": 2
+                        },
+                        "groupButtonmmb4g5yzmo": {
+                          "id": "groupButtonmmb4g5yzmo",
                           "label": "Add Docs",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "buttonColor": "#03B365",
+                          "widgetId": "6nxkr62b1i",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "index": 3
+                        },
+                        "groupButton3": {
+                          "label": "Print Postage Label",
                           "id": "groupButton3",
                           "buttonType": "SIMPLE",
                           "buttonColor": "#03B365",
                           "widgetId": "",
                           "isVisible": true,
-                          "isDisabled": false,
-                          "index": 2,
+                          "isDisabled": true,
+                          "index": 4,
                           "menuItems": {
                             "menuItem1": {
                               "label": "First Option",
@@ -4939,17 +5873,6 @@
                               "index": 2
                             }
                           }
-                        },
-                        "groupButtonmmb4g5yzmo": {
-                          "id": "groupButtonmmb4g5yzmo",
-                          "label": "Seal and Label",
-                          "menuItems": {},
-                          "buttonType": "SIMPLE",
-                          "buttonColor": "#03B365",
-                          "widgetId": "6nxkr62b1i",
-                          "isDisabled": true,
-                          "isVisible": true,
-                          "iconName": "small-tick"
                         }
                       },
                       "type": "BUTTON_GROUP_WIDGET",
@@ -4992,6 +5915,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "leftColumn": 56,
+                      "dynamicBindingPathList": [],
                       "iconSize": 24,
                       "key": "all9elmysf"
                     },
@@ -5026,11 +5950,12 @@
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 70,
-                      "bottomRow": 74,
+                      "topRow": 71,
+                      "bottomRow": 75,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "leftColumn": 39,
+                      "dynamicBindingPathList": [],
                       "text": "Close",
                       "isDisabled": false,
                       "key": "212tsy3oq4",
@@ -5052,8 +5977,8 @@
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 70,
-                      "bottomRow": 74,
+                      "topRow": 71,
+                      "bottomRow": 75,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "dynamicTriggerPathList": [
@@ -5080,6 +6005,7 @@
                     },
                     {
                       "widgetName": "Button13",
+                      "onClick": "{{CreateAUSPostShipmentItemLabel.run()}}",
                       "buttonColor": "#FFFFFF",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -5089,7 +6015,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "parentColumnSpace": 12.71875,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 43,
                       "dynamicBindingPathList": [],
                       "text": "Print Postage Label",
@@ -5107,6 +6037,35 @@
                       "isLoading": false,
                       "buttonVariant": "PRIMARY",
                       "iconAlign": "left"
+                    },
+                    {
+                      "widgetName": "DocumentViewer2",
+                      "rightColumn": 59,
+                      "isCanvas": false,
+                      "displayName": "Document Viewer",
+                      "iconSVG": "/static/media/icon.09fcd36b.svg",
+                      "widgetId": "xl4uhoygq2",
+                      "topRow": 16,
+                      "bottomRow": 71,
+                      "parentRowSpace": 10,
+                      "isVisible": true,
+                      "type": "DOCUMENT_VIEWER_WIDGET",
+                      "version": 1,
+                      "hideCard": false,
+                      "parentId": "cfk3xh3heo",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 12.71875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "docUrl"
+                        }
+                      ],
+                      "docUrl": "{{CreateAUSPostShipmentItemLabel.data.data.createDeliveryShipmentItemLabel}}",
+                      "key": "83j71bajm9"
                     }
                   ],
                   "isDisabled": false,
@@ -5148,6 +6107,7 @@
               "animateLoading": true,
               "parentColumnSpace": 12.01953125,
               "leftColumn": -1,
+              "dynamicBindingPathList": [],
               "children": [
                 {
                   "widgetName": "Canvas21",
@@ -5184,6 +6144,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "leftColumn": 55,
+                      "dynamicBindingPathList": [],
                       "iconSize": 24,
                       "key": "hfx3s8idvf"
                     },
@@ -5291,25 +6252,18 @@
               "children": [
                 {
                   "widgetName": "Canvas24",
-                  "rightColumn": 319.40625,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "309xn1y754",
                   "topRow": 0,
                   "bottomRow": 650,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "0rlot1jj2q",
                   "shouldScrollContents": false,
                   "minHeight": 654,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
+                  "dynamicBindingPathList": [],
                   "children": [
                     {
                       "widgetName": "Icon8",
@@ -5330,6 +6284,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "leftColumn": 54,
+                      "dynamicBindingPathList": [],
                       "iconSize": 24,
                       "key": "hfx3s8idvf"
                     },
@@ -5579,13 +6534,7 @@
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
-                          "key": "template.Text32.text"
-                        },
-                        {
                           "key": "listData"
-                        },
-                        {
-                          "key": "template.Text33.text"
                         }
                       ],
                       "gridType": "vertical",
@@ -5606,6 +6555,7 @@
                           "noPad": true,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
+                          "dynamicBindingPathList": [],
                           "children": [
                             {
                               "boxShadow": "NONE",
@@ -5624,6 +6574,7 @@
                               "isDeletable": false,
                               "animateLoading": true,
                               "leftColumn": 0,
+                              "dynamicBindingPathList": [],
                               "children": [
                                 {
                                   "widgetName": "Canvas26",
@@ -5644,6 +6595,7 @@
                                   "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
+                                  "dynamicBindingPathList": [],
                                   "children": [
                                     {
                                       "widgetName": "AddToShipmentCheckbox",
@@ -5874,7 +6826,15 @@
                     }
                   ],
                   "isDisabled": false,
-                  "key": "huqaclpg09"
+                  "key": "huqaclpg09",
+                  "rightColumn": 319.40625,
+                  "detachFromLayout": true,
+                  "widgetId": "309xn1y754",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "0rlot1jj2q",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
                 }
               ],
               "key": "lvl5lg51xn",
@@ -5929,12 +6889,384 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "onOptionChange": "{{GetOrdersByWarehouse.run()}}"
+              "onOptionChange": "{{GetOrdersByWarehouse.run(() => GetWarehouseBins.run(), () => {})}}"
+            },
+            {
+              "widgetName": "Modal1",
+              "isCanvas": true,
+              "displayName": "Modal",
+              "iconSVG": "/static/media/icon.4975978e.svg",
+              "topRow": 61,
+              "bottomRow": 85,
+              "parentRowSpace": 10,
+              "type": "MODAL_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "animateLoading": true,
+              "parentColumnSpace": 9.6875,
+              "leftColumn": 61,
+              "children": [
+                {
+                  "widgetName": "Canvas27",
+                  "rightColumn": 232.5,
+                  "detachFromLayout": true,
+                  "displayName": "Canvas",
+                  "widgetId": "yfnvzo0w4d",
+                  "topRow": 0,
+                  "bottomRow": 820,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "version": 1,
+                  "hideCard": true,
+                  "parentId": "xbvptjeez8",
+                  "shouldScrollContents": false,
+                  "minHeight": 822,
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "widgetName": "TitleButton2Copy1",
+                      "isCanvas": false,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "groupButtons.groupButton1.onClick"
+                        }
+                      ],
+                      "displayName": "Button Group",
+                      "iconSVG": "/static/media/icon.d6773218.svg",
+                      "topRow": 5,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "groupButtons": {
+                        "groupButton1": {
+                          "label": "Select Package",
+                          "id": "groupButton1",
+                          "widgetId": "",
+                          "buttonColor": "#03B365",
+                          "buttonType": "SIMPLE",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 0,
+                          "menuItems": {},
+                          "onClick": "{{showModal('SelectPackageModal');closeModal('AddItemsModal')}}"
+                        },
+                        "groupButton2": {
+                          "label": "Add Items",
+                          "id": "groupButton2",
+                          "buttonColor": "#03B365",
+                          "buttonType": "SIMPLE",
+                          "widgetId": "",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 1,
+                          "menuItems": {}
+                        },
+                        "groupButton8c5bmmveft": {
+                          "id": "groupButton8c5bmmveft",
+                          "label": "Weigh Items",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "buttonColor": "#03B365",
+                          "placement": "CENTER",
+                          "widgetId": "ajoan2rxq5",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "index": 2,
+                          "iconName": "small-tick"
+                        },
+                        "groupButton3": {
+                          "label": "Add Docs",
+                          "id": "groupButton3",
+                          "buttonType": "SIMPLE",
+                          "buttonColor": "#03B365",
+                          "widgetId": "",
+                          "isVisible": true,
+                          "isDisabled": true,
+                          "index": 3,
+                          "menuItems": {
+                            "menuItem1": {
+                              "label": "First Option",
+                              "backgroundColor": "#FFFFFF",
+                              "id": "menuItem1",
+                              "widgetId": "",
+                              "onClick": "",
+                              "isVisible": true,
+                              "isDisabled": false,
+                              "index": 0
+                            },
+                            "menuItem2": {
+                              "label": "Second Option",
+                              "backgroundColor": "#FFFFFF",
+                              "id": "menuItem2",
+                              "widgetId": "",
+                              "onClick": "",
+                              "isVisible": true,
+                              "isDisabled": false,
+                              "index": 1
+                            },
+                            "menuItem3": {
+                              "label": "Delete",
+                              "iconName": "trash",
+                              "iconColor": "#FFFFFF",
+                              "iconAlign": "right",
+                              "textColor": "#FFFFFF",
+                              "backgroundColor": "#DD4B34",
+                              "id": "menuItem3",
+                              "widgetId": "",
+                              "onClick": "",
+                              "isVisible": true,
+                              "isDisabled": false,
+                              "index": 2
+                            }
+                          }
+                        },
+                        "groupButtonmmb4g5yzmo": {
+                          "id": "groupButtonmmb4g5yzmo",
+                          "label": "Print Postage Label",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "buttonColor": "#03B365",
+                          "widgetId": "6nxkr62b1i",
+                          "isDisabled": true,
+                          "isVisible": true,
+                          "index": 4
+                        }
+                      },
+                      "type": "BUTTON_GROUP_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 9.6875,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "groupButtons.groupButton1.onClick"
+                        }
+                      ],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "key": "i5eraiqm8c",
+                      "orientation": "horizontal",
+                      "rightColumn": 61,
+                      "widgetId": "1yrq417hrw",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "yfnvzo0w4d",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "buttonVariant": "PRIMARY"
+                    },
+                    {
+                      "widgetName": "Text19",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 9,
+                      "bottomRow": 13,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 5.01800537109375,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 5,
+                      "dynamicBindingPathList": [],
+                      "text": "Weight(kg)",
+                      "key": "tfpt1p054n",
+                      "rightColumn": 28,
+                      "textAlign": "LEFT",
+                      "widgetId": "yc8ngt3hoh",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "yfnvzo0w4d",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "PARAGRAPH"
+                    },
+                    {
+                      "widgetName": "BoxWeightInput",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595.svg",
+                      "topRow": 9,
+                      "bottomRow": 13,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 5.01800537109375,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 28,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        }
+                      ],
+                      "labelStyle": "",
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "key": "7jx32u4uij",
+                      "isRequired": false,
+                      "rightColumn": 40,
+                      "widgetId": "44bzws0vhs",
+                      "isVisible": true,
+                      "label": "",
+                      "allowCurrencyChange": false,
+                      "version": 1,
+                      "parentId": "yfnvzo0w4d",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "iconAlign": "left",
+                      "defaultText": "{{ShipmentItemList.selectedItem.weightKg}}"
+                    },
+                    {
+                      "widgetName": "Icon9",
+                      "rightColumn": 64,
+                      "onClick": "{{closeModal('Modal1')}}",
+                      "color": "#040627",
+                      "iconName": "cross",
+                      "displayName": "Icon",
+                      "iconSVG": "/static/media/icon.31d6cfe0.svg",
+                      "widgetId": "z124zqmduk",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "isVisible": true,
+                      "type": "ICON_WIDGET",
+                      "version": 1,
+                      "hideCard": true,
+                      "parentId": "yfnvzo0w4d",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "leftColumn": 56,
+                      "iconSize": 24,
+                      "key": "y14d23494s"
+                    },
+                    {
+                      "widgetName": "Text34",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 1,
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Modal Title",
+                      "key": "xqet2p770o",
+                      "rightColumn": 41,
+                      "textAlign": "LEFT",
+                      "widgetId": "3q82bkb09j",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "yfnvzo0w4d",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "HEADING1"
+                    },
+                    {
+                      "widgetName": "Button17",
+                      "onClick": "{{closeModal('Modal1')}}",
+                      "buttonColor": "#03B365",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 60,
+                      "bottomRow": 64,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 38,
+                      "text": "Close",
+                      "isDisabled": false,
+                      "key": "e9e9grrm9o",
+                      "rightColumn": 50,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "ua6avepzga",
+                      "buttonStyle": "PRIMARY",
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "yfnvzo0w4d",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "buttonVariant": "SECONDARY",
+                      "placement": "CENTER"
+                    },
+                    {
+                      "widgetName": "Button18",
+                      "onClick": "{{UpdateWeight.run(() => {{UpdateAUSPostShipmentItem.run();showModal('AddDocsModal');closeModal(\"Modal1\")}}, () => {})}}",
+                      "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 60,
+                      "bottomRow": 64,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 50,
+                      "dynamicBindingPathList": [],
+                      "text": "Confirm",
+                      "isDisabled": false,
+                      "key": "e9e9grrm9o",
+                      "rightColumn": 62,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "3c6eeubvns",
+                      "buttonStyle": "PRIMARY_BUTTON",
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "yfnvzo0w4d",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "buttonVariant": "PRIMARY",
+                      "placement": "CENTER"
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "ofjjbnejm4"
+                }
+              ],
+              "key": "nf6cxlwslq",
+              "height": 822,
+              "rightColumn": 85,
+              "detachFromLayout": true,
+              "widgetId": "xbvptjeez8",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "width": 786
             }
           ]
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "Page1_CreateAUSPostShipmentItemLabel",
+              "name": "CreateAUSPostShipmentItemLabel",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"item\": {\n\t\t\t\"id\": ShipmentItemList.selectedItem.id\n\t\t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateDeliveryShipmentItemLabel($shipment:ExtShipmentRef!, $item:ExtShipmentItemRef!, $shippingAccount:ShippingAccountData!) {\n  createDeliveryShipmentItemLabel(shipment:$shipment, item:$item, shippingAccountData:$shippingAccount)\n}\n\t`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Page1_GetEquipmentWithOrders",
               "name": "GetEquipmentWithOrders",
@@ -5956,11 +7288,29 @@
           ],
           [
             {
+              "id": "Page1_GetCarrierCarriers",
+              "name": "GetCarrierCarriers",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tid:carrierSelectBin.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    carriers @cascade{\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_GetOrdersByWarehouse",
               "name": "GetOrdersByWarehouse",
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n\tvariables:{\n  \"input\": EquipmentSelector.selectedOptionValue\n},\n\tquery:`\n\t\tquery GetOrderByEquipment($input:ID!){\n  getEquipment(id:$input){\n    orders(filter:{not:{orderType:{eq:PURCHASE_ORDER}}}){\n      id\n\t\twarehouse {\n\t\t\tid\n\t\t}\n\t\tstatus\n\t\torderType\n    createdDateTime\n    shipFromPartner{\n\t\t\tid\n      name\n    }\n    shipToPartner{\n\t\t\t\tid\n      name\n    }\n\t\tlines{\n\t\t\tmaterial{\n        code\n        name\n      }\n      quantity\n\t\t\tpackedQty\n\t\t\tstockOnHandQty\n\t\t}\n    }\n  }\n}\n\t`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_GetWarehouseBins",
+              "name": "GetWarehouseBins",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n\tvariables:{\n  \t\"warehouse\": EquipmentSelector.selectedOptionValue,\n\t},\n\tquery:`\nquery GetEquipment($warehouse:ID!){\n  getEquipment(id:$warehouse) {\n    children {\n      value:id\n      label:name\n      carriers {\n        value:id\n        label:code\n        status {\n          code\n        }\n      }\n    }\n  }\n}\n\t`\n})"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -5982,11 +7332,32 @@
               ],
               "timeoutInMillisecond": 10000
             }
+          ],
+          [
+            {
+              "id": "Page1_GetCarriersStatus",
+              "name": "GetCarriersStatus",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tid:carrierSelectCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrierStatus($id:ID!){\n  getCarrier(id:$id){\n    status {\n      code\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_QueryMaterialInventoryHandling",
+              "name": "QueryMaterialInventoryHandling",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n\tvariables:{\n  \t\"id\": AddItemsMaterialSelector.selectedOptionValue,\n\t\t\"warehouse\": [EquipmentSelector.selectedOptionValue]\n\t},\n\tquery:`\nquery GetInventoryHandlingPolicy($id:ID!, $warehouse:[ID!]!){\n  getMaterialDefinition(id:$id) {\n\t\tserialMask\n    inventoryHandlingPolicy {\n      trackByCarrier\n      trackBySerialNumber\n\t\t\t\n      rules @cascade{\n        warehouse (filter:{id:$warehouse}){\n          name\n        }\n        stateModel {\n          states (filter:{canPack:true}){\n            status {\n              label:code\n\t\t\t\t\t\t\tvalue:id\n            }\n          }\n        }\n      }\n    }\n  }\n}\n\t`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
           ]
         ],
         "widgetNames": [
           "AddDocsModal",
-          "AddItemQuantityInput",
           "AddItemsMaterialSelector",
           "AddItemsModal",
           "AddToShipmentCheckbox",
@@ -6000,14 +7371,18 @@
           "Button12",
           "Button13",
           "Button16",
+          "Button17",
+          "Button18",
           "Button2",
           "Button5",
-          "Button6",
           "Button7",
           "Button8",
           "Button9",
           "Canvas1",
           "Canvas12",
+          "Canvas14",
+          "Canvas14Copy",
+          "Canvas14Copy1",
           "Canvas17",
           "Canvas18",
           "Canvas19",
@@ -6019,8 +7394,12 @@
           "Canvas24",
           "Canvas25",
           "Canvas26",
+          "Canvas27",
+          "Canvas2Copy",
           "Canvas3",
+          "Canvas3Copy",
           "Canvas4",
+          "Canvas4Copy",
           "Canvas5",
           "Canvas6",
           "Container1",
@@ -6038,7 +7417,11 @@
           "Divider1",
           "Divider2",
           "DocumentViewer1",
+          "DocumentViewer2",
           "EquipmentSelector",
+          "Form1",
+          "Form1Copy",
+          "Form1Copy1",
           "HeightInput",
           "Icon1",
           "Icon3",
@@ -6047,6 +7430,7 @@
           "Icon6",
           "Icon7",
           "Icon8",
+          "Icon9",
           "IconButton1",
           "IconButton2",
           "Input1",
@@ -6055,6 +7439,7 @@
           "ListPartNumberDetail",
           "ListShipmentDetail",
           "MainContainer",
+          "Modal1",
           "OrderStatus",
           "OrderType",
           "ParcelDetail",
@@ -6062,7 +7447,6 @@
           "SealAndLabelModal",
           "SelectPackageConfirmButton",
           "SelectPackageModal",
-          "SerialNumberInput",
           "ShipTo",
           "ShipmentItemList",
           "ShipmentLabelModal",
@@ -6073,6 +7457,7 @@
           "Text11",
           "Text12",
           "Text13",
+          "Text13Copy",
           "Text15",
           "Text16",
           "Text17",
@@ -6093,6 +7478,7 @@
           "Text31",
           "Text32",
           "Text33",
+          "Text34",
           "Text4",
           "Text5",
           "Text6",
@@ -6102,10 +7488,36 @@
           "TitleButton1",
           "TitleButton2",
           "TitleButton2Copy",
+          "TitleButton2Copy1",
           "TitleButton2CopyCopy",
-          "UpdateDeliveryShipmentItemBtn",
           "WidthInput",
+          "btnAddSerial",
+          "btnCarrierAddCarrier",
+          "btnCarrierReset",
+          "btnReceiveTrackedByCarrier",
+          "btnReceiveUntracked",
+          "btnResetBulk",
+          "btnSerialReset",
+          "bulkSelectBin",
+          "bulkSelectStatus",
+          "carrierSelectBin",
+          "carrierSelectCarrier",
+          "inpBarcode",
+          "inputBulkQuantity",
+          "inputCarrierQuantity",
+          "lblScanBarcode",
+          "receiveTabs",
           "shipFrom",
+          "txtBulk",
+          "txtBulkBin",
+          "txtBulkQuantity",
+          "txtBulkStatus",
+          "txtCarrierCarrier",
+          "txtCarrierQuantity",
+          "txtCarrierStatus",
+          "txtCarrierTitle",
+          "txtSerialBin",
+          "txtSerialTitle",
           "weightInput"
         ],
         "validOnPageLoadActions": true,
