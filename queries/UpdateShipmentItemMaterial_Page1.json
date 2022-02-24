@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \"input1\": {\n    \"filter\": {\n      \"id\": ShipmentItemList.selectedItem.id\n    },\n    \"set\": {\n      \"material\": {\n        \"code\": AddItemsMaterialSelector.selectedOptionLabel\n      },\n      \"plannedQuantity\": parseInt(AddItemQuantityInput.text)\n    }\n  }\n},\n\tquery:`\n\t\tmutation updateBox($input1:UpdateShipmentItemInput!){\n  updateShipmentItem(input:$input1){\n    numUids\n  }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n  \"input1\": {\n    \"filter\": {\n      \"id\": ShipmentItemList.selectedItem.id\n    },\n    \"set\": {\n      \"material\": {\n        \"code\": AddItemsMaterialSelector.selectedOptionLabel\n      },\n      \"plannedQuantity\": AddItemsTabs.getQuantity()\n    }\n  }\n},\n\tquery:`\n\t\tmutation updateBox($input1:UpdateShipmentItemInput!){\n  updateShipmentItem(input:$input1){\n    numUids\n  }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \"input1\": {\n    \"filter\": {\n      \"id\": ShipmentItemList.selectedItem.id\n    },\n    \"set\": {\n      \"material\": {\n        \"code\": AddItemsMaterialSelector.selectedOptionLabel\n      },\n      \"plannedQuantity\": parseInt(AddItemQuantityInput.text)\n    }\n  }\n},\n\tquery:`\n\t\tmutation updateBox($input1:UpdateShipmentItemInput!){\n  updateShipmentItem(input:$input1){\n    numUids\n  }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n  \"input1\": {\n    \"filter\": {\n      \"id\": ShipmentItemList.selectedItem.id\n    },\n    \"set\": {\n      \"material\": {\n        \"code\": AddItemsMaterialSelector.selectedOptionLabel\n      },\n      \"plannedQuantity\": AddItemsTabs.getQuantity()\n    }\n  }\n},\n\tquery:`\n\t\tmutation updateBox($input1:UpdateShipmentItemInput!){\n  updateShipmentItem(input:$input1){\n    numUids\n  }\n}\n\t`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
