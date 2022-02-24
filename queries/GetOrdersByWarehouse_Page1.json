@@ -32,7 +32,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -44,7 +44,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n\tvariables:{\n  \"input\": EquipmentSelector.selectedOptionValue\n},\n\tquery:`\n\t\tquery GetOrderByEquipment($input:ID!){\n  getEquipment(id:$input){\n    orders(filter:{not:{orderType:{eq:PURCHASE_ORDER}}}){\n      id\n\t\twarehouse {\n\t\t\tid\n\t\t}\n\t\tstatus\n\t\torderType\n    createdDateTime\n    shipFromPartner{\n\t\t\tid\n      name\n    }\n    shipToPartner{\n\t\t\t\tid\n      name\n    }\n\t\tlines{\n\t\t\tmaterial{\n        code\n        name\n      }\n      quantity\n\t\t\tpackedQty\n\t\t\tstockOnHandQty\n\t\t}\n    }\n  }\n}\n\t`\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

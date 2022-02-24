@@ -7259,98 +7259,11 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_CreateAUSPostShipmentItemLabel",
-              "name": "CreateAUSPostShipmentItemLabel",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"item\": {\n\t\t\t\"id\": ShipmentItemList.selectedItem.id\n\t\t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateDeliveryShipmentItemLabel($shipment:ExtShipmentRef!, $item:ExtShipmentItemRef!, $shippingAccount:ShippingAccountData!) {\n  createDeliveryShipmentItemLabel(shipment:$shipment, item:$item, shippingAccountData:$shippingAccount)\n}\n\t`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Page1_GetEquipmentWithOrders",
               "name": "GetEquipmentWithOrders",
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n\tvariables:null,\n\tquery:`\n\t\tquery{\n  queryEquipment@cascade{\n    value:id\n    label:name\n    orders(filter:{not:{orderType:{eq:PURCHASE_ORDER}}}){\n      id\n    }\n  }\n}\n\t`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_QueryAssociatedDeliveries",
-              "name": "QueryAssociatedDeliveries",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\n  \t\"shipments\": GetShipmentIDs.getIDsArray(),\n\t},\n\tquery:`\nquery QueryDelivery($shipments:[ID!]!){\n  queryDelivery @cascade{\n    id\n    transportCompanyDeliveryId\n    transportCompany\n    shipments (filter:{id:$shipments}){\n      id\n    }\n  }\n}\n\t`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_GetCarrierCarriers",
-              "name": "GetCarrierCarriers",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:carrierSelectBin.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    carriers @cascade{\n      label:code\n      value:id\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_GetOrdersByWarehouse",
-              "name": "GetOrdersByWarehouse",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\n  \"input\": EquipmentSelector.selectedOptionValue\n},\n\tquery:`\n\t\tquery GetOrderByEquipment($input:ID!){\n  getEquipment(id:$input){\n    orders(filter:{not:{orderType:{eq:PURCHASE_ORDER}}}){\n      id\n\t\twarehouse {\n\t\t\tid\n\t\t}\n\t\tstatus\n\t\torderType\n    createdDateTime\n    shipFromPartner{\n\t\t\tid\n      name\n    }\n    shipToPartner{\n\t\t\t\tid\n      name\n    }\n\t\tlines{\n\t\t\tmaterial{\n        code\n        name\n      }\n      quantity\n\t\t\tpackedQty\n\t\t\tstockOnHandQty\n\t\t}\n    }\n  }\n}\n\t`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_GetWarehouseBins",
-              "name": "GetWarehouseBins",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\n  \t\"warehouse\": EquipmentSelector.selectedOptionValue,\n\t},\n\tquery:`\nquery GetEquipment($warehouse:ID!){\n  getEquipment(id:$warehouse) {\n    children {\n      value:id\n      label:name\n      carriers {\n        value:id\n        label:code\n        status {\n          code\n        }\n      }\n    }\n  }\n}\n\t`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_QuertShipmentMaterialCode",
-              "name": "QuertShipmentMaterialCode",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\"input\":ListOrders.selectedItem.id},\n\tquery:`\n\t\tquery QueryOrderLineMaterialCode($input:ID!){\n\tgetOrder(id:$input){\n    lines{\n      material{\n        value:id\n        label:code\n      }\n    }\n  }\n}\n\t`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_QueryShipment",
-              "name": "QueryShipment",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\n  \t\"shipment\": ListOrders.selectedItem.id,\n\t},\n\tquery:`\nquery QueryShipments($shipment:ID!){\n  getOrder(id:$shipment){\n\t\tshipments {\n\t\t\tid\n\t\t\ttransportCompanyShipmentId\n\t\t\tstatus\n    \treference\n    \titems (filter:{isActive:true}){\n      \tid\n\t\t\t\tstatus\n\t\t\t\tweightKg\n\t\t\t\ttrackingDetailsArticleId\n        trackingDetailsBarcodeId\n        transportCompanyItemId\n        box {\n\t\t\t\t\tid\n          sizeDepthCm\n        \tsizeWidthCm\n          sizeHeightCm\n        }\n      }\n\t\t}\n  }\n}\n\t`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_GetCarriersStatus",
-              "name": "GetCarriersStatus",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tid:carrierSelectCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrierStatus($id:ID!){\n  getCarrier(id:$id){\n    status {\n      code\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_QueryMaterialInventoryHandling",
-              "name": "QueryMaterialInventoryHandling",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\n  \t\"id\": AddItemsMaterialSelector.selectedOptionValue,\n\t\t\"warehouse\": [EquipmentSelector.selectedOptionValue]\n\t},\n\tquery:`\nquery GetInventoryHandlingPolicy($id:ID!, $warehouse:[ID!]!){\n  getMaterialDefinition(id:$id) {\n\t\tserialMask\n    inventoryHandlingPolicy {\n      trackByCarrier\n      trackBySerialNumber\n\t\t\t\n      rules @cascade{\n        warehouse (filter:{id:$warehouse}){\n          name\n        }\n        stateModel {\n          states (filter:{canPack:true}){\n            status {\n              label:code\n\t\t\t\t\t\t\tvalue:id\n            }\n          }\n        }\n      }\n    }\n  }\n}\n\t`\n})"
               ],
               "timeoutInMillisecond": 10000
             }

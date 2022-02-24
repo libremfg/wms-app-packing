@@ -44,7 +44,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n\tvariables:null,\n\tquery:`\n\t\tquery{\n  queryEquipment@cascade{\n    value:id\n    label:name\n    orders(filter:{not:{orderType:{eq:PURCHASE_ORDER}}}){\n      id\n    }\n  }\n}\n\t`\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

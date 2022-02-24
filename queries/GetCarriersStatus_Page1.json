@@ -19,9 +19,14 @@
       "headers": [],
       "encodeParamsToggle": true,
       "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:carrierSelectCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrierStatus($id:ID!){\n  getCarrier(id:$id){\n    status {\n      code\n    }\n  }\n}\n    `\n})\n}}",
-      "httpMethod": "POST"
+      "httpMethod": "POST",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": true
+        }
+      ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,7 +38,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n    variables: {\n\t\t\tid:carrierSelectCarrier.selectedOptionValue\n\t\t},\n    query: `\nquery GetCarrierStatus($id:ID!){\n  getCarrier(id:$id){\n    status {\n      code\n    }\n  }\n}\n    `\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

@@ -32,7 +32,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -44,7 +44,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n\tvariables:{\n  \t\"shipments\": GetShipmentIDs.getIDsArray(),\n\t},\n\tquery:`\nquery QueryDelivery($shipments:[ID!]!){\n  queryDelivery @cascade{\n    id\n    transportCompanyDeliveryId\n    transportCompany\n    shipments (filter:{id:$shipments}){\n      id\n    }\n  }\n}\n\t`\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

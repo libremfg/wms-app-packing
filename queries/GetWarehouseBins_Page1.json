@@ -19,9 +19,14 @@
       "headers": [],
       "encodeParamsToggle": true,
       "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"warehouse\": EquipmentSelector.selectedOptionValue,\n\t},\n\tquery:`\nquery GetEquipment($warehouse:ID!){\n  getEquipment(id:$warehouse) {\n    children {\n      value:id\n      label:name\n      carriers {\n        value:id\n        label:code\n        status {\n          code\n        }\n      }\n    }\n  }\n}\n\t`\n})}}",
-      "httpMethod": "POST"
+      "httpMethod": "POST",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": true
+        }
+      ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,7 +38,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n\tvariables:{\n  \t\"warehouse\": EquipmentSelector.selectedOptionValue,\n\t},\n\tquery:`\nquery GetEquipment($warehouse:ID!){\n  getEquipment(id:$warehouse) {\n    children {\n      value:id\n      label:name\n      carriers {\n        value:id\n        label:code\n        status {\n          code\n        }\n      }\n    }\n  }\n}\n\t`\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
