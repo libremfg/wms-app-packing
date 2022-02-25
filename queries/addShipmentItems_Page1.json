@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (AddShipItems.data.errors != null) {\n\t\t\tshowAlert(AddShipItems.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal('ParcelDetail')\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (AddShipItems.data.errors != null) {\n\t\t\tshowAlert(AddShipItems.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal('ParcelDetailModal')\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (AddShipItems.data.errors != null) {\n\t\t\tshowAlert(AddShipItems.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal('ParcelDetail')\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}"
+      "() => {\n\t\tif (AddShipItems.data.errors != null) {\n\t\t\tshowAlert(AddShipItems.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal('ParcelDetailModal')\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -27,14 +27,14 @@
           "children": [
             {
               "template": {
-                "Text1": {
+                "txtListOrderId": {
                   "isVisible": true,
                   "text": "{{ListOrders.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.id;\n              })();\n            })}}",
                   "fontSize": "PARAGRAPH",
                   "fontStyle": "BOLD",
                   "textAlign": "LEFT",
                   "textColor": "#231F20",
-                  "widgetName": "Text1",
+                  "widgetName": "txtListOrderId",
                   "version": 1,
                   "type": "TEXT_WIDGET",
                   "hideCard": false,
@@ -57,14 +57,14 @@
                   "bottomRow": 4,
                   "parentId": "xpzb7xlc1j"
                 },
-                "Text2": {
+                "txtListOrderOrderType": {
                   "isVisible": true,
                   "text": "{{ListOrders.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.orderType;\n              })();\n            })}}",
                   "fontSize": "PARAGRAPH",
                   "fontStyle": "BOLD",
                   "textAlign": "LEFT",
                   "textColor": "#231F20",
-                  "widgetName": "Text2",
+                  "widgetName": "txtListOrderOrderType",
                   "version": 1,
                   "type": "TEXT_WIDGET",
                   "hideCard": false,
@@ -87,14 +87,14 @@
                   "bottomRow": 8,
                   "parentId": "xpzb7xlc1j"
                 },
-                "Text4": {
+                "txtListOrderCreatedTime": {
                   "isVisible": true,
                   "text": "{{ListOrders.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.createdDateTime;\n              })();\n            })}}",
                   "fontSize": "PARAGRAPH",
                   "fontStyle": "BOLD",
                   "textAlign": "LEFT",
                   "textColor": "#231F20",
-                  "widgetName": "Text4",
+                  "widgetName": "txtListOrderCreatedTime",
                   "version": 1,
                   "type": "TEXT_WIDGET",
                   "hideCard": false,
@@ -139,14 +139,14 @@
                     "parentId": true
                   }
                 },
-                "Text5": {
+                "txtListOrderStatus": {
                   "isVisible": true,
                   "text": "{{ListOrders.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.status;\n              })();\n            })}}",
                   "fontSize": "PARAGRAPH",
                   "fontStyle": "BOLD",
                   "textAlign": "LEFT",
                   "textColor": "#231F20",
-                  "widgetName": "Text5",
+                  "widgetName": "txtListOrderStatus",
                   "version": 1,
                   "type": "TEXT_WIDGET",
                   "hideCard": false,
@@ -224,13 +224,16 @@
                   "key": "isVisible"
                 },
                 {
-                  "key": "template.Text1.text"
+                  "key": "template.txtListOrderId.text"
                 },
                 {
-                  "key": "template.Text5.text"
+                  "key": "template.txtListOrderStatus.text"
                 },
                 {
-                  "key": "template.Text4.text"
+                  "key": "template.txtListOrderCreatedTime.text"
+                },
+                {
+                  "key": "template.txtListOrderOrderType.text"
                 }
               ],
               "gridType": "vertical",
@@ -255,7 +258,7 @@
                   "children": [
                     {
                       "boxShadow": "NONE",
-                      "widgetName": "Container1",
+                      "widgetName": "ctnListOrders",
                       "borderColor": "transparent",
                       "disallowCopy": true,
                       "isCanvas": true,
@@ -293,7 +296,7 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
-                              "widgetName": "Text1",
+                              "widgetName": "txtListOrderId",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.e6c93592.svg",
                               "topRow": 0,
@@ -353,7 +356,7 @@
                               "textStyle": "HEADING"
                             },
                             {
-                              "widgetName": "Text2",
+                              "widgetName": "txtListOrderOrderType",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.e6c93592.svg",
                               "topRow": 4,
@@ -413,7 +416,7 @@
                               "textStyle": "BODY"
                             },
                             {
-                              "widgetName": "Text4",
+                              "widgetName": "txtListOrderCreatedTime",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.e6c93592.svg",
                               "topRow": 9,
@@ -471,7 +474,7 @@
                               "fontSize": "PARAGRAPH"
                             },
                             {
-                              "widgetName": "Text5",
+                              "widgetName": "txtListOrderStatus",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.e6c93592.svg",
                               "topRow": 2,
@@ -561,10 +564,10 @@
                 }
               ],
               "privateWidgets": {
-                "Text1": true,
-                "Text2": true,
-                "Text4": true,
-                "Text5": true
+                "txtListOrderId": true,
+                "txtListOrderOrderType": true,
+                "txtListOrderCreatedTime": true,
+                "txtListOrderStatus": true
               },
               "key": "ir7m4o4ba1",
               "backgroundColor": "transparent",
@@ -578,7 +581,7 @@
               "isLoading": false
             },
             {
-              "widgetName": "Input1",
+              "widgetName": "inpOrderSearch",
               "displayName": "Input",
               "iconSVG": "/static/media/icon.9f505595.svg",
               "topRow": 7,
@@ -611,7 +614,7 @@
             },
             {
               "boxShadow": "NONE",
-              "widgetName": "Container2",
+              "widgetName": "ctnOrderDetails",
               "borderColor": "transparent",
               "isCanvas": true,
               "dynamicPropertyPathList": [
@@ -659,7 +662,7 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
-                      "widgetName": "Text3",
+                      "widgetName": "txtOrderId",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 0,
@@ -690,7 +693,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "shipFrom",
+                      "widgetName": "txtOrderShipFrom",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 4,
@@ -721,7 +724,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "ShipTo",
+                      "widgetName": "txtOrderShipTo",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 4,
@@ -752,7 +755,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "OrderType",
+                      "widgetName": "txtOrderType",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 8,
@@ -783,7 +786,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "OrderStatus",
+                      "widgetName": "txtOrderStatus",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 12,
@@ -814,7 +817,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "CreatedDate",
+                      "widgetName": "txtCreatedDate",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 16,
@@ -845,7 +848,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "Divider1",
+                      "widgetName": "divOrderDetails1",
                       "thickness": "2",
                       "displayName": "Divider",
                       "iconSVG": "/static/media/icon.cbe8f608.svg",
@@ -873,7 +876,7 @@
                       "isLoading": false
                     },
                     {
-                      "widgetName": "ListPartNumberDetail",
+                      "widgetName": "ListOrderNumber",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "material",
@@ -936,7 +939,7 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "material",
-                          "computedValue": "{{ListPartNumberDetail.sanitizedTableData.map((currentRow) => ( _.map(currentRow.material)[0]))}}"
+                          "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( _.map(currentRow.material)[0]))}}"
                         },
                         "quantity": {
                           "index": 1,
@@ -953,7 +956,7 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "quantity",
-                          "computedValue": "{{ListPartNumberDetail.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
+                          "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
                         },
                         "customColumn2": {
                           "index": 3,
@@ -967,7 +970,7 @@
                           "isCellVisible": true,
                           "isDerived": true,
                           "label": "customColumn2",
-                          "computedValue": "{{ListPartNumberDetail.sanitizedTableData.map((currentRow) => ( currentRow.customColumn2))}}",
+                          "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( currentRow.customColumn2))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "buttonLabelColor": "#FFFFFF"
                         },
@@ -986,7 +989,7 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "packedQty",
-                          "computedValue": "{{ListPartNumberDetail.sanitizedTableData.map((currentRow) => ( currentRow.packedQty))}}"
+                          "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( currentRow.packedQty))}}"
                         },
                         "stockOnHandQty": {
                           "index": 3,
@@ -1003,7 +1006,7 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "stockOnHandQty",
-                          "computedValue": "{{ListPartNumberDetail.sanitizedTableData.map((currentRow) => ( currentRow.stockOnHandQty))}}"
+                          "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( currentRow.stockOnHandQty))}}"
                         },
                         "customColumn3": {
                           "index": 5,
@@ -1017,13 +1020,13 @@
                           "isCellVisible": false,
                           "isDerived": true,
                           "label": "Pack Order",
-                          "computedValue": "{{ListPartNumberDetail.sanitizedTableData.map((currentRow) => ( currentRow.customColumn3))}}",
+                          "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( currentRow.customColumn3))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "buttonLabelColor": "#FFFFFF",
                           "buttonColor": "#03B365",
                           "menuColor": "#03B365",
                           "labelColor": "#FFFFFF",
-                          "buttonLabel": "{{ListPartNumberDetail.sanitizedTableData.map((currentRow) => ( 'Pack Orders'))}}"
+                          "buttonLabel": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( 'Pack Orders'))}}"
                         }
                       },
                       "delimiter": ",",
@@ -1041,7 +1044,7 @@
                           "isCellVisible": true,
                           "isDerived": true,
                           "label": "PartName",
-                          "computedValue": "{{ListPartNumberDetail.sanitizedTableData.map((currentRow) => ( currentRow.material.name))}}",
+                          "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( currentRow.material.name))}}",
                           "buttonStyle": "rgb(3, 179, 101)",
                           "buttonLabelColor": "#FFFFFF"
                         },
@@ -1063,7 +1066,7 @@
                           "buttonColor": "#03B365",
                           "menuColor": "#03B365",
                           "labelColor": "#FFFFFF",
-                          "buttonLabel": "{{ListPartNumberDetail.sanitizedTableData.map((currentRow) => ( 'Pack Orders'))}}"
+                          "buttonLabel": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( 'Pack Orders'))}}"
                         }
                       },
                       "rightColumn": 64,
@@ -1097,7 +1100,7 @@
                       }
                     },
                     {
-                      "widgetName": "Divider2",
+                      "widgetName": "divOrderDetails2",
                       "thickness": 2,
                       "displayName": "Divider",
                       "iconSVG": "/static/media/icon.cbe8f608.svg",
@@ -1124,7 +1127,7 @@
                       "isLoading": false
                     },
                     {
-                      "widgetName": "Shipment_Detail_Title",
+                      "widgetName": "txtShipmentDetailTitle",
                       "dynamicPropertyPathList": [],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
@@ -1311,7 +1314,7 @@
                           "buttonStyle": "rgb(3, 179, 101)",
                           "buttonLabelColor": "#FFFFFF",
                           "buttonLabel": "{{ListShipmentDetail.sanitizedTableData.map((currentRow) => ( 'Add Parcel'))}}",
-                          "onClick": "{{showModal('ParcelDetail')}}",
+                          "onClick": "{{showModal('ParcelDetailModal')}}",
                           "buttonColor": "#2E3D49"
                         },
                         "customColumn2": {
@@ -1563,7 +1566,7 @@
                       }
                     },
                     {
-                      "widgetName": "Parcel_Detail",
+                      "widgetName": "txtParcelDetailTitle",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 59,
@@ -1595,14 +1598,14 @@
                     },
                     {
                       "template": {
-                        "Text6": {
+                        "txtShipmentItemBox": {
                           "isVisible": true,
                           "text": "{{ShipmentItemList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'H: ' + currentItem.box.sizeHeightCm + 'cm W: ' + currentItem.box.sizeWidthCm + 'cm L:' + currentItem.box.sizeDepthCm + 'cm   Weight: ' + currentItem.weightKg + 'kg';\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
                           "textColor": "#231F20",
-                          "widgetName": "Text6",
+                          "widgetName": "txtShipmentItemBox",
                           "version": 1,
                           "type": "TEXT_WIDGET",
                           "hideCard": false,
@@ -1627,14 +1630,14 @@
                           "shouldScroll": false,
                           "disableLink": false
                         },
-                        "Text7": {
+                        "txtShipmentItemId": {
                           "isVisible": true,
-                          "text": "{{ShipmentItemList.listData.map((currentItem) => currentItem.id)}}",
+                          "text": "{{ShipmentItemList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.id;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
                           "textColor": "#231F20",
-                          "widgetName": "Text7",
+                          "widgetName": "txtShipmentItemId",
                           "version": 1,
                           "type": "TEXT_WIDGET",
                           "hideCard": false,
@@ -1657,14 +1660,14 @@
                           "bottomRow": 8,
                           "parentId": "uag59url39"
                         },
-                        "Text12": {
+                        "txtShipmentItemStatus": {
                           "isVisible": true,
                           "text": "{{ShipmentItemList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.status;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
                           "textColor": "#231F20",
-                          "widgetName": "Text12",
+                          "widgetName": "txtShipmentItemStatus",
                           "version": 1,
                           "type": "TEXT_WIDGET",
                           "hideCard": false,
@@ -1709,7 +1712,7 @@
                             "parentId": true
                           }
                         },
-                        "IconButton2": {
+                        "btnDeleteShipmentItem": {
                           "isVisible": true,
                           "iconName": "{{ShipmentItemList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'trash';\n              })();\n            })}}",
                           "borderRadius": "CIRCLE",
@@ -1717,7 +1720,7 @@
                           "buttonColor": "{{ShipmentItemList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '#F6F7F8';\n              })();\n            })}}",
                           "buttonVariant": "PRIMARY",
                           "isDisabled": false,
-                          "widgetName": "IconButton2",
+                          "widgetName": "btnDeleteShipmentItem",
                           "version": 1,
                           "type": "ICON_BUTTON_WIDGET",
                           "hideCard": false,
@@ -1764,14 +1767,14 @@
                           },
                           "onClick": "{{DeleteShipmentItem.run(() => QueryOrder.run(), () => showAlert('Failed to edlete order shipment','error'))}}"
                         },
-                        "Text25": {
+                        "txtShipmentItemAuspostId": {
                           "isVisible": true,
                           "text": "{{ShipmentItemList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Auspost Id: ' + currentItem.transportCompanyItemId;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
                           "textColor": "#231F20",
-                          "widgetName": "Text25",
+                          "widgetName": "txtShipmentItemAuspostId",
                           "version": 1,
                           "animateLoading": true,
                           "type": "TEXT_WIDGET",
@@ -1833,7 +1836,7 @@
                       "parentColumnSpace": 13.30859375,
                       "dynamicTriggerPathList": [
                         {
-                          "key": "template.IconButton2.onClick"
+                          "key": "template.btnDeleteShipmentItem.onClick"
                         },
                         {
                           "key": "onListItemClick"
@@ -1845,10 +1848,16 @@
                           "key": "listData"
                         },
                         {
-                          "key": "template.Text6.text"
+                          "key": "template.txtShipmentItemBox.text"
                         },
                         {
-                          "key": "template.Text25.text"
+                          "key": "template.txtShipmentItemAuspostId.text"
+                        },
+                        {
+                          "key": "template.txtShipmentItemId.text"
+                        },
+                        {
+                          "key": "template.txtShipmentItemStatus.text"
                         }
                       ],
                       "gridType": "vertical",
@@ -1873,7 +1882,7 @@
                           "children": [
                             {
                               "boxShadow": "NONE",
-                              "widgetName": "Container3",
+                              "widgetName": "ctnShipmentItemList",
                               "borderColor": "transparent",
                               "disallowCopy": true,
                               "isCanvas": true,
@@ -1911,7 +1920,7 @@
                                   "dynamicBindingPathList": [],
                                   "children": [
                                     {
-                                      "widgetName": "Text6",
+                                      "widgetName": "txtShipmentItemBox",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.e6c93592.svg",
                                       "topRow": 0,
@@ -1973,7 +1982,7 @@
                                       "textStyle": "HEADING"
                                     },
                                     {
-                                      "widgetName": "Text7",
+                                      "widgetName": "txtShipmentItemId",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.e6c93592.svg",
                                       "topRow": 0,
@@ -2033,7 +2042,7 @@
                                       "textStyle": "BODY"
                                     },
                                     {
-                                      "widgetName": "Text12",
+                                      "widgetName": "txtShipmentItemStatus",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
                                       "topRow": 4,
@@ -2092,7 +2101,7 @@
                                     },
                                     {
                                       "boxShadow": "NONE",
-                                      "widgetName": "IconButton2",
+                                      "widgetName": "btnDeleteShipmentItem",
                                       "onClick": "{{DeleteShipmentItem.run(() => QueryOrder.run(), () => showAlert('Failed to edlete order shipment','error'))}}",
                                       "buttonColor": "#F6F7F8",
                                       "dynamicPropertyPathList": [
@@ -2157,7 +2166,7 @@
                                       "buttonVariant": "PRIMARY"
                                     },
                                     {
-                                      "widgetName": "Text25",
+                                      "widgetName": "txtShipmentItemAuspostId",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
                                       "topRow": 4,
@@ -2248,11 +2257,11 @@
                         }
                       ],
                       "privateWidgets": {
-                        "Text6": true,
-                        "Text7": true,
-                        "Text12": true,
-                        "IconButton2": true,
-                        "Text25": true
+                        "txtShipmentItemBox": true,
+                        "txtShipmentItemId": true,
+                        "txtShipmentItemStatus": true,
+                        "btnDeleteShipmentItem": true,
+                        "txtShipmentItemAuspostId": true
                       },
                       "key": "xof3ycat4k",
                       "backgroundColor": "transparent",
@@ -2266,7 +2275,7 @@
                       "isLoading": false
                     },
                     {
-                      "widgetName": "Text26",
+                      "widgetName": "txtDeliveriesTitle",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 105,
@@ -2297,7 +2306,7 @@
                       "template": {
                         "Text28": {
                           "isVisible": true,
-                          "text": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Transport Company: ' + currentItem.transportCompany;\n              })();\n            })}}",
+                          "text": "{{ListDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Transport Company: ' + currentItem.transportCompany;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
@@ -2351,7 +2360,7 @@
                         },
                         "Text27": {
                           "isVisible": true,
-                          "text": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'ID: ' + currentItem.id;\n              })();\n            })}}",
+                          "text": "{{ListDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'ID: ' + currentItem.id;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
@@ -2405,7 +2414,7 @@
                         },
                         "Text29": {
                           "isVisible": true,
-                          "text": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Transport Company ID: ' + currentItem.transportCompanyDeliveryId;\n              })();\n            })}}",
+                          "text": "{{ListDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Transport Company ID: ' + currentItem.transportCompanyDeliveryId;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
@@ -2459,10 +2468,10 @@
                         },
                         "Text30": {
                           "isVisible": true,
-                          "text": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Shipments: ' + _.map(currentItem.shipments,\"id\");\n              })();\n            })}}",
-                          "fontSize": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'PARAGRAPH';\n              })();\n            })}}",
+                          "text": "{{ListDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Shipments: ' + _.map(currentItem.shipments,\"id\");\n              })();\n            })}}",
+                          "fontSize": "{{ListDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'PARAGRAPH';\n              })();\n            })}}",
                           "fontStyle": "BOLD",
-                          "textAlign": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'LEFT';\n              })();\n            })}}",
+                          "textAlign": "{{ListDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'LEFT';\n              })();\n            })}}",
                           "textColor": "#231F20",
                           "widgetName": "Text30",
                           "version": 1,
@@ -2512,7 +2521,7 @@
                           }
                         }
                       },
-                      "widgetName": "List1",
+                      "widgetName": "ListDeliveries",
                       "listData": "{{QueryAssociatedDeliveries.data.data.queryDelivery}}",
                       "isCanvas": true,
                       "displayName": "List",
@@ -2881,7 +2890,7 @@
                       "isLoading": false
                     },
                     {
-                      "widgetName": "CreateDeliveryButton",
+                      "widgetName": "btnCreateDelivery",
                       "onClick": "{{showModal('CreateDeliveryModal')}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -2915,7 +2924,7 @@
                       "buttonVariant": "PRIMARY"
                     },
                     {
-                      "widgetName": "CreateShipment",
+                      "widgetName": "btnCreateShipment",
                       "onClick": "{{CreateShipmentMutation.run()}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
@@ -2980,7 +2989,7 @@
             },
             {
               "boxShadow": "NONE",
-              "widgetName": "IconButton1",
+              "widgetName": "btnOrderSearch",
               "buttonColor": "#FFFFFF",
               "displayName": "Icon Button",
               "iconSVG": "/static/media/icon.1a0c634a.svg",
@@ -3007,7 +3016,7 @@
               "buttonVariant": "PRIMARY"
             },
             {
-              "widgetName": "ParcelDetail",
+              "widgetName": "ParcelDetailModal",
               "isCanvas": true,
               "displayName": "Modal",
               "iconSVG": "/static/media/icon.4975978e.svg",
@@ -3039,7 +3048,7 @@
                     {
                       "widgetName": "Icon1",
                       "rightColumn": 64,
-                      "onClick": "{{closeModal('ParcelDetail')}}",
+                      "onClick": "{{closeModal('ParcelDetailModal')}}",
                       "color": "#040627",
                       "iconName": "cross",
                       "displayName": "Icon",
@@ -3060,7 +3069,7 @@
                       "key": "zixug0jymb"
                     },
                     {
-                      "widgetName": "Text8",
+                      "widgetName": "txtParcelDetailModalTitle",
                       "rightColumn": 48,
                       "textAlign": "LEFT",
                       "displayName": "Text",
@@ -3085,8 +3094,8 @@
                       "key": "y0dssy8m9l"
                     },
                     {
-                      "widgetName": "Button1",
-                      "onClick": "{{closeModal('ParcelDetail')}}",
+                      "widgetName": "btnCloseParcelDetailModal",
+                      "onClick": "{{closeModal('ParcelDetailModal')}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -3112,7 +3121,7 @@
                       "buttonVariant": "SECONDARY"
                     },
                     {
-                      "widgetName": "Button2",
+                      "widgetName": "btnConfirmParcelDetailModal",
                       "onClick": "{{AddShipItems.run(() => MutationCompletions.addShipmentItems(), () => {})}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
@@ -3138,7 +3147,7 @@
                         }
                       ],
                       "text": "Confirm",
-                      "isDisabled": "{{HeightInput.text==null||DepthInput.text==null||WidthInput.text==null?true:false}}",
+                      "isDisabled": "{{inpParcelDetailHeight.text==null||inpParcelDetailDepth.text==null||inpParcelDetailWidth.text==null?true:false}}",
                       "key": "oratw74zz7",
                       "rightColumn": 62,
                       "isDefaultClickDisabled": true,
@@ -3153,7 +3162,7 @@
                       "buttonVariant": "PRIMARY"
                     },
                     {
-                      "widgetName": "Text9",
+                      "widgetName": "txtParcelDetailHeight",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 6,
@@ -3180,7 +3189,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "Text10",
+                      "widgetName": "txtParcelDetailDepth",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 10,
@@ -3207,7 +3216,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "Text11",
+                      "widgetName": "txtParcelDetailWidth",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.e6c93592.svg",
                       "topRow": 14,
@@ -3234,7 +3243,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "HeightInput",
+                      "widgetName": "inpParcelDetailHeight",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
                       "topRow": 6,
@@ -3267,7 +3276,7 @@
                       "defaultText": ""
                     },
                     {
-                      "widgetName": "DepthInput",
+                      "widgetName": "inpParcelDetailDepth",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
                       "topRow": 10,
@@ -3300,7 +3309,7 @@
                       "defaultText": ""
                     },
                     {
-                      "widgetName": "WidthInput",
+                      "widgetName": "inpParcelDetailWidth",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
                       "topRow": 14,
@@ -3333,7 +3342,7 @@
                       "defaultText": ""
                     },
                     {
-                      "widgetName": "Text13",
+                      "widgetName": "txtParcelDetailWeight",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 18,
@@ -3360,7 +3369,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "weightInput",
+                      "widgetName": "inpParcelDetailWeight",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
                       "topRow": 18,
@@ -7225,7 +7234,6 @@
           "BoxLengthInput",
           "BoxWeightInput",
           "BoxWidthInput",
-          "Button1",
           "Button10",
           "Button11",
           "Button12",
@@ -7234,7 +7242,6 @@
           "Button17",
           "Button18",
           "Button19",
-          "Button2",
           "Button5",
           "Button8",
           "Button9",
@@ -7262,27 +7269,17 @@
           "Canvas4Copy",
           "Canvas5",
           "Canvas6",
-          "Container1",
-          "Container2",
-          "Container3",
           "Container4",
           "Container5",
           "Container6",
-          "CreateDeliveryButton",
           "CreateDeliveryModal",
           "CreateDeliveryShipmentList",
-          "CreateShipment",
-          "CreatedDate",
-          "DepthInput",
-          "Divider1",
-          "Divider2",
           "DocumentViewer1",
           "DocumentViewer2",
           "EquipmentSelector",
           "Form1",
           "Form1Copy",
           "Form1Copy1",
-          "HeightInput",
           "Icon1",
           "Icon3",
           "Icon4",
@@ -7291,80 +7288,71 @@
           "Icon7",
           "Icon8",
           "Icon9",
-          "IconButton1",
-          "IconButton2",
-          "Input1",
-          "List1",
+          "ListDeliveries",
+          "ListOrderNumber",
           "ListOrders",
-          "ListPartNumberDetail",
           "ListShipmentDetail",
           "MainContainer",
-          "OrderStatus",
-          "OrderType",
-          "ParcelDetail",
-          "Parcel_Detail",
+          "ParcelDetailModal",
           "SealAndLabelModal",
           "SelectPackageConfirmButton",
           "SelectPackageModal",
-          "ShipTo",
           "ShipmentItemList",
           "ShipmentLabelModal",
           "ShipmentLabelModalTitle",
-          "Shipment_Detail_Title",
-          "Text1",
-          "Text10",
-          "Text11",
-          "Text12",
-          "Text13",
           "Text13Copy",
           "Text15",
           "Text16",
           "Text17",
           "Text18",
           "Text19",
-          "Text2",
           "Text20",
           "Text21",
           "Text22",
           "Text23",
-          "Text25",
-          "Text26",
           "Text27",
           "Text28",
           "Text29",
-          "Text3",
           "Text30",
           "Text31",
           "Text32",
           "Text33",
           "Text34",
-          "Text4",
-          "Text5",
-          "Text6",
-          "Text7",
-          "Text8",
-          "Text9",
           "TitleButton1",
           "TitleButton2",
           "TitleButton2Copy",
           "TitleButton2Copy1",
           "TitleButton2CopyCopy",
           "WeighItemsModal",
-          "WidthInput",
           "btnAddSerial",
           "btnCarrierAddCarrier",
+          "btnCloseParcelDetailModal",
+          "btnConfirmParcelDetailModal",
+          "btnCreateDelivery",
+          "btnCreateShipment",
+          "btnDeleteShipmentItem",
+          "btnOrderSearch",
           "btnReceiveTrackedByCarrier",
           "btnReceiveUntracked",
           "bulkSelectBin",
           "bulkSelectStatus",
           "carrierSelectBin",
           "carrierSelectCarrier",
+          "ctnListOrders",
+          "ctnOrderDetails",
+          "ctnShipmentItemList",
+          "divOrderDetails1",
+          "divOrderDetails2",
           "inpBarcode",
+          "inpOrderSearch",
+          "inpParcelDetailDepth",
+          "inpParcelDetailHeight",
+          "inpParcelDetailWeight",
+          "inpParcelDetailWidth",
           "inputBulkQuantity",
           "inputCarrierQuantity",
           "lblScanBarcode",
           "receiveTabs",
-          "shipFrom",
           "txtBulk",
           "txtBulkBin",
           "txtBulkQuantity",
@@ -7373,9 +7361,30 @@
           "txtCarrierQuantity",
           "txtCarrierStatus",
           "txtCarrierTitle",
+          "txtCreatedDate",
+          "txtDeliveriesTitle",
+          "txtListOrderCreatedTime",
+          "txtListOrderId",
+          "txtListOrderOrderType",
+          "txtListOrderStatus",
+          "txtOrderId",
+          "txtOrderShipFrom",
+          "txtOrderShipTo",
+          "txtOrderStatus",
+          "txtOrderType",
+          "txtParcelDetailDepth",
+          "txtParcelDetailHeight",
+          "txtParcelDetailModalTitle",
+          "txtParcelDetailTitle",
+          "txtParcelDetailWeight",
+          "txtParcelDetailWidth",
           "txtSerialBin",
           "txtSerialTitle",
-          "weightInput"
+          "txtShipmentDetailTitle",
+          "txtShipmentItemAuspostId",
+          "txtShipmentItemBox",
+          "txtShipmentItemId",
+          "txtShipmentItemStatus"
         ],
         "validOnPageLoadActions": true,
         "id": "Page1",
