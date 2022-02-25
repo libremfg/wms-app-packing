@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\"input\":ListOrders.selectedItem.id},\n\tquery:`\n\t\tquery QueryOrderLineMaterialCode($input:ID!){\n\tgetOrder(id:$input){\n    lines{\n      material{\n        value:id\n        label:code\n      }\n    }\n  }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\"input\":GetOrderDetail.data.data.getOrder.id},\n\tquery:`\n\t\tquery QueryOrderLineMaterialCode($input:ID!){\n\tgetOrder(id:$input){\n    lines{\n      material{\n        value:id\n        label:code\n      }\n    }\n  }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\"input\":ListOrders.selectedItem.id},\n\tquery:`\n\t\tquery QueryOrderLineMaterialCode($input:ID!){\n\tgetOrder(id:$input){\n    lines{\n      material{\n        value:id\n        label:code\n      }\n    }\n  }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\"input\":GetOrderDetail.data.data.getOrder.id},\n\tquery:`\n\t\tquery QueryOrderLineMaterialCode($input:ID!){\n\tgetOrder(id:$input){\n    lines{\n      material{\n        value:id\n        label:code\n      }\n    }\n  }\n}\n\t`\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

@@ -560,7 +560,7 @@
               "key": "ir7m4o4ba1",
               "backgroundColor": "transparent",
               "rightColumn": 20,
-              "onListItemClick": "{{QueryShipment.run(() => QuertShipmentMaterialCode.run(), () => {})}}",
+              "onListItemClick": "{{GetOrderDetail.run(() => QuertShipmentMaterialCode.run(), () => {})}}",
               "itemBackgroundColor": "#FFFFFF",
               "widgetId": "xzfevh51a7",
               "isVisible": "{{EquipmentSelector.selectedOptionValue == null?false:true}}",
@@ -666,7 +666,7 @@
                           "key": "text"
                         }
                       ],
-                      "text": "{{ListOrders.selectedItem.id}}",
+                      "text": "{{GetOrderDetail.data.data.getOrder.id}}",
                       "key": "lhcbkfmabi",
                       "rightColumn": 16,
                       "textAlign": "LEFT",
@@ -697,7 +697,7 @@
                           "key": "text"
                         }
                       ],
-                      "text": "Ship From: {{ListOrders.selectedItem.shipFromPartner.name}}",
+                      "text": "Ship From: {{GetOrderDetail.data.data.getOrder.shipFromPartner.name}}",
                       "key": "lhcbkfmabi",
                       "rightColumn": 25,
                       "textAlign": "LEFT",
@@ -728,7 +728,7 @@
                           "key": "text"
                         }
                       ],
-                      "text": "Ship To:{{ListOrders.selectedItem.shipToPartner.name}}",
+                      "text": "Ship To:{{GetOrderDetail.data.data.getOrder.shipToPartner.name}}",
                       "key": "lhcbkfmabi",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
@@ -759,7 +759,7 @@
                           "key": "text"
                         }
                       ],
-                      "text": "Order Type: {{ListOrders.selectedItem.orderType}}",
+                      "text": "Order Type: {{GetOrderDetail.data.data.getOrder.orderType}}",
                       "key": "lhcbkfmabi",
                       "rightColumn": 22,
                       "textAlign": "LEFT",
@@ -790,7 +790,7 @@
                           "key": "text"
                         }
                       ],
-                      "text": "Order Status:{{ListOrders.selectedItem.status}}",
+                      "text": "Order Status:{{GetOrderDetail.data.data.getOrder.status}}",
                       "key": "lhcbkfmabi",
                       "rightColumn": 16,
                       "textAlign": "LEFT",
@@ -821,7 +821,7 @@
                           "key": "text"
                         }
                       ],
-                      "text": "Created Date: {{ListOrders.selectedItem.createdDateTime}}",
+                      "text": "Created Date: {{GetOrderDetail.data.data.getOrder.createdDateTime}}",
                       "key": "lhcbkfmabi",
                       "rightColumn": 27,
                       "textAlign": "LEFT",
@@ -1061,7 +1061,7 @@
                       "textSize": "PARAGRAPH",
                       "widgetId": "dla9viwtv2",
                       "isVisibleFilters": false,
-                      "tableData": "{{ListOrders.selectedItem.lines}}",
+                      "tableData": "{{GetOrderDetail.data.data.getOrder.lines}}",
                       "isVisible": true,
                       "label": "Data",
                       "searchKey": "",
@@ -1527,7 +1527,7 @@
                       "textSize": "PARAGRAPH",
                       "widgetId": "1ikohm5y1j",
                       "isVisibleFilters": false,
-                      "tableData": "{{QueryShipment.data.data.getOrder.shipments}}",
+                      "tableData": "{{GetOrderDetail.data.data.getOrder.shipments}}",
                       "isVisible": true,
                       "label": "Data",
                       "searchKey": "",
@@ -7152,6 +7152,17 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n\tvariables:null,\n\tquery:`\n\t\tquery{\n  queryEquipment@cascade{\n    value:id\n    label:name\n    orders(filter:{not:{orderType:{eq:PURCHASE_ORDER}}}){\n      id\n    }\n  }\n}\n\t`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_GetOrderDetail",
+              "name": "GetOrderDetail",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n\tvariables:{\n  \"input\": ListOrders.selectedItem.id\n},\n\tquery:`\nquery GetOrder($input:ID!){\n  getOrder(id:$input){\n    id\n\t\twarehouse {\n\t\t\tid\n\t\t}\n\t\tstatus\n\t\torderType\n    createdDateTime\n    shipFromPartner{\n\t\t\tid\n      name\n    }\n    shipToPartner{\n\t\t\t\tid\n      name\n    }\n\t\tlines{\n\t\t\tmaterial{\n        code\n        name\n      }\n      quantity\n\t\t\tpackedQty\n\t\t\tstockOnHandQty\n\t\t}\n\t\tshipments {\n\t\t\tid\n\t\t\ttransportCompanyShipmentId\n\t\t\tstatus\n    \treference\n    \titems (filter:{isActive:true}){\n      \tid\n\t\t\t\tstatus\n\t\t\t\tweightKg\n\t\t\t\ttrackingDetailsArticleId\n        trackingDetailsBarcodeId\n        transportCompanyItemId\n        box {\n\t\t\t\t\tid\n          sizeDepthCm\n        \tsizeWidthCm\n          sizeHeightCm\n        }\n      }\n\t\t}\n  }\n}\n\t`\n})"
               ],
               "timeoutInMillisecond": 10000
             }

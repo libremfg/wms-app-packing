@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"items\": [{\"id\":ShipmentItemList.selectedItem.id}],\n  \t\"account\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation UpdateShipmentItems($shipment:ExtShipmentRef!,$items:[ExtShipmentItemRef!]!,$account:ShippingAccountData!) {\n  addShipmentItemsToDeliveryShipment(shipment:$shipment,shipmentItems:$items,shippingAccountData:$account) {\n    id\n  }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"items\": [{\"id\":ShipmentItemList.selectedItem.id}],\n  \t\"account\": {\n    \t\"Warehouse\":{\"id\":GetOrderDetail.data.data.getOrder.warehouse.id},\n    \t\"Partner\":{\"id\":GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation UpdateShipmentItems($shipment:ExtShipmentRef!,$items:[ExtShipmentItemRef!]!,$account:ShippingAccountData!) {\n  addShipmentItemsToDeliveryShipment(shipment:$shipment,shipmentItems:$items,shippingAccountData:$account) {\n    id\n  }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"items\": [{\"id\":ShipmentItemList.selectedItem.id}],\n  \t\"account\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation UpdateShipmentItems($shipment:ExtShipmentRef!,$items:[ExtShipmentItemRef!]!,$account:ShippingAccountData!) {\n  addShipmentItemsToDeliveryShipment(shipment:$shipment,shipmentItems:$items,shippingAccountData:$account) {\n    id\n  }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"items\": [{\"id\":ShipmentItemList.selectedItem.id}],\n  \t\"account\": {\n    \t\"Warehouse\":{\"id\":GetOrderDetail.data.data.getOrder.warehouse.id},\n    \t\"Partner\":{\"id\":GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation UpdateShipmentItems($shipment:ExtShipmentRef!,$items:[ExtShipmentItemRef!]!,$account:ShippingAccountData!) {\n  addShipmentItemsToDeliveryShipment(shipment:$shipment,shipmentItems:$items,shippingAccountData:$account) {\n    id\n  }\n}\n\t`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
