@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 2816,
+          "rightColumn": 1296,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -3098,14 +3098,11 @@
                     },
                     {
                       "widgetName": "Button2",
-                      "onClick": "{{AddShipItems.run(() => closeModal('ParcelDetail'),QueryOrder.run(), () => {})}}",
+                      "onClick": "{{AddShipItems.run(() => MutationCompletions.addShipmentItems(), () => {})}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
                           "key": "isDisabled"
-                        },
-                        {
-                          "key": "onClick"
                         }
                       ],
                       "displayName": "Button",
