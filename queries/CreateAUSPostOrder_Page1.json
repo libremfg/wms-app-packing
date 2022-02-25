@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"shipments\": appsmith.store.ShipmentsToAdd,\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation  CreateDeliveryOrderFromShipments($shipments:[ExtShipmentRef!]!,$shippingAccount:ShippingAccountData!) {\n   createDeliveryOrderFromShipments(shipments:$shipments,shippingAccountData:$shippingAccount){\n\t id\n\t }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"shipments\": appsmith.store.ShipmentsToAdd,\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":GetOrderDetail.data.data.getOrder.warehouse.id},\n    \t\"Partner\":{\"id\":GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation  CreateDeliveryOrderFromShipments($shipments:[ExtShipmentRef!]!,$shippingAccount:ShippingAccountData!) {\n   createDeliveryOrderFromShipments(shipments:$shipments,shippingAccountData:$shippingAccount){\n\t id\n\t }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \t\"shipments\": appsmith.store.ShipmentsToAdd,\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation  CreateDeliveryOrderFromShipments($shipments:[ExtShipmentRef!]!,$shippingAccount:ShippingAccountData!) {\n   createDeliveryOrderFromShipments(shipments:$shipments,shippingAccountData:$shippingAccount){\n\t id\n\t }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n  \t\"shipments\": appsmith.store.ShipmentsToAdd,\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":GetOrderDetail.data.data.getOrder.warehouse.id},\n    \t\"Partner\":{\"id\":GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation  CreateDeliveryOrderFromShipments($shipments:[ExtShipmentRef!]!,$shippingAccount:ShippingAccountData!) {\n   createDeliveryOrderFromShipments(shipments:$shipments,shippingAccountData:$shippingAccount){\n\t id\n\t }\n}\n\t`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

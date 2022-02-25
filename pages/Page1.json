@@ -4071,7 +4071,7 @@
                                     {
                                       "resetFormOnClick": true,
                                       "widgetName": "btnAddSerial",
-                                      "onClick": "{{MoveSubLotToShipment.run()}}",
+                                      "onClick": "{{MoveSubLotToShipment.run(() => MutationCompletions.moveSerialised(), () => {})}}",
                                       "buttonColor": "#03B365",
                                       "displayName": "FormButton",
                                       "iconSVG": "/static/media/icon.c8f649ed.svg",

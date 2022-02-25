@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateEmptyDeliveryShipment($shipment:ExtShipmentRef!,$shippingAccount:ShippingAccountData!) {\n  createEmptyDeliveryShipment(shipment:$shipment,shippingAccountData:$shippingAccount){\n    id\n  }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":GetOrderDetail.data.data.getOrder.warehouse.id},\n    \t\"Partner\":{\"id\":GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateEmptyDeliveryShipment($shipment:ExtShipmentRef!,$shippingAccount:ShippingAccountData!) {\n  createEmptyDeliveryShipment(shipment:$shipment,shippingAccountData:$shippingAccount){\n    id\n  }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateEmptyDeliveryShipment($shipment:ExtShipmentRef!,$shippingAccount:ShippingAccountData!) {\n  createEmptyDeliveryShipment(shipment:$shipment,shippingAccountData:$shippingAccount){\n    id\n  }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":GetOrderDetail.data.data.getOrder.warehouse.id},\n    \t\"Partner\":{\"id\":GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateEmptyDeliveryShipment($shipment:ExtShipmentRef!,$shippingAccount:ShippingAccountData!) {\n  createEmptyDeliveryShipment(shipment:$shipment,shippingAccountData:$shippingAccount){\n    id\n  }\n}\n\t`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

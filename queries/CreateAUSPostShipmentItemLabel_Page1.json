@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"item\": {\n\t\t\t\"id\": ShipmentItemList.selectedItem.id\n\t\t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateDeliveryShipmentItemLabel($shipment:ExtShipmentRef!, $item:ExtShipmentItemRef!, $shippingAccount:ShippingAccountData!) {\n  createDeliveryShipmentItemLabel(shipment:$shipment, item:$item, shippingAccountData:$shippingAccount)\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"item\": {\n\t\t\t\"id\": ShipmentItemList.selectedItem.id\n\t\t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":GetOrderDetail.data.data.warehouse.id},\n    \t\"Partner\":{\"id\":GetOrderDetail.data.data.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateDeliveryShipmentItemLabel($shipment:ExtShipmentRef!, $item:ExtShipmentItemRef!, $shippingAccount:ShippingAccountData!) {\n  createDeliveryShipmentItemLabel(shipment:$shipment, item:$item, shippingAccountData:$shippingAccount)\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"item\": {\n\t\t\t\"id\": ShipmentItemList.selectedItem.id\n\t\t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":ListOrders.selectedItem.warehouse.id},\n    \t\"Partner\":{\"id\":ListOrders.selectedItem.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateDeliveryShipmentItemLabel($shipment:ExtShipmentRef!, $item:ExtShipmentItemRef!, $shippingAccount:ShippingAccountData!) {\n  createDeliveryShipmentItemLabel(shipment:$shipment, item:$item, shippingAccountData:$shippingAccount)\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n  \t\"shipment\": {\n    \t\"id\":  ListShipmentDetail.selectedRow.id\n  \t},\n\t\t\"item\": {\n\t\t\t\"id\": ShipmentItemList.selectedItem.id\n\t\t},\n  \t\"shippingAccount\": {\n    \t\"Warehouse\":{\"id\":GetOrderDetail.data.data.warehouse.id},\n    \t\"Partner\":{\"id\":GetOrderDetail.data.data.shipFromPartner.id},\n    \t\"TransportCompany\":\"AUSPOST\"\n\t\t}\n\t},\n\tquery:`\nmutation CreateDeliveryShipmentItemLabel($shipment:ExtShipmentRef!, $item:ExtShipmentItemRef!, $shippingAccount:ShippingAccountData!) {\n  createDeliveryShipmentItemLabel(shipment:$shipment, item:$item, shippingAccountData:$shippingAccount)\n}\n\t`\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
