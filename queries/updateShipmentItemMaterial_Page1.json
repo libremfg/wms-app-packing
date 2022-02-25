@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "moveSerialised",
-    "fullyQualifiedName": "MutationCompletions.moveSerialised",
+    "name": "updateShipmentItemMaterial",
+    "fullyQualifiedName": "MutationCompletions.updateShipmentItemMaterial",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (MoveSubLotToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveSubLotToShipment.data.errors[0].message)\n\t\t} \n\t}",
+      "body": "() => {\n\t\tif (UpdateShipmentItemMaterial.data.errors != null) {\n\t\t\tshowAlert(UpdateShipmentItemMaterial.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal('AddItemsModal')\n\t\t\tshowModal('WeighItemsModal')\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (MoveSubLotToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveSubLotToShipment.data.errors[0].message)\n\t\t} \n\t}"
+      "() => {\n\t\tif (UpdateShipmentItemMaterial.data.errors != null) {\n\t\t\tshowAlert(UpdateShipmentItemMaterial.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal('AddItemsModal')\n\t\t\tshowModal('WeighItemsModal')\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_moveSerialised",
+  "id": "Page1_updateShipmentItemMaterial",
   "deleted": false,
-  "gitSyncId": "6188a576799de8559acc5336_62180e5b445a8d746a05e661"
+  "gitSyncId": "6188a576799de8559acc5336_62184631445a8d746a05e7f5"
 }

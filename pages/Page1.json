@@ -1834,6 +1834,12 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "listData"
+                        },
+                        {
+                          "key": "template.Text6.text"
+                        },
+                        {
+                          "key": "template.Text25.text"
                         }
                       ],
                       "gridType": "vertical",
@@ -3969,13 +3975,13 @@
                   "widgetName": "Canvas18",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 620,
+                  "bottomRow": 610,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 554,
+                  "minHeight": 614,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
@@ -4086,7 +4092,7 @@
                                       ],
                                       "leftColumn": 48,
                                       "dynamicBindingPathList": [],
-                                      "text": "Submit",
+                                      "text": "Add Serialised",
                                       "key": "orfb913i2s",
                                       "rightColumn": 64,
                                       "isDefaultClickDisabled": true,
@@ -4195,6 +4201,42 @@
                                       "regex": "{{QueryMaterialInventoryHandling.data.data.getMaterialDefinition.serialMask}}",
                                       "iconAlign": "left",
                                       "defaultText": ""
+                                    },
+                                    {
+                                      "widgetName": "Button19",
+                                      "onClick": "{{UpdateShipmentItemMaterial.run(() => MutationCompletions.updateShipmentItemMaterial(), () => {})}}",
+                                      "buttonColor": "#03B365",
+                                      "dynamicPropertyPathList": [],
+                                      "displayName": "Button",
+                                      "iconSVG": "/static/media/icon.cca02633.svg",
+                                      "topRow": 21,
+                                      "bottomRow": 25,
+                                      "parentRowSpace": 10,
+                                      "type": "BUTTON_WIDGET",
+                                      "hideCard": false,
+                                      "animateLoading": true,
+                                      "parentColumnSpace": 11.0625,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onClick"
+                                        }
+                                      ],
+                                      "leftColumn": 48,
+                                      "dynamicBindingPathList": [],
+                                      "text": "Finished",
+                                      "isDisabled": false,
+                                      "key": "0gzhqg3dge",
+                                      "rightColumn": 64,
+                                      "isDefaultClickDisabled": true,
+                                      "widgetId": "6wyh38x07v",
+                                      "isVisible": true,
+                                      "recaptchaType": "V3",
+                                      "version": 1,
+                                      "parentId": "pzlf4a2kje",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "buttonVariant": "PRIMARY",
+                                      "placement": "CENTER"
                                     }
                                   ],
                                   "key": "ynxpp8ycgp"
@@ -5251,7 +5293,7 @@
                 }
               ],
               "key": "7mns992moq",
-              "height": 554,
+              "height": 614,
               "rightColumn": 68,
               "detachFromLayout": true,
               "widgetId": "hvbs4xaoba",
@@ -7182,6 +7224,7 @@
           "Button16",
           "Button17",
           "Button18",
+          "Button19",
           "Button2",
           "Button5",
           "Button8",
