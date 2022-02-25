@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "myFun2",
-    "fullyQualifiedName": "JSObject2.myFun2",
+    "fullyQualifiedName": "JSObject1.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,16 +14,17 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_JSObject2",
+    "collectionId": "Page1_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\t//write code here\n\t}",
+      "body": "() => {\n\t\tif (QueryShipment.data.data.getOrder.shipments.length == 0){\n\t\t\treturn true\n\t\t}else{\n\t\t\treturn false\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\t//write code here\n\t}"
+      "() => {\n\t\tif (QueryShipment.data.data.getOrder.shipments.length == 0){\n\t\t\treturn true\n\t\t}else{\n\t\t\treturn false\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
@@ -42,5 +43,5 @@
   },
   "id": "Page1_myFun2",
   "deleted": false,
-  "gitSyncId": "6188a576799de8559acc5336_61d65900a4437918c02218da"
+  "gitSyncId": "6188a576799de8559acc5336_61c43436e89bc475f3ccff0c"
 }

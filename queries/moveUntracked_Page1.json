@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun1",
-    "fullyQualifiedName": "JSObject1.myFun1",
+    "name": "moveUntracked",
+    "fullyQualifiedName": "MutationCompletions.moveUntracked",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,16 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_JSObject1",
+    "collectionId": "Page1_MutationCompletions",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\t{{showModal('AddItemsModal');closeModal('SelectPackageModal')}}\n\t}",
+      "body": "() => {\n\t\tif (MoveUntrackedToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveUntrackedToShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tUpdateShipmentItemMaterial.run()\n\t\t\tcloseModal(\"AddItemsModal\")\n\t\t\tshowModal(\"WeighItemsModal\")\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,15 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\t{{showModal('AddItemsModal');closeModal('SelectPackageModal')}}\n\t}",
-      "showModal('AddItemsModal');closeModal('SelectPackageModal')"
+      "() => {\n\t\tif (MoveUntrackedToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveUntrackedToShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tUpdateShipmentItemMaterial.run()\n\t\t\tcloseModal(\"AddItemsModal\")\n\t\t\tshowModal(\"WeighItemsModal\")\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_myFun1",
+  "id": "Page1_moveUntracked",
   "deleted": false,
-  "gitSyncId": "6188a576799de8559acc5336_61c43436e89bc475f3ccff0b"
+  "gitSyncId": "6188a576799de8559acc5336_62180e42445a8d746a05e65f"
 }
