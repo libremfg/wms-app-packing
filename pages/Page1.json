@@ -222,6 +222,15 @@
                 },
                 {
                   "key": "isVisible"
+                },
+                {
+                  "key": "template.Text1.text"
+                },
+                {
+                  "key": "template.Text5.text"
+                },
+                {
+                  "key": "template.Text4.text"
                 }
               ],
               "gridType": "vertical",
