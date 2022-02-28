@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \"input\": {\n    \"filter\": {\n      \"id\": ShipmentItemList.selectedItem.box.id\n    },\n    \"set\": {\n      \"sizeWidthCm\": parseInt(BoxWidthInput.text),\n      \"sizeDepthCm\": parseInt(BoxLengthInput.text),\n      \"sizeHeightCm\": parseInt(BoxHeightInput.text)\n    }\n  }\n},\n\tquery:`\n\t\tmutation updateBox($input:UpdateBoxInput!){\n  updateBox(input:$input){\n    numUids\n  }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n  \"input\": {\n    \"filter\": {\n      \"id\": ShipmentItemList.selectedItem.box.id\n    },\n    \"set\": {\n      \"sizeWidthCm\": parseInt(inpSelectPackageBoxWidth.text),\n      \"sizeDepthCm\": parseInt(inpSelectPackageBoxLength.text),\n      \"sizeHeightCm\": parseInt(inpSelectPackageBoxHeight.text)\n    }\n  }\n},\n\tquery:`\n\t\tmutation updateBox($input:UpdateBoxInput!){\n  updateBox(input:$input){\n    numUids\n  }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \"input\": {\n    \"filter\": {\n      \"id\": ShipmentItemList.selectedItem.box.id\n    },\n    \"set\": {\n      \"sizeWidthCm\": parseInt(BoxWidthInput.text),\n      \"sizeDepthCm\": parseInt(BoxLengthInput.text),\n      \"sizeHeightCm\": parseInt(BoxHeightInput.text)\n    }\n  }\n},\n\tquery:`\n\t\tmutation updateBox($input:UpdateBoxInput!){\n  updateBox(input:$input){\n    numUids\n  }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n  \"input\": {\n    \"filter\": {\n      \"id\": ShipmentItemList.selectedItem.box.id\n    },\n    \"set\": {\n      \"sizeWidthCm\": parseInt(inpSelectPackageBoxWidth.text),\n      \"sizeDepthCm\": parseInt(inpSelectPackageBoxLength.text),\n      \"sizeHeightCm\": parseInt(inpSelectPackageBoxHeight.text)\n    }\n  }\n},\n\tquery:`\n\t\tmutation updateBox($input:UpdateBoxInput!){\n  updateBox(input:$input){\n    numUids\n  }\n}\n\t`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

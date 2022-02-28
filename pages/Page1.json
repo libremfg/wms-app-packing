@@ -3460,7 +3460,7 @@
                     {
                       "tabId": "",
                       "boxShadow": "NONE",
-                      "widgetName": "Container4",
+                      "widgetName": "ctnPackageDimensions",
                       "borderColor": "transparent",
                       "isCanvas": true,
                       "displayName": "Container",
@@ -3502,7 +3502,7 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
-                              "widgetName": "BoxHeightInput",
+                              "widgetName": "inpSelectPackageBoxHeight",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 8,
@@ -3538,7 +3538,7 @@
                               "defaultText": "{{ShipmentItemList.selectedItem.box.sizeHeightCm}}"
                             },
                             {
-                              "widgetName": "Text18",
+                              "widgetName": "txtSelectPackageHeight",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
                               "topRow": 8,
@@ -3565,7 +3565,7 @@
                               "fontSize": "PARAGRAPH"
                             },
                             {
-                              "widgetName": "BoxWidthInput",
+                              "widgetName": "inpSelectPackageBoxWidth",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 4,
@@ -3601,7 +3601,7 @@
                               "defaultText": "{{ShipmentItemList.selectedItem.box.sizeWidthCm}}"
                             },
                             {
-                              "widgetName": "Text17",
+                              "widgetName": "txtSelectPackageWidth",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
                               "topRow": 4,
@@ -3628,7 +3628,7 @@
                               "fontSize": "PARAGRAPH"
                             },
                             {
-                              "widgetName": "BoxLengthInput",
+                              "widgetName": "inpSelectPackageBoxLength",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 0,
@@ -3664,7 +3664,7 @@
                               "defaultText": "{{ShipmentItemList.selectedItem.box.sizeDepthCm}}"
                             },
                             {
-                              "widgetName": "Text16",
+                              "widgetName": "txtSelectPackageLength",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
                               "topRow": 0,
@@ -3730,7 +3730,7 @@
                       "key": "dw7b8gs3uq"
                     },
                     {
-                      "widgetName": "Text15",
+                      "widgetName": "txtSelectPackageModalTitle",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "displayName": "Text",
@@ -3755,7 +3755,7 @@
                       "key": "tfpt1p054n"
                     },
                     {
-                      "widgetName": "Button5",
+                      "widgetName": "btnCloseSelectPackageModal",
                       "onClick": "{{closeModal('SelectPackageModal')}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -3782,7 +3782,7 @@
                       "buttonVariant": "SECONDARY"
                     },
                     {
-                      "widgetName": "TitleButton1",
+                      "widgetName": "btnSelectPackageModalTitle",
                       "isCanvas": false,
                       "dynamicPropertyPathList": [
                         {
@@ -3911,7 +3911,7 @@
                       "buttonVariant": "PRIMARY"
                     },
                     {
-                      "widgetName": "SelectPackageConfirmButton",
+                      "widgetName": "btnSelectPackageModalConfirm",
                       "onClick": "{{UpdatePackageSize.run(() => {{showModal('AddItemsModal');closeModal('SelectPackageModal');QuertShipmentMaterialCode.run();QueryOrder.run()}}, () => {})}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
@@ -4051,7 +4051,7 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
-                              "widgetName": "Form1",
+                              "widgetName": "formAddItemsSerialised",
                               "backgroundColor": "white",
                               "rightColumn": 64,
                               "isCanvas": true,
@@ -4071,7 +4071,7 @@
                               "leftColumn": 0,
                               "children": [
                                 {
-                                  "widgetName": "Canvas14",
+                                  "widgetName": "canvasAddItemsSerialised",
                                   "rightColumn": 119.771484375,
                                   "detachFromLayout": true,
                                   "displayName": "Canvas",
@@ -4221,7 +4221,7 @@
                                       "defaultText": ""
                                     },
                                     {
-                                      "widgetName": "Button19",
+                                      "widgetName": "btnFinishAddItemsSerial",
                                       "onClick": "{{UpdateShipmentItemMaterial.run(() => MutationCompletions.updateShipmentItemMaterial(), () => {})}}",
                                       "buttonColor": "#03B365",
                                       "dynamicPropertyPathList": [],
@@ -4293,7 +4293,7 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
-                              "widgetName": "Form1Copy",
+                              "widgetName": "formAddItemsCarrier",
                               "backgroundColor": "white",
                               "rightColumn": 64,
                               "isCanvas": true,
@@ -4313,7 +4313,7 @@
                               "leftColumn": 0,
                               "children": [
                                 {
-                                  "widgetName": "Canvas14Copy",
+                                  "widgetName": "canvasAddItemsCarrier",
                                   "rightColumn": 119.771484375,
                                   "detachFromLayout": true,
                                   "displayName": "Canvas",
@@ -4655,7 +4655,7 @@
                                       "fontSize": "PARAGRAPH"
                                     },
                                     {
-                                      "widgetName": "Text13Copy",
+                                      "widgetName": "txtAddItemsCarrierStatus",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
                                       "topRow": 12,
@@ -4725,7 +4725,7 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
-                              "widgetName": "Form1Copy1",
+                              "widgetName": "formAddItemsBulk",
                               "backgroundColor": "white",
                               "rightColumn": 64,
                               "isCanvas": true,
@@ -4745,7 +4745,7 @@
                               "leftColumn": 0,
                               "children": [
                                 {
-                                  "widgetName": "Canvas14Copy1",
+                                  "widgetName": "canvasAddItemsBulk",
                                   "rightColumn": 119.771484375,
                                   "detachFromLayout": true,
                                   "displayName": "Canvas",
@@ -5074,14 +5074,14 @@
                           "index": 1
                         }
                       },
-                      "isVisible": "{{!_.isEmpty(AddItemsMaterialSelector.selectedOptionValue)}}",
+                      "isVisible": "{{!_.isEmpty(selectAddItemsMaterial.selectedOptionValue)}}",
                       "version": 3,
                       "parentId": "yabla4zhr1",
                       "renderMode": "CANVAS",
                       "isLoading": false
                     },
                     {
-                      "widgetName": "TitleButton2",
+                      "widgetName": "btnAddItemsModalTitle",
                       "isCanvas": false,
                       "dynamicPropertyPathList": [
                         {
@@ -5233,7 +5233,7 @@
                       "key": "jfw91zvi5h"
                     },
                     {
-                      "widgetName": "Text20",
+                      "widgetName": "txtAddItemsModalTitle",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "displayName": "Text",
@@ -5258,7 +5258,7 @@
                       "key": "hhw544w8fd"
                     },
                     {
-                      "widgetName": "AddItemsMaterialSelector",
+                      "widgetName": "selectAddItemsMaterial",
                       "isFilterable": false,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
@@ -5354,7 +5354,7 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
-                      "widgetName": "TitleButton2Copy",
+                      "widgetName": "btnAddDocsModalTitle",
                       "isCanvas": false,
                       "dynamicPropertyPathList": [
                         {
@@ -5506,7 +5506,7 @@
                       "key": "all9elmysf"
                     },
                     {
-                      "widgetName": "Text21",
+                      "widgetName": "txtAddDocsModalTitle",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "displayName": "Text",
@@ -5531,7 +5531,7 @@
                       "key": "8e8e51qoo7"
                     },
                     {
-                      "widgetName": "Button8",
+                      "widgetName": "btnCloseAddDocsModal",
                       "onClick": "{{closeModal('AddDocsModal')}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -5558,7 +5558,7 @@
                       "buttonVariant": "SECONDARY"
                     },
                     {
-                      "widgetName": "Button9",
+                      "widgetName": "btnConfirmAddDocsModal",
                       "onClick": "{{showModal('SealAndLabelModal');closeModal(AddDocsModal)}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
@@ -5595,7 +5595,7 @@
                       "buttonVariant": "PRIMARY"
                     },
                     {
-                      "widgetName": "Text23",
+                      "widgetName": "txtAddDocsPackingSlip",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 11,
@@ -5622,7 +5622,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "Button12",
+                      "widgetName": "btnAddDocsPrintPacking",
                       "onClick": "{{download()}}",
                       "buttonColor": "#FFFFFF",
                       "displayName": "Button",
@@ -5714,7 +5714,7 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
-                      "widgetName": "TitleButton2CopyCopy",
+                      "widgetName": "btnSealAndLabelModalTitle",
                       "isCanvas": false,
                       "dynamicPropertyPathList": [
                         {
@@ -5865,7 +5865,7 @@
                       "key": "all9elmysf"
                     },
                     {
-                      "widgetName": "Text22",
+                      "widgetName": "txtSealAndLabelModalTitle",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "displayName": "Text",
@@ -5890,7 +5890,7 @@
                       "key": "8e8e51qoo7"
                     },
                     {
-                      "widgetName": "Button10",
+                      "widgetName": "btnCloseSealAndLabelModal",
                       "onClick": "{{closeModal('SealAndLabelModal')}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -5917,7 +5917,7 @@
                       "buttonVariant": "SECONDARY"
                     },
                     {
-                      "widgetName": "Button11",
+                      "widgetName": "btnConfirmSealAndLabelModal",
                       "onClick": "{{closeModal('SealAndLabelModal')}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -5949,7 +5949,7 @@
                       "buttonVariant": "PRIMARY"
                     },
                     {
-                      "widgetName": "Button13",
+                      "widgetName": "btnPrintPostageLabel",
                       "onClick": "{{CreateAUSPostShipmentItemLabel.run()}}",
                       "buttonColor": "#FFFFFF",
                       "displayName": "Button",
@@ -5984,7 +5984,7 @@
                       "iconAlign": "left"
                     },
                     {
-                      "widgetName": "DocumentViewer2",
+                      "widgetName": "docViewPostageLabel",
                       "rightColumn": 59,
                       "isCanvas": false,
                       "displayName": "Document Viewer",
@@ -6120,7 +6120,7 @@
                       "fontSize": "HEADING1"
                     },
                     {
-                      "widgetName": "DocumentViewer1",
+                      "widgetName": "docViewShipmentLabel",
                       "rightColumn": 52,
                       "isCanvas": false,
                       "displayName": "Document Viewer",
@@ -6234,7 +6234,7 @@
                       "key": "hfx3s8idvf"
                     },
                     {
-                      "widgetName": "Text31",
+                      "widgetName": "txtDeliveryModalTitle",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -6294,119 +6294,11 @@
                     },
                     {
                       "template": {
-                        "Text33": {
-                          "isVisible": true,
-                          "text": "{{CreateDeliveryShipmentList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Shipment Items that will be added: ' + _.map(currentItem.items, \"id\");\n              })();\n            })}}",
-                          "fontSize": "PARAGRAPH",
-                          "fontStyle": "BOLD",
-                          "textAlign": "LEFT",
-                          "textColor": "#231F20",
-                          "widgetName": "Text33",
-                          "version": 1,
-                          "animateLoading": true,
-                          "type": "TEXT_WIDGET",
-                          "hideCard": false,
-                          "displayName": "Text",
-                          "key": "o7tfyf63wg",
-                          "iconSVG": "/static/media/icon.97c59b52.svg",
-                          "widgetId": "4icio8f0p2",
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
-                          "parentColumnSpace": 9.36181640625,
-                          "parentRowSpace": 10,
-                          "leftColumn": 25,
-                          "rightColumn": 41,
-                          "topRow": 2,
-                          "bottomRow": 6,
-                          "parentId": "ze3aeylc0s",
-                          "logBlackList": {
-                            "isVisible": true,
-                            "text": true,
-                            "fontSize": true,
-                            "fontStyle": true,
-                            "textAlign": true,
-                            "textColor": true,
-                            "widgetName": true,
-                            "version": true,
-                            "animateLoading": true,
-                            "type": true,
-                            "hideCard": true,
-                            "displayName": true,
-                            "key": true,
-                            "iconSVG": true,
-                            "isCanvas": true,
-                            "minHeight": true,
-                            "widgetId": true,
-                            "renderMode": true,
-                            "isLoading": true,
-                            "parentColumnSpace": true,
-                            "parentRowSpace": true,
-                            "leftColumn": true,
-                            "rightColumn": true,
-                            "topRow": true,
-                            "bottomRow": true,
-                            "parentId": true
-                          }
-                        },
-                        "Text32": {
-                          "isVisible": true,
-                          "text": "{{CreateDeliveryShipmentList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Shipment ID: ' + currentItem.id;\n              })();\n            })}}",
-                          "fontSize": "PARAGRAPH",
-                          "fontStyle": "BOLD",
-                          "textAlign": "LEFT",
-                          "textColor": "#231F20",
-                          "widgetName": "Text32",
-                          "version": 1,
-                          "animateLoading": true,
-                          "type": "TEXT_WIDGET",
-                          "hideCard": false,
-                          "displayName": "Text",
-                          "key": "o7tfyf63wg",
-                          "iconSVG": "/static/media/icon.97c59b52.svg",
-                          "widgetId": "cyyghprhd5",
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
-                          "parentColumnSpace": 9.36181640625,
-                          "parentRowSpace": 10,
-                          "leftColumn": 7,
-                          "rightColumn": 23,
-                          "topRow": 2,
-                          "bottomRow": 6,
-                          "parentId": "ze3aeylc0s",
-                          "logBlackList": {
-                            "isVisible": true,
-                            "text": true,
-                            "fontSize": true,
-                            "fontStyle": true,
-                            "textAlign": true,
-                            "textColor": true,
-                            "widgetName": true,
-                            "version": true,
-                            "animateLoading": true,
-                            "type": true,
-                            "hideCard": true,
-                            "displayName": true,
-                            "key": true,
-                            "iconSVG": true,
-                            "isCanvas": true,
-                            "minHeight": true,
-                            "widgetId": true,
-                            "renderMode": true,
-                            "isLoading": true,
-                            "parentColumnSpace": true,
-                            "parentRowSpace": true,
-                            "leftColumn": true,
-                            "rightColumn": true,
-                            "topRow": true,
-                            "bottomRow": true,
-                            "parentId": true
-                          }
-                        },
-                        "AddToShipmentCheckbox": {
+                        "checkboxAddToShipment": {
                           "isVisible": true,
                           "label": "",
                           "defaultCheckedState": false,
-                          "widgetName": "AddToShipmentCheckbox",
+                          "widgetName": "checkboxAddToShipment",
                           "version": 1,
                           "alignWidget": "LEFT",
                           "isDisabled": false,
@@ -6456,9 +6348,117 @@
                             "parentId": true
                           },
                           "onCheckChange": "{{GetShipmentIDs.addShipmentIDsToDeliveryList()}}"
+                        },
+                        "txtAddToDeliveryShipmentId": {
+                          "isVisible": true,
+                          "text": "{{listCreateDeliveryShipment.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Shipment ID: ' + currentItem.id;\n              })();\n            })}}",
+                          "fontSize": "PARAGRAPH",
+                          "fontStyle": "BOLD",
+                          "textAlign": "LEFT",
+                          "textColor": "#231F20",
+                          "widgetName": "txtAddToDeliveryShipmentId",
+                          "version": 1,
+                          "animateLoading": true,
+                          "type": "TEXT_WIDGET",
+                          "hideCard": false,
+                          "displayName": "Text",
+                          "key": "o7tfyf63wg",
+                          "iconSVG": "/static/media/icon.97c59b52.svg",
+                          "widgetId": "cyyghprhd5",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "parentColumnSpace": 9.36181640625,
+                          "parentRowSpace": 10,
+                          "leftColumn": 7,
+                          "rightColumn": 23,
+                          "topRow": 2,
+                          "bottomRow": 6,
+                          "parentId": "ze3aeylc0s",
+                          "logBlackList": {
+                            "isVisible": true,
+                            "text": true,
+                            "fontSize": true,
+                            "fontStyle": true,
+                            "textAlign": true,
+                            "textColor": true,
+                            "widgetName": true,
+                            "version": true,
+                            "animateLoading": true,
+                            "type": true,
+                            "hideCard": true,
+                            "displayName": true,
+                            "key": true,
+                            "iconSVG": true,
+                            "isCanvas": true,
+                            "minHeight": true,
+                            "widgetId": true,
+                            "renderMode": true,
+                            "isLoading": true,
+                            "parentColumnSpace": true,
+                            "parentRowSpace": true,
+                            "leftColumn": true,
+                            "rightColumn": true,
+                            "topRow": true,
+                            "bottomRow": true,
+                            "parentId": true
+                          }
+                        },
+                        "txtAddToDeliveryShipItemId": {
+                          "isVisible": true,
+                          "text": "{{listCreateDeliveryShipment.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Shipment Items that will be added: ' + _.map(currentItem.items, \"id\");\n              })();\n            })}}",
+                          "fontSize": "PARAGRAPH",
+                          "fontStyle": "BOLD",
+                          "textAlign": "LEFT",
+                          "textColor": "#231F20",
+                          "widgetName": "txtAddToDeliveryShipItemId",
+                          "version": 1,
+                          "animateLoading": true,
+                          "type": "TEXT_WIDGET",
+                          "hideCard": false,
+                          "displayName": "Text",
+                          "key": "o7tfyf63wg",
+                          "iconSVG": "/static/media/icon.97c59b52.svg",
+                          "widgetId": "4icio8f0p2",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "parentColumnSpace": 9.36181640625,
+                          "parentRowSpace": 10,
+                          "leftColumn": 25,
+                          "rightColumn": 41,
+                          "topRow": 2,
+                          "bottomRow": 6,
+                          "parentId": "ze3aeylc0s",
+                          "logBlackList": {
+                            "isVisible": true,
+                            "text": true,
+                            "fontSize": true,
+                            "fontStyle": true,
+                            "textAlign": true,
+                            "textColor": true,
+                            "widgetName": true,
+                            "version": true,
+                            "animateLoading": true,
+                            "type": true,
+                            "hideCard": true,
+                            "displayName": true,
+                            "key": true,
+                            "iconSVG": true,
+                            "isCanvas": true,
+                            "minHeight": true,
+                            "widgetId": true,
+                            "renderMode": true,
+                            "isLoading": true,
+                            "parentColumnSpace": true,
+                            "parentRowSpace": true,
+                            "leftColumn": true,
+                            "rightColumn": true,
+                            "topRow": true,
+                            "bottomRow": true,
+                            "parentId": true
+                          }
                         }
                       },
-                      "widgetName": "CreateDeliveryShipmentList",
+                      "widgetName": "listCreateDeliveryShipment",
                       "listData": "{{AUSPostValidation.deliverableShipments()}}",
                       "isCanvas": true,
                       "displayName": "List",
@@ -6473,7 +6473,7 @@
                       "parentColumnSpace": 11.4375,
                       "dynamicTriggerPathList": [
                         {
-                          "key": "template.AddToShipmentCheckbox.onCheckChange"
+                          "key": "template.checkboxAddToShipment.onCheckChange"
                         }
                       ],
                       "leftColumn": 1,
@@ -6504,7 +6504,7 @@
                           "children": [
                             {
                               "boxShadow": "NONE",
-                              "widgetName": "Container6",
+                              "widgetName": "ctnShipmentList",
                               "borderColor": "transparent",
                               "disallowCopy": true,
                               "isCanvas": true,
@@ -6543,7 +6543,7 @@
                                   "dynamicBindingPathList": [],
                                   "children": [
                                     {
-                                      "widgetName": "AddToShipmentCheckbox",
+                                      "widgetName": "checkboxAddToShipment",
                                       "displayName": "Checkbox",
                                       "iconSVG": "/static/media/icon.aaab032b.svg",
                                       "topRow": 2,
@@ -6604,7 +6604,7 @@
                                       "defaultCheckedState": false
                                     },
                                     {
-                                      "widgetName": "Text32",
+                                      "widgetName": "txtAddToDeliveryShipmentId",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
                                       "topRow": 2,
@@ -6664,7 +6664,7 @@
                                       "fontSize": "PARAGRAPH"
                                     },
                                     {
-                                      "widgetName": "Text33",
+                                      "widgetName": "txtAddToDeliveryShipItemId",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
                                       "topRow": 0,
@@ -6755,9 +6755,9 @@
                         }
                       ],
                       "privateWidgets": {
-                        "AddToShipmentCheckbox": true,
-                        "Text32": true,
-                        "Text33": true
+                        "checkboxAddToShipment": true,
+                        "txtAddToDeliveryShipmentId": true,
+                        "txtAddToDeliveryShipItemId": true
                       },
                       "key": "ro5e8jlzlj",
                       "backgroundColor": "transparent",
@@ -6874,7 +6874,7 @@
                   "leftColumn": 0,
                   "children": [
                     {
-                      "widgetName": "TitleButton2Copy1",
+                      "widgetName": "btnWeightItemsModalTitle",
                       "isCanvas": false,
                       "dynamicPropertyPathList": [
                         {
@@ -7003,7 +7003,7 @@
                       "buttonVariant": "PRIMARY"
                     },
                     {
-                      "widgetName": "Text19",
+                      "widgetName": "txtWeightItemsModalWeight",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 9,
@@ -7030,7 +7030,7 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "BoxWeightInput",
+                      "widgetName": "inpWeightItemsWeight",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
                       "topRow": 9,
@@ -7088,7 +7088,7 @@
                       "key": "y14d23494s"
                     },
                     {
-                      "widgetName": "Text34",
+                      "widgetName": "txtWeightItemsModalTitle",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -7096,10 +7096,12 @@
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [],
                       "leftColumn": 1,
+                      "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Modal Title",
+                      "text": "Weigh Item",
                       "key": "xqet2p770o",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
@@ -7115,7 +7117,7 @@
                       "fontSize": "HEADING1"
                     },
                     {
-                      "widgetName": "Button17",
+                      "widgetName": "btnCloseWeighItemsModal",
                       "onClick": "{{closeModal('WeighItemsModal')}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -7143,7 +7145,7 @@
                       "placement": "CENTER"
                     },
                     {
-                      "widgetName": "Button18",
+                      "widgetName": "btnConfirmWeighItemsModal",
                       "onClick": "{{UpdateWeight.run(() => {{UpdateAUSPostShipmentItem.run();showModal('AddDocsModal');closeModal(\"WeighItemsModal\")}}, () => {})}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
@@ -7227,29 +7229,10 @@
         ],
         "widgetNames": [
           "AddDocsModal",
-          "AddItemsMaterialSelector",
           "AddItemsModal",
-          "AddToShipmentCheckbox",
-          "BoxHeightInput",
-          "BoxLengthInput",
-          "BoxWeightInput",
-          "BoxWidthInput",
-          "Button10",
-          "Button11",
-          "Button12",
-          "Button13",
           "Button16",
-          "Button17",
-          "Button18",
-          "Button19",
-          "Button5",
-          "Button8",
-          "Button9",
           "Canvas1",
           "Canvas12",
-          "Canvas14",
-          "Canvas14Copy",
-          "Canvas14Copy1",
           "Canvas17",
           "Canvas18",
           "Canvas19",
@@ -7269,17 +7252,9 @@
           "Canvas4Copy",
           "Canvas5",
           "Canvas6",
-          "Container4",
           "Container5",
-          "Container6",
           "CreateDeliveryModal",
-          "CreateDeliveryShipmentList",
-          "DocumentViewer1",
-          "DocumentViewer2",
           "EquipmentSelector",
-          "Form1",
-          "Form1Copy",
-          "Form1Copy1",
           "Icon1",
           "Icon3",
           "Icon4",
@@ -7295,64 +7270,83 @@
           "MainContainer",
           "ParcelDetailModal",
           "SealAndLabelModal",
-          "SelectPackageConfirmButton",
           "SelectPackageModal",
           "ShipmentItemList",
           "ShipmentLabelModal",
           "ShipmentLabelModalTitle",
-          "Text13Copy",
-          "Text15",
-          "Text16",
-          "Text17",
-          "Text18",
-          "Text19",
-          "Text20",
-          "Text21",
-          "Text22",
-          "Text23",
           "Text27",
           "Text28",
           "Text29",
           "Text30",
-          "Text31",
-          "Text32",
-          "Text33",
-          "Text34",
-          "TitleButton1",
-          "TitleButton2",
-          "TitleButton2Copy",
-          "TitleButton2Copy1",
-          "TitleButton2CopyCopy",
           "WeighItemsModal",
+          "btnAddDocsModalTitle",
+          "btnAddDocsPrintPacking",
+          "btnAddItemsModalTitle",
           "btnAddSerial",
           "btnCarrierAddCarrier",
+          "btnCloseAddDocsModal",
           "btnCloseParcelDetailModal",
+          "btnCloseSealAndLabelModal",
+          "btnCloseSelectPackageModal",
+          "btnCloseWeighItemsModal",
+          "btnConfirmAddDocsModal",
           "btnConfirmParcelDetailModal",
+          "btnConfirmSealAndLabelModal",
+          "btnConfirmWeighItemsModal",
           "btnCreateDelivery",
           "btnCreateShipment",
           "btnDeleteShipmentItem",
+          "btnFinishAddItemsSerial",
           "btnOrderSearch",
+          "btnPrintPostageLabel",
           "btnReceiveTrackedByCarrier",
           "btnReceiveUntracked",
+          "btnSealAndLabelModalTitle",
+          "btnSelectPackageModalConfirm",
+          "btnSelectPackageModalTitle",
+          "btnWeightItemsModalTitle",
           "bulkSelectBin",
           "bulkSelectStatus",
+          "canvasAddItemsBulk",
+          "canvasAddItemsCarrier",
+          "canvasAddItemsSerialised",
           "carrierSelectBin",
           "carrierSelectCarrier",
+          "checkboxAddToShipment",
           "ctnListOrders",
           "ctnOrderDetails",
+          "ctnPackageDimensions",
           "ctnShipmentItemList",
+          "ctnShipmentList",
           "divOrderDetails1",
           "divOrderDetails2",
+          "docViewPostageLabel",
+          "docViewShipmentLabel",
+          "formAddItemsBulk",
+          "formAddItemsCarrier",
+          "formAddItemsSerialised",
           "inpBarcode",
           "inpOrderSearch",
           "inpParcelDetailDepth",
           "inpParcelDetailHeight",
           "inpParcelDetailWeight",
           "inpParcelDetailWidth",
+          "inpSelectPackageBoxHeight",
+          "inpSelectPackageBoxLength",
+          "inpSelectPackageBoxWidth",
+          "inpWeightItemsWeight",
           "inputBulkQuantity",
           "inputCarrierQuantity",
           "lblScanBarcode",
+          "listCreateDeliveryShipment",
           "receiveTabs",
+          "selectAddItemsMaterial",
+          "txtAddDocsModalTitle",
+          "txtAddDocsPackingSlip",
+          "txtAddItemsCarrierStatus",
+          "txtAddItemsModalTitle",
+          "txtAddToDeliveryShipItemId",
+          "txtAddToDeliveryShipmentId",
           "txtBulk",
           "txtBulkBin",
           "txtBulkQuantity",
@@ -7363,6 +7357,7 @@
           "txtCarrierTitle",
           "txtCreatedDate",
           "txtDeliveriesTitle",
+          "txtDeliveryModalTitle",
           "txtListOrderCreatedTime",
           "txtListOrderId",
           "txtListOrderOrderType",
@@ -7378,13 +7373,20 @@
           "txtParcelDetailTitle",
           "txtParcelDetailWeight",
           "txtParcelDetailWidth",
+          "txtSealAndLabelModalTitle",
+          "txtSelectPackageHeight",
+          "txtSelectPackageLength",
+          "txtSelectPackageModalTitle",
+          "txtSelectPackageWidth",
           "txtSerialBin",
           "txtSerialTitle",
           "txtShipmentDetailTitle",
           "txtShipmentItemAuspostId",
           "txtShipmentItemBox",
           "txtShipmentItemId",
-          "txtShipmentItemStatus"
+          "txtShipmentItemStatus",
+          "txtWeightItemsModalTitle",
+          "txtWeightItemsModalWeight"
         ],
         "validOnPageLoadActions": true,
         "id": "Page1",

@@ -18,7 +18,7 @@
       "paginationType": "NONE",
       "headers": [],
       "encodeParamsToggle": true,
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"id\": AddItemsMaterialSelector.selectedOptionValue,\n\t\t\"warehouse\": [EquipmentSelector.selectedOptionValue]\n\t},\n\tquery:`\nquery GetInventoryHandlingPolicy($id:ID!, $warehouse:[ID!]!){\n  getMaterialDefinition(id:$id) {\n\t\tserialMask\n    inventoryHandlingPolicy {\n      trackByCarrier\n      trackBySerialNumber\n\t\t\t\n      rules @cascade{\n        warehouse (filter:{id:$warehouse}){\n          name\n        }\n        stateModel {\n          states (filter:{canPack:true}){\n            status {\n              label:code\n\t\t\t\t\t\t\tvalue:id\n            }\n          }\n        }\n      }\n    }\n  }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n  \t\"id\": selectAddItemsMaterial.selectedOptionValue,\n\t\t\"warehouse\": [EquipmentSelector.selectedOptionValue]\n\t},\n\tquery:`\nquery GetInventoryHandlingPolicy($id:ID!, $warehouse:[ID!]!){\n  getMaterialDefinition(id:$id) {\n\t\tserialMask\n    inventoryHandlingPolicy {\n      trackByCarrier\n      trackBySerialNumber\n\t\t\t\n      rules @cascade{\n        warehouse (filter:{id:$warehouse}){\n          name\n        }\n        stateModel {\n          states (filter:{canPack:true}){\n            status {\n              label:code\n\t\t\t\t\t\t\tvalue:id\n            }\n          }\n        }\n      }\n    }\n  }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \t\"id\": AddItemsMaterialSelector.selectedOptionValue,\n\t\t\"warehouse\": [EquipmentSelector.selectedOptionValue]\n\t},\n\tquery:`\nquery GetInventoryHandlingPolicy($id:ID!, $warehouse:[ID!]!){\n  getMaterialDefinition(id:$id) {\n\t\tserialMask\n    inventoryHandlingPolicy {\n      trackByCarrier\n      trackBySerialNumber\n\t\t\t\n      rules @cascade{\n        warehouse (filter:{id:$warehouse}){\n          name\n        }\n        stateModel {\n          states (filter:{canPack:true}){\n            status {\n              label:code\n\t\t\t\t\t\t\tvalue:id\n            }\n          }\n        }\n      }\n    }\n  }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n  \t\"id\": selectAddItemsMaterial.selectedOptionValue,\n\t\t\"warehouse\": [EquipmentSelector.selectedOptionValue]\n\t},\n\tquery:`\nquery GetInventoryHandlingPolicy($id:ID!, $warehouse:[ID!]!){\n  getMaterialDefinition(id:$id) {\n\t\tserialMask\n    inventoryHandlingPolicy {\n      trackByCarrier\n      trackBySerialNumber\n\t\t\t\n      rules @cascade{\n        warehouse (filter:{id:$warehouse}){\n          name\n        }\n        stateModel {\n          states (filter:{canPack:true}){\n            status {\n              label:code\n\t\t\t\t\t\t\tvalue:id\n            }\n          }\n        }\n      }\n    }\n  }\n}\n\t`\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
