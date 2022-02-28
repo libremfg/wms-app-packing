@@ -4337,7 +4337,7 @@
                                     {
                                       "resetFormOnClick": true,
                                       "widgetName": "btnReceiveTrackedByCarrier",
-                                      "onClick": "{{MoveTrackedByCarrierToShipment.run()}}",
+                                      "onClick": "{{MoveTrackedByCarrierToShipment.run(() => MutationCompletions.moveCarrier(), () => {})}}",
                                       "buttonColor": "#03B365",
                                       "displayName": "FormButton",
                                       "iconSVG": "/static/media/icon.c8f649ed.svg",
@@ -4769,7 +4769,7 @@
                                     {
                                       "resetFormOnClick": true,
                                       "widgetName": "btnReceiveUntracked",
-                                      "onClick": "{{MoveUntrackedToShipment.run()}}",
+                                      "onClick": "{{MoveUntrackedToShipment.run(() => MutationCompletions.moveUntracked(), () => {})}}",
                                       "buttonColor": "#03B365",
                                       "displayName": "FormButton",
                                       "iconSVG": "/static/media/icon.c8f649ed.svg",
@@ -7211,17 +7211,6 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n\tvariables:null,\n\tquery:`\n\t\tquery{\n  queryEquipment@cascade{\n    value:id\n    label:name\n    orders(filter:{not:{orderType:{eq:PURCHASE_ORDER}}}){\n      id\n    }\n  }\n}\n\t`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_GetOrderDetail",
-              "name": "GetOrderDetail",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\n  \"input\": ListOrders.selectedItem.id\n},\n\tquery:`\nquery GetOrder($input:ID!){\n  getOrder(id:$input){\n    id\n\t\twarehouse {\n\t\t\tid\n\t\t}\n\t\tstatus\n\t\torderType\n    createdDateTime\n    shipFromPartner{\n\t\t\tid\n      name\n    }\n    shipToPartner{\n\t\t\t\tid\n      name\n    }\n\t\tlines{\n\t\t\tmaterial{\n        code\n        name\n      }\n      quantity\n\t\t\tpackedQty\n\t\t\tstockOnHandQty\n\t\t}\n\t\tshipments {\n\t\t\tid\n\t\t\ttransportCompanyShipmentId\n\t\t\tstatus\n    \treference\n    \titems (filter:{isActive:true}){\n      \tid\n\t\t\t\tstatus\n\t\t\t\tweightKg\n\t\t\t\ttrackingDetailsArticleId\n        trackingDetailsBarcodeId\n        transportCompanyItemId\n        box {\n\t\t\t\t\tid\n          sizeDepthCm\n        \tsizeWidthCm\n          sizeHeightCm\n        }\n      }\n\t\t}\n  }\n}\n\t`\n})"
               ],
               "timeoutInMillisecond": 10000
             }

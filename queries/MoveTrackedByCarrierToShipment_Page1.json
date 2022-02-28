@@ -18,7 +18,7 @@
       "paginationType": "NONE",
       "headers": [],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\t\n  input: [\n    {\n      material: {code: selectAddItemsMaterial.selectedOptionLabel},\n      materialUse: \"Packed\",\n      owner: {id: GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n\t\t\t//user: {id: GetUserSites.data.data.getUser.id},\n      quantity: 1,\n      to: {\n        shipment: {id: ListShipmentDetail.selectedRow.id},\n        shipmentItem: {id: ShipmentItemList.selectedItem.id}\n      },\n\t\t\tfrom: {\n\t\t\t\tcarrier: {id: carrierSelectCarrier.selectedOptionValue}\n\t\t\t}\n    }\n  ]\n\t\t},\n    query: `\nmutation ReceiveSerialised($input:[AddInventoryTransactionInput!]!) {\n\taddInventoryTransactions(input:$input){\n    material{code},\n    storageLocation{name},\n    quantity\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\t\n  input: [\n    {\n      material: {code: selectAddItemsMaterial.selectedOptionLabel},\n      materialUse: \"Packed\",\n      owner: {id: GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n\t\t\t//user: {id: GetUserSites.data.data.getUser.id},\n      quantity: inputCarrierQuantity,\n      to: {\n        shipment: {id: ListShipmentDetail.selectedRow.id},\n        shipmentItem: {id: ShipmentItemList.selectedItem.id}\n      },\n\t\t\tfrom: {\n\t\t\t\tcarrier: {id: carrierSelectCarrier.selectedOptionValue}\n\t\t\t}\n    }\n  ]\n\t\t},\n    query: `\nmutation ReceiveSerialised($input:[AddInventoryTransactionInput!]!) {\n\taddInventoryTransactions(input:$input){\n    material{code},\n    storageLocation{name},\n    quantity\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\t\n  input: [\n    {\n      material: {code: selectAddItemsMaterial.selectedOptionLabel},\n      materialUse: \"Packed\",\n      owner: {id: GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n\t\t\t//user: {id: GetUserSites.data.data.getUser.id},\n      quantity: 1,\n      to: {\n        shipment: {id: ListShipmentDetail.selectedRow.id},\n        shipmentItem: {id: ShipmentItemList.selectedItem.id}\n      },\n\t\t\tfrom: {\n\t\t\t\tcarrier: {id: carrierSelectCarrier.selectedOptionValue}\n\t\t\t}\n    }\n  ]\n\t\t},\n    query: `\nmutation ReceiveSerialised($input:[AddInventoryTransactionInput!]!) {\n\taddInventoryTransactions(input:$input){\n    material{code},\n    storageLocation{name},\n    quantity\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\t\n  input: [\n    {\n      material: {code: selectAddItemsMaterial.selectedOptionLabel},\n      materialUse: \"Packed\",\n      owner: {id: GetOrderDetail.data.data.getOrder.shipFromPartner.id},\n\t\t\t//user: {id: GetUserSites.data.data.getUser.id},\n      quantity: inputCarrierQuantity,\n      to: {\n        shipment: {id: ListShipmentDetail.selectedRow.id},\n        shipmentItem: {id: ShipmentItemList.selectedItem.id}\n      },\n\t\t\tfrom: {\n\t\t\t\tcarrier: {id: carrierSelectCarrier.selectedOptionValue}\n\t\t\t}\n    }\n  ]\n\t\t},\n    query: `\nmutation ReceiveSerialised($input:[AddInventoryTransactionInput!]!) {\n\taddInventoryTransactions(input:$input){\n    material{code},\n    storageLocation{name},\n    quantity\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
