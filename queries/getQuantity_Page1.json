@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tvar item = QueryMaterialInventoryHandling.data.data.getMaterialDefinition\n\t\t//return item\n\t\treturn (item.inventoryHandlingPolicy.trackBySerialNumber ? 1:item.inventoryHandlingPolicy.trackByCarrier ? _.int(inputCarrierQuantity.text) : _.int(inputBulkQuantity.text));\n\t}",
+      "body": "() => {\n\t\tvar item = QueryMaterialInventoryHandling.data.data.getMaterialDefinition\n\t\t//return item\n\t\treturn (item.inventoryHandlingPolicy.trackBySerialNumber ? 1:item.inventoryHandlingPolicy.trackByCarrier ? parseInt(inputCarrierQuantity.text) : parseInt(inputBulkQuantity.text));\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tvar item = QueryMaterialInventoryHandling.data.data.getMaterialDefinition\n\t\t//return item\n\t\treturn (item.inventoryHandlingPolicy.trackBySerialNumber ? 1:item.inventoryHandlingPolicy.trackByCarrier ? _.int(inputCarrierQuantity.text) : _.int(inputBulkQuantity.text));\n\t}"
+      "() => {\n\t\tvar item = QueryMaterialInventoryHandling.data.data.getMaterialDefinition\n\t\t//return item\n\t\treturn (item.inventoryHandlingPolicy.trackBySerialNumber ? 1:item.inventoryHandlingPolicy.trackByCarrier ? parseInt(inputCarrierQuantity.text) : parseInt(inputBulkQuantity.text));\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

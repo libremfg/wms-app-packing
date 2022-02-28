@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (MoveUntrackedToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveUntrackedToShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tUpdateShipmentItemMaterial.run()\n\t\t\tcloseModal(\"AddItemsModal\")\n\t\t\tshowModal(\"WeighItemsModal\")\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (MoveUntrackedToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveUntrackedToShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal(\"AddItemsModal\")\n\t\t\tshowModal(\"WeighItemsModal\")\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (MoveUntrackedToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveUntrackedToShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tUpdateShipmentItemMaterial.run()\n\t\t\tcloseModal(\"AddItemsModal\")\n\t\t\tshowModal(\"WeighItemsModal\")\n\t\t}\n\t}"
+      "() => {\n\t\tif (MoveUntrackedToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveUntrackedToShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal(\"AddItemsModal\")\n\t\t\tshowModal(\"WeighItemsModal\")\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
