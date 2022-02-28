@@ -6801,7 +6801,7 @@
               "isFilterable": false,
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba.svg",
-              "labelText": "Label",
+              "labelText": "Warehouse",
               "topRow": 0,
               "bottomRow": 7,
               "parentRowSpace": 10,
