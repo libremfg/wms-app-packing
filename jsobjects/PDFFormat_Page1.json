@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "PDFFormat",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tformatPackingSlip: () => {\n\t\tconst data = \"data:application/pdf;base64,\" + GetPackingSlip.data.data.getPackingSlipPDF\n\t\tstoreValue('packingSlip', data)\n\t\treturn data\n\t}\n}",
+    "variables": []
+  },
+  "id": "Page1_PDFFormat",
+  "deleted": false,
+  "gitSyncId": "6188a576799de8559acc5336_621c4a6b445a8d746a060d77"
+}
