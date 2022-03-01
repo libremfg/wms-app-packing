@@ -7151,7 +7151,7 @@
                   "displayName": "Canvas",
                   "widgetId": "rw58mjzkpf",
                   "topRow": 0,
-                  "bottomRow": 640,
+                  "bottomRow": 670,
                   "parentRowSpace": 1,
                   "isVisible": true,
                   "type": "CANVAS_WIDGET",
@@ -7251,7 +7251,7 @@
                         }
                       ],
                       "text": "Confirm",
-                      "isDisabled": "{{(listShipFromPartners.selectedItem != null)}}",
+                      "isDisabled": "{{_.isEmpty(listShipFromPartners)}}",
                       "key": "mm0ml6eyxk",
                       "rightColumn": 62,
                       "isDefaultClickDisabled": true,
@@ -7648,41 +7648,6 @@
                       "parentId": "rw58mjzkpf",
                       "renderMode": "CANVAS",
                       "isLoading": false
-                    },
-                    {
-                      "widgetName": "Text31",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 44,
-                      "bottomRow": 59,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{listShipFromPartners.listData}}",
-                      "key": "de7ul2v7qa",
-                      "rightColumn": 34,
-                      "textAlign": "LEFT",
-                      "widgetId": "eb3y0bfofn",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "shouldScroll": false,
-                      "version": 1,
-                      "parentId": "rw58mjzkpf",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "PARAGRAPH"
                     }
                   ],
                   "isDisabled": false,
@@ -7722,7 +7687,7 @@
               "name": "GetShipFromPartners",
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\n  \t\"warehouse\": [EquipmentSelector.selectedOptionValue],\n\t},\n\tquery:`\nquery GetShippingAccount($warehouse:[ID!]!){\n  queryShippingAccount (filter:{isActive:true})@cascade{\n    transportCompany\n    partner {\n      id\n      companyCode\n    }\n    warehouse(filter:{id:$warehouse}) {\n      name\n    }\n  }\n}\n\t`\n})"
+                "JSON.stringify({\n\tvariables:{\n  \t\"warehouse\": [EquipmentSelector.selectedOptionValue],\n\t},\n\tquery:`\nquery GetShippingAccount($warehouse:[ID!]!){\n  queryShippingAccount (filter:{isActive:true})@cascade{\n    transportCompany\n    partner {\n      id\n\t\t\tshippingAddress {\n\t\t\t\tid\n\t\t\t}\n      companyCode\n    }\n    warehouse(filter:{id:$warehouse}) {\n      name\n    }\n  }\n}\n\t`\n})"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -7782,7 +7747,6 @@
           "Text28",
           "Text29",
           "Text30",
-          "Text31",
           "WeighItemsModal",
           "btnAddDocsModalTitle",
           "btnAddItemsModalTitle",

@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"order\": {\"id\": GetOrderDetail.data.data.getOrder.id},\n      \"status\": \"CREATED\",\n      \"type\": \"OUTBOUND\",\n      \"warehouse\":{\"id\":GetOrderDetail.data.data.getOrder.id},\n\t\t\t\"isActive\":true,\n\t\t\t\"transportCompany\":\"AUSPOST\",\n\t\t\t\"from\":{\"id\":listShipFromPartners.listData[listShipFromPartners.]},\n\t\t\t\"createdDateTimeUTC\":moment(),\n\t\t\t\"to\":{\"id\":GetOrderDetail.data.data.getOrder.shipToPartner.id}\n    }\n  ]\n\t},\n\tquery:`\nmutation addShipment($input:[AddShipmentInput!]!){\n  addShipment(input:$input){\n    shipment{\n      id\n    }\n  }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n\n  \"input\": {\n    \"shipments\": {\n      \"dateTimeCreatedUTC\": moment(),\n      \"status\": \"CREATED\",\n      \"type\": \"OUTBOUND\",\n      \"warehouse\": {\"id\": EquipmentSelector.selectedOptionValue},\n      \"transportCompany\": \"AUSPOST\"\n    },\n    \"shipFromPartner\": {\"id\": listCreateDeliveryShipment.selectedItem.partner.id},\n    \"createdDateTime\": moment()\n  }\n\n\t},\n\tquery:`\nmutation UpdateOrder($input:OrderPatch!){\n  updateOrder(input:{filter:{id:\"\"},set:$input}){\n    order {\n      id\n    }\n  }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -45,7 +45,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"order\": {\"id\": GetOrderDetail.data.data.getOrder.id},\n      \"status\": \"CREATED\",\n      \"type\": \"OUTBOUND\",\n      \"warehouse\":{\"id\":GetOrderDetail.data.data.getOrder.id},\n\t\t\t\"isActive\":true,\n\t\t\t\"transportCompany\":\"AUSPOST\",\n\t\t\t\"from\":{\"id\":listShipFromPartners.listData[listShipFromPartners.]},\n\t\t\t\"createdDateTimeUTC\":moment(),\n\t\t\t\"to\":{\"id\":GetOrderDetail.data.data.getOrder.shipToPartner.id}\n    }\n  ]\n\t},\n\tquery:`\nmutation addShipment($input:[AddShipmentInput!]!){\n  addShipment(input:$input){\n    shipment{\n      id\n    }\n  }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n\n  \"input\": {\n    \"shipments\": {\n      \"dateTimeCreatedUTC\": moment(),\n      \"status\": \"CREATED\",\n      \"type\": \"OUTBOUND\",\n      \"warehouse\": {\"id\": EquipmentSelector.selectedOptionValue},\n      \"transportCompany\": \"AUSPOST\"\n    },\n    \"shipFromPartner\": {\"id\": listCreateDeliveryShipment.selectedItem.partner.id},\n    \"createdDateTime\": moment()\n  }\n\n\t},\n\tquery:`\nmutation UpdateOrder($input:OrderPatch!){\n  updateOrder(input:{filter:{id:\"\"},set:$input}){\n    order {\n      id\n    }\n  }\n}\n\t`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
