@@ -2928,7 +2928,7 @@
                     },
                     {
                       "widgetName": "btnOpenSelectPartnerModal",
-                      "onClick": "{{GetShipFromPartners.run(() => MutationCompletions.createShipment(), () => {})}}",
+                      "onClick": "{{GetShipFromPartners.run(() => showModal('modalSelectPartner'), () => {})}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
@@ -7225,7 +7225,7 @@
                     },
                     {
                       "widgetName": "btnCreateShipment",
-                      "onClick": "{{CreateShipmentMutation.run(() => closeModal('modalSelectPartner'), () => {})}}",
+                      "onClick": "{{CreateShipmentMutation.run(() => MutationCompletions.createShipment(), () => {})}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
