@@ -7680,17 +7680,6 @@
               ],
               "timeoutInMillisecond": 10000
             }
-          ],
-          [
-            {
-              "id": "Page1_GetShipFromPartners",
-              "name": "GetShipFromPartners",
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n\tvariables:{\n  \t\"warehouse\": [EquipmentSelector.selectedOptionValue],\n\t},\n\tquery:`\nquery GetShippingAccount($warehouse:[ID!]!){\n  queryShippingAccount (filter:{isActive:true})@cascade{\n    transportCompany\n    partner {\n      id\n\t\t\tshippingAddress {\n\t\t\t\tid\n\t\t\t}\n      companyCode\n    }\n    warehouse(filter:{id:$warehouse}) {\n      name\n    }\n  }\n}\n\t`\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
           ]
         ],
         "widgetNames": [
