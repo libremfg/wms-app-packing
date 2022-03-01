@@ -14,7 +14,7 @@
     },
     "pageId": "Page1",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 20000,
       "paginationType": "NONE",
       "headers": [
         {

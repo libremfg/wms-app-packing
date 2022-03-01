@@ -2539,6 +2539,9 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "listData"
+                        },
+                        {
+                          "key": "template.Text27.text"
                         }
                       ],
                       "gridType": "vertical",
@@ -2890,7 +2893,7 @@
                       "isLoading": false
                     },
                     {
-                      "widgetName": "btnCreateDelivery",
+                      "widgetName": "btnOpenCreateDeliveryModal",
                       "onClick": "{{showModal('CreateDeliveryModal')}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -6179,7 +6182,7 @@
                       "fontSize": "HEADING1"
                     },
                     {
-                      "widgetName": "Button16",
+                      "widgetName": "btnCreateDelivery",
                       "onClick": "{{CreateAUSPostOrder.run(() => MutationCompletions.createAUSPostOrder(), () => {})}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
@@ -6399,6 +6402,12 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "listData"
+                        },
+                        {
+                          "key": "template.txtAddToDeliveryShipmentId.text"
+                        },
+                        {
+                          "key": "template.txtAddToDeliveryShipItemId.text"
                         }
                       ],
                       "gridType": "vertical",
@@ -7138,7 +7147,6 @@
         "widgetNames": [
           "AddDocsModal",
           "AddItemsModal",
-          "Button16",
           "Canvas1",
           "Canvas12",
           "Canvas17",
@@ -7204,6 +7212,7 @@
           "btnDeleteShipmentItem",
           "btnFinishAddItemsSerial",
           "btnGetPackingSlip",
+          "btnOpenCreateDeliveryModal",
           "btnOrderSearch",
           "btnPrintPostageLabel",
           "btnReceiveTrackedByCarrier",
