@@ -2928,7 +2928,7 @@
                     },
                     {
                       "widgetName": "btnOpenSelectPartnerModal",
-                      "onClick": "{{GetShipFromPartners.run(() => showModal('modalSelectPartner'), () => {})}}",
+                      "onClick": "{{GetShipFromPartners.run(() => MutationCompletions.createShipment(), () => {})}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
