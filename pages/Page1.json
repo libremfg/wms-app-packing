@@ -1296,7 +1296,7 @@
                           "label": "items",
                           "computedValue": "{{ListShipmentDetail.sanitizedTableData.map((currentRow) => ( currentRow.items))}}",
                           "buttonLabel": "{{ListShipmentDetail.sanitizedTableData.map((currentRow) => ( 'Create Delivery Shipment'))}}",
-                          "onClick": "{{CreateEmptyAUSPostShipment.run(() => QueryShipment.run(), () => {})}}"
+                          "onClick": "{{CreateEmptyAUSPostShipment.run(() => GetOrderDetail.run(), () => {})}}"
                         },
                         "customColumn1": {
                           "index": 3,
