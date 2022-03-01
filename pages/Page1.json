@@ -5599,7 +5599,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "width": 786
+              "width": 964
             },
             {
               "widgetName": "SealAndLabelModal",

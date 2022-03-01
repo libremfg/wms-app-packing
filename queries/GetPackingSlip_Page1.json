@@ -25,7 +25,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:null,\n\tquery:`\n\t\tquery {\n  \t\tgetPackingSlipPDF\n\t\t}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n\t\tid: {\n\t\t\tid: ShipmentItemList.selectedItem.id\n\t\t}\n\t},\n\tquery:`\n\t\tquery GetPackingSlip($id:ExtShipmentItemRef!){\n  \t\tgetPackingSlipPDF(shipmentItem:$id)\n\t\t}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -46,7 +46,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:null,\n\tquery:`\n\t\tquery {\n  \t\tgetPackingSlipPDF\n\t\t}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n\t\tid: {\n\t\t\tid: ShipmentItemList.selectedItem.id\n\t\t}\n\t},\n\tquery:`\n\t\tquery GetPackingSlip($id:ExtShipmentItemRef!){\n  \t\tgetPackingSlipPDF(shipmentItem:$id)\n\t\t}\n\t`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

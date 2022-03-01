@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tconst data = \"data:application/pdf;base64,\" + GetPackingSlip.data.data.getPackingSlipPDF\n\t\tstoreValue('packingSlip', data)\n\t\treturn data\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
