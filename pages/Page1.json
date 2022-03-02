@@ -4015,7 +4015,7 @@
                                     {
                                       "resetFormOnClick": true,
                                       "widgetName": "btnAddSerial",
-                                      "onClick": "{{MoveSubLotToShipment.run(() => MutationCompletions.moveSerialised(), () => {})}}",
+                                      "onClick": "{{MoveSubLotToShipment.run(() => MutationCompletions.moveSerialised(), () => showAlert('Influx timed out','error'))}}",
                                       "buttonColor": "#03B365",
                                       "displayName": "FormButton",
                                       "iconSVG": "/static/media/icon.c8f649ed.svg",
