@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (CreateAUSPostOrder.data.errors != null) {\n\t\t\tshowAlert(CreateAUSPostOrder.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal(\"CreateDeliveryModal\")\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (CreateAUSPostOrder.data.errors != null) {\n\t\t\tshowAlert(CreateAUSPostOrder.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal(\"CreateDeliveryModal\")\n\t\t\tGetShipmentIDs.resetDeliveryList()\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (CreateAUSPostOrder.data.errors != null) {\n\t\t\tshowAlert(CreateAUSPostOrder.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal(\"CreateDeliveryModal\")\n\t\t}\n\t}"
+      "() => {\n\t\tif (CreateAUSPostOrder.data.errors != null) {\n\t\t\tshowAlert(CreateAUSPostOrder.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal(\"CreateDeliveryModal\")\n\t\t\tGetShipmentIDs.resetDeliveryList()\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
