@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (MoveSubLotToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveSubLotToShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal(\"AddItemsModal\")\n\t\t\tshowModal(\"WeighItemsModal\")\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (MoveSubLotToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveSubLotToShipment.data.errors[0].message)\n\t\t} \n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (MoveSubLotToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveSubLotToShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal(\"AddItemsModal\")\n\t\t\tshowModal(\"WeighItemsModal\")\n\t\t}\n\t}"
+      "() => {\n\t\tif (MoveSubLotToShipment.data.errors != null) {\n\t\t\tshowAlert(MoveSubLotToShipment.data.errors[0].message)\n\t\t} \n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
