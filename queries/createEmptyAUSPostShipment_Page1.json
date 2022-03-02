@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "addShipmentItems",
-    "fullyQualifiedName": "MutationCompletions.addShipmentItems",
+    "name": "createEmptyAUSPostShipment",
+    "fullyQualifiedName": "MutationCompletions.createEmptyAUSPostShipment",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (AddShipItems.data.errors != null) {\n\t\t\tshowAlert(AddShipItems.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal('ParcelDetailModal')\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (CreateEmptyAUSPostShipment.data.errors != null) {\n\t\t\tshowAlert(CreateEmptyAUSPostShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (AddShipItems.data.errors != null) {\n\t\t\tshowAlert(AddShipItems.data.errors[0].message)\n\t\t} else {\n\t\t\tcloseModal('ParcelDetailModal')\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}"
+      "() => {\n\t\tif (CreateEmptyAUSPostShipment.data.errors != null) {\n\t\t\tshowAlert(CreateEmptyAUSPostShipment.data.errors[0].message)\n\t\t} else {\n\t\t\tGetOrderDetail.run()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_addShipmentItems",
+  "id": "Page1_createEmptyAUSPostShipment",
   "deleted": false,
-  "gitSyncId": "6188a576799de8559acc5336_621eb1a5445a8d746a063677"
+  "gitSyncId": "6188a576799de8559acc5336_621eb19e445a8d746a063675"
 }
