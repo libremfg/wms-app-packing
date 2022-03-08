@@ -572,7 +572,7 @@
               "key": "ir7m4o4ba1",
               "backgroundColor": "transparent",
               "rightColumn": 20,
-              "onListItemClick": "{{GetOrderDetail.run(() => QuertShipmentMaterialCode.run(), () => {})}}",
+              "onListItemClick": "{{GetOrderDetail.run(() => QueryAssociatedDeliveries.run(), () => {})}}",
               "itemBackgroundColor": "#FFFFFF",
               "widgetId": "xzfevh51a7",
               "isVisible": "{{EquipmentSelector.selectedOptionValue == null?false:true}}",
@@ -880,7 +880,6 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "material",
-                        "customColumn2",
                         "quantity",
                         "packedQty",
                         "stockOnHandQty",
@@ -911,9 +910,6 @@
                         },
                         {
                           "key": "primaryColumns.packedQty.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn2.computedValue"
                         },
                         {
                           "key": "primaryColumns.quantity.computedValue"
@@ -957,22 +953,6 @@
                           "isDerived": false,
                           "label": "quantity",
                           "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
-                        },
-                        "customColumn2": {
-                          "index": 3,
-                          "width": 150,
-                          "id": "customColumn2",
-                          "columnType": "text",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "customColumn2",
-                          "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( currentRow.customColumn2))}}",
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "buttonLabelColor": "#FFFFFF"
                         },
                         "packedQty": {
                           "index": 2,
@@ -1032,22 +1012,6 @@
                       "delimiter": ",",
                       "key": "kcroddbrkx",
                       "derivedColumns": {
-                        "customColumn2": {
-                          "index": 3,
-                          "width": 150,
-                          "id": "customColumn2",
-                          "columnType": "text",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "PartName",
-                          "computedValue": "{{ListOrderNumber.sanitizedTableData.map((currentRow) => ( currentRow.material.name))}}",
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "buttonLabelColor": "#FFFFFF"
-                        },
                         "customColumn3": {
                           "index": 5,
                           "width": 150,
@@ -1096,7 +1060,7 @@
                         "customColumn3": 94,
                         "stockOnHandQty": 142,
                         "quantity": 126,
-                        "material": 123.00000000000009
+                        "material": 214.00000000000009
                       }
                     },
                     {
@@ -2542,6 +2506,15 @@
                         },
                         {
                           "key": "template.Text27.text"
+                        },
+                        {
+                          "key": "template.Text28.text"
+                        },
+                        {
+                          "key": "template.Text29.text"
+                        },
+                        {
+                          "key": "template.Text30.text"
                         }
                       ],
                       "gridType": "vertical",
@@ -4107,6 +4080,7 @@
                                       "widgetName": "inpBarcode",
                                       "displayName": "Input",
                                       "iconSVG": "/static/media/icon.9f505595.svg",
+                                      "onSubmit": "{{MoveSubLotToShipment.run(() => MutationCompletions.moveSerialised(), () => {})}}",
                                       "topRow": 8,
                                       "bottomRow": 12,
                                       "parentRowSpace": 10,
@@ -4114,7 +4088,11 @@
                                       "type": "INPUT_WIDGET",
                                       "hideCard": false,
                                       "parentColumnSpace": 4.640625,
-                                      "dynamicTriggerPathList": [],
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onSubmit"
+                                        }
+                                      ],
                                       "resetOnSubmit": true,
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
@@ -5203,7 +5181,7 @@
                           "key": "options"
                         }
                       ],
-                      "options": "{{_.map(QuertShipmentMaterialCode.data.data.getOrder.lines,\"material\")}}",
+                      "options": "{{_.map(GetOrderDetail.data.data.getOrder.lines,\"material\")}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "db50jotkak",
@@ -7674,6 +7652,7 @@
             {
               "id": "Page1_GetEquipmentWithOrders",
               "name": "GetEquipmentWithOrders",
+              "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n\tvariables:null,\n\tquery:`\n\t\tquery{\n  queryEquipment@cascade{\n    value:id\n    label:name\n    orders(filter:{not:{orderType:{eq:PURCHASE_ORDER}}}){\n      id\n    }\n  }\n}\n\t`\n})"
