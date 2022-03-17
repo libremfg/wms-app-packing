@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"orderLineNumber\": parseInt(OrderLineNumberInput.text),\n      \"order\": {\n        \"id\": ListOrders.selectedItem.id\n      },\n      \"material\": {\n        \"id\":MaterialSelector.selectedOptionValue \n      },\n      \"quantity\": parseInt(QuantityInput.text),\n      \n    }\n  ]\n},\n\tquery:`\n\t\tmutation addOrderLine($input: [AddOrderLineInput!]!){\n\taddOrderLine(input:$input){\n    numUids\n  }\n}\n\t`\n})}}",
+      "body": "{{JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"orderLineNumber\": parseInt(OrderLineNumberInput.text),\n      \"order\": {\n        \"id\": ListOrders.selectedItem.id\n      },\n      \"material\": {\n        \"id\":MaterialSelector.selectedOptionValue \n      },\n      \"quantity\": parseInt(QuantityInput.text),\n\t\t\t\t\"isActive\":isActive.isChecked,\n\t\t\t\"isReturn\":isReturn.isChecked\n    }\n  ]\n},\n\tquery:`\n\t\tmutation addOrderLine($input: [AddOrderLineInput!]!){\n\taddOrderLine(input:$input){\n    numUids\n  }\n}\n\t`\n})}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -45,7 +45,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"orderLineNumber\": parseInt(OrderLineNumberInput.text),\n      \"order\": {\n        \"id\": ListOrders.selectedItem.id\n      },\n      \"material\": {\n        \"id\":MaterialSelector.selectedOptionValue \n      },\n      \"quantity\": parseInt(QuantityInput.text),\n      \n    }\n  ]\n},\n\tquery:`\n\t\tmutation addOrderLine($input: [AddOrderLineInput!]!){\n\taddOrderLine(input:$input){\n    numUids\n  }\n}\n\t`\n})"
+      "JSON.stringify({\n\tvariables:{\n  \"input\": [\n    {\n      \"orderLineNumber\": parseInt(OrderLineNumberInput.text),\n      \"order\": {\n        \"id\": ListOrders.selectedItem.id\n      },\n      \"material\": {\n        \"id\":MaterialSelector.selectedOptionValue \n      },\n      \"quantity\": parseInt(QuantityInput.text),\n\t\t\t\t\"isActive\":isActive.isChecked,\n\t\t\t\"isReturn\":isReturn.isChecked\n    }\n  ]\n},\n\tquery:`\n\t\tmutation addOrderLine($input: [AddOrderLineInput!]!){\n\taddOrderLine(input:$input){\n    numUids\n  }\n}\n\t`\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
